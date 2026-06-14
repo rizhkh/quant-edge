@@ -1,0 +1,11 @@
+model: knn
+generated: '2026-04-26'
+method: kendall
+metrics:
+  mae: 2.37
+  mape_pct: 32.25
+  direction_pct: 60.0
+  cone_hit_pct: 58.7
+params:
+  K: 5
+  MIN_GAP: 40

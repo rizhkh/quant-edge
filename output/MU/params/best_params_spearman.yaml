@@ -1,0 +1,11 @@
+model: knn
+generated: '2026-04-26'
+method: spearman
+metrics:
+  mae: 2.65
+  mape_pct: 36.08
+  direction_pct: 80.0
+  cone_hit_pct: 40.0
+params:
+  K: 20
+  MIN_GAP: 30

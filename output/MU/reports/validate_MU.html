@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MU — Validation Report</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 24px;
+    line-height: 1.4;
+  }
+  .container { max-width: 1400px; margin: 0 auto; }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #334155;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+  h1 .ticker { color: #38bdf8; }
+  .meta { color: #94a3b8; font-size: 13px; text-align: right; }
+  .meta .updated { color: #fbbf24; font-weight: 600; }
+
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .kpi {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .kpi-label {
+    color: #94a3b8;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .kpi-value {
+    color: #f1f5f9;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .kpi-sub { color: #cbd5e1; font-size: 12px; }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  @media (max-width: 1100px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .kpis    { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .panel {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .panel-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .panel-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f1f5f9;
+  }
+  .panel-header .subtitle { color: #94a3b8; font-size: 12px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+  }
+  th {
+    background: #0f172a;
+    color: #94a3b8;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.model { font-weight: 600; color: #38bdf8; }
+  td.muted { color: #475569; text-align: center; }
+
+  .rank-gold   { color: #fbbf24; font-weight: 700; }
+  .rank-silver { color: #cbd5e1; font-weight: 700; }
+  .rank-bronze { color: #d97706; font-weight: 700; }
+  .rank-norm   { color: #64748b; }
+
+  .perday-panel { overflow-x: auto; }
+  .perday-panel table { min-width: 900px; }
+  td.date-cell {
+    font-family: 'SF Mono', Monaco, monospace;
+    color: #e2e8f0;
+    font-weight: 500;
+  }
+  .day-num {
+    color: #64748b;
+    font-size: 10px;
+    margin-top: 2px;
+  }
+  .err {
+    font-size: 11px;
+    margin-top: 2px;
+  }
+  .badges {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .analysis-panel {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+  .analysis-header {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #334155;
+  }
+  .analysis-verdict-label, .analysis-rec-label {
+    color: #94a3b8;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .analysis-verdict {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .analysis-rec-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #38bdf8;
+  }
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
+  }
+  @media (max-width: 900px) {
+    .analysis-grid { grid-template-columns: 1fr; }
+    .analysis-header { flex-direction: column; gap: 12px; align-items: flex-start; }
+  }
+  .analysis-block h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+  .analysis-block ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .analysis-block li {
+    color: #e2e8f0;
+    font-size: 13px;
+    padding: 4px 0 4px 14px;
+    position: relative;
+    line-height: 1.45;
+  }
+  .analysis-block li::before {
+    content: "•";
+    color: #64748b;
+    position: absolute;
+    left: 0;
+  }
+
+  footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #334155;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1><span class="ticker">MU</span> Validation Dashboard</h1>
+    <div class="meta">
+      <div class="updated">Last updated: 2026-06-13 13:59:09</div>
+      <div>Range: 2026-04-17 → 2026-06-12 · 40 days</div>
+    </div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="kpi-label">Best Conservative</div>
+      <div class="kpi-value">KENDALL</div>
+      <div class='kpi-sub'>score 57.4 · 67% dir · 7.9% err</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Tightest Predictions</div>
+      <div class="kpi-value">KNN2</div>
+      <div class='kpi-sub'>avg err 7.27% · 27% within 3%</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Validation Days</div>
+      <div class="kpi-value">40</div>
+      <div class='kpi-sub'>2026-04-17 → 2026-06-12</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Avg Direction Acc</div>
+      <div class="kpi-value">53.0%</div>
+      <div class='kpi-sub'>across all models</div>
+    </div></div>
+
+  
+  <div class="analysis-panel">
+    <div class="analysis-header">
+      <div>
+        <div class="analysis-verdict-label">VERDICT</div>
+        <div class="analysis-verdict" style="color:#eab308">
+          ⚠️ WEAK SIGNAL
+        </div>
+      </div>
+      <div class="analysis-rec">
+        <div class="analysis-rec-label">Recommended model</div>
+        <div class="analysis-rec-value">KENDALL</div>
+      </div>
+    </div>
+    <div class="analysis-grid">
+      <div class='analysis-block'><h4>Why</h4><ul><li>score 57.4 (below trust threshold of 60)</li></ul></div>
+      
+      <div class='analysis-block'><h4 style='color:#22c55e'>✓ Going right</h4><ul><li>Top 3 by conservative score: kendall, euclidean, manhattan</li><li>euclidean has 72% direction accuracy (40 days)</li></ul></div>
+      <div class='analysis-block'><h4 style='color:#ef4444'>✗ Going wrong</h4><ul><li>ML models (47% avg dir) significantly underperform kNN methods (58% avg dir)</li><li>cosine cone too narrow — only 40% in-band rate</li><li>xgboost cone too narrow — only 40% in-band rate</li><li>analog predicted UP 25% of the time but actual UP rate was 62% (directional bias)</li></ul></div>
+      <div class='analysis-block'><h4>• Observations</h4><ul><li>Tightest predictions: knn2 (7.27% avg err). Most reliable direction: euclidean (72%). Different models — pick by use case.</li></ul></div>
+      <div class='analysis-block'><h4>Recommended usage</h4><ul><li><strong>Direction call:</strong> euclidean (72% correct, 40 days)</li><li><strong>Tight price target:</strong> knn2 (7.27% avg err)</li><li><strong>Risk/cone bands:</strong> kendall (55% in-band)</li></ul></div>
+    </div>
+  </div>
+
+
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-header">
+        <h2>Conservative Leaderboard</h2>
+        <div class="subtitle">40% dir · 30% tight · 20% in-band · 10% err</div>
+      </div>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Model</th><th>N</th><th>Avg Err</th><th>Tight ≤3%</th><th>Dir Acc</th><th>In-Band</th><th>Score</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="rank-gold">1</td>
+          <td class="model">kendall</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">7.86%</span></td>
+          <td>35%</td>
+          <td><span style="color:#eab308">66.7%</span></td>
+          <td>55.3%</td>
+          <td><strong>57.4</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-silver">2</td>
+          <td class="model">euclidean</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">8.20%</span></td>
+          <td>28%</td>
+          <td><span style="color:#22c55e">72.2%</span></td>
+          <td>47.4%</td>
+          <td><strong>55.8</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-bronze">3</td>
+          <td class="model">manhattan</td>
+          <td>34</td>
+          <td><span style="color:#ef4444">9.02%</span></td>
+          <td>21%</td>
+          <td><span style="color:#eab308">64.7%</span></td>
+          <td>47.1%</td>
+          <td><strong>50.6</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">4</td>
+          <td class="model">knn2</td>
+          <td>33</td>
+          <td><span style="color:#ef4444">7.27%</span></td>
+          <td>27%</td>
+          <td><span style="color:#eab308">63.6%</span></td>
+          <td>30.3%</td>
+          <td><strong>49.0</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">5</td>
+          <td class="model">xgboost</td>
+          <td>38</td>
+          <td><span style="color:#ef4444">7.76%</span></td>
+          <td>29%</td>
+          <td><span style="color:#eab308">52.8%</span></td>
+          <td>39.5%</td>
+          <td><strong>46.9</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">6</td>
+          <td class="model">spearman</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">9.14%</span></td>
+          <td>30%</td>
+          <td><span style="color:#ef4444">44.4%</span></td>
+          <td>44.7%</td>
+          <td><strong>44.8</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">7</td>
+          <td class="model">pearson</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">8.82%</span></td>
+          <td>22%</td>
+          <td><span style="color:#eab308">50.0%</span></td>
+          <td>44.7%</td>
+          <td><strong>44.8</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">8</td>
+          <td class="model">cosine</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">9.12%</span></td>
+          <td>20%</td>
+          <td><span style="color:#eab308">50.0%</span></td>
+          <td>39.5%</td>
+          <td><strong>43.0</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">9</td>
+          <td class="model">lightgbm</td>
+          <td>36</td>
+          <td><span style="color:#ef4444">8.13%</span></td>
+          <td>19%</td>
+          <td><span style="color:#ef4444">47.2%</span></td>
+          <td>25.0%</td>
+          <td><strong>38.9</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">10</td>
+          <td class="model">randomforest</td>
+          <td>34</td>
+          <td><span style="color:#ef4444">8.61%</span></td>
+          <td>18%</td>
+          <td><span style="color:#ef4444">41.2%</span></td>
+          <td>35.3%</td>
+          <td><strong>38.0</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">11</td>
+          <td class="model">analog</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">9.78%</span></td>
+          <td>18%</td>
+          <td><span style="color:#ef4444">30.6%</span></td>
+          <td>—</td>
+          <td><strong>26.5</strong></td>
+        </tr></tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <h2>Production Leaderboard</h2>
+        <div class="subtitle">sorted by avg error % (lower = better)</div>
+      </div>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Model</th><th>N</th><th>Avg Err</th><th>Tight ≤3%</th><th>Dir Acc</th><th>In-Band</th><th>Score</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="rank-gold">1</td>
+          <td class="model">knn2</td>
+          <td>33</td>
+          <td><span style="color:#ef4444">7.27%</span></td>
+          <td>27%</td>
+          <td><span style="color:#eab308">63.6%</span></td>
+          <td>30.3%</td>
+          <td><strong>49.0</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-silver">2</td>
+          <td class="model">xgboost</td>
+          <td>38</td>
+          <td><span style="color:#ef4444">7.76%</span></td>
+          <td>29%</td>
+          <td><span style="color:#eab308">52.8%</span></td>
+          <td>39.5%</td>
+          <td><strong>46.9</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-bronze">3</td>
+          <td class="model">kendall</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">7.86%</span></td>
+          <td>35%</td>
+          <td><span style="color:#eab308">66.7%</span></td>
+          <td>55.3%</td>
+          <td><strong>57.4</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">4</td>
+          <td class="model">lightgbm</td>
+          <td>36</td>
+          <td><span style="color:#ef4444">8.13%</span></td>
+          <td>19%</td>
+          <td><span style="color:#ef4444">47.2%</span></td>
+          <td>25.0%</td>
+          <td><strong>38.9</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">5</td>
+          <td class="model">euclidean</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">8.20%</span></td>
+          <td>28%</td>
+          <td><span style="color:#22c55e">72.2%</span></td>
+          <td>47.4%</td>
+          <td><strong>55.8</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">6</td>
+          <td class="model">randomforest</td>
+          <td>34</td>
+          <td><span style="color:#ef4444">8.61%</span></td>
+          <td>18%</td>
+          <td><span style="color:#ef4444">41.2%</span></td>
+          <td>35.3%</td>
+          <td><strong>38.0</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">7</td>
+          <td class="model">pearson</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">8.82%</span></td>
+          <td>22%</td>
+          <td><span style="color:#eab308">50.0%</span></td>
+          <td>44.7%</td>
+          <td><strong>44.8</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">8</td>
+          <td class="model">manhattan</td>
+          <td>34</td>
+          <td><span style="color:#ef4444">9.02%</span></td>
+          <td>21%</td>
+          <td><span style="color:#eab308">64.7%</span></td>
+          <td>47.1%</td>
+          <td><strong>50.6</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">9</td>
+          <td class="model">cosine</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">9.12%</span></td>
+          <td>20%</td>
+          <td><span style="color:#eab308">50.0%</span></td>
+          <td>39.5%</td>
+          <td><strong>43.0</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">10</td>
+          <td class="model">spearman</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">9.14%</span></td>
+          <td>30%</td>
+          <td><span style="color:#ef4444">44.4%</span></td>
+          <td>44.7%</td>
+          <td><strong>44.8</strong></td>
+        </tr>
+
+        <tr>
+          <td class="rank-norm">11</td>
+          <td class="model">analog</td>
+          <td>40</td>
+          <td><span style="color:#ef4444">9.78%</span></td>
+          <td>18%</td>
+          <td><span style="color:#ef4444">30.6%</span></td>
+          <td>—</td>
+          <td><strong>26.5</strong></td>
+        </tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel perday-panel">
+    <div class="panel-header">
+      <h2>Per-Day Predictions</h2>
+      <div class="subtitle">most recent first · top 6 models by conservative score</div>
+    </div>
+    <table>
+      <thead><tr><th>Date</th><th>Actual</th><th>kendall</th><th>euclidean</th><th>manhattan</th><th>knn2</th><th>xgboost</th><th>spearman</th></tr></thead>
+      <tbody><tr><td class='date-cell'>2026-06-12<div class='day-num'>day Day 10 of 36</div></td><td>$981.61 <span style='color:#ef4444;font-size:11px'>▼1.4%</span></td><td>$999.56<div class='err' style='color:#22c55e'>1.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$943.26<div class='err' style='color:#eab308'>3.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$928.55<div class='err' style='color:#ef4444'>5.4%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$920.00<div class='err' style='color:#ef4444'>6.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$1088.15<div class='err' style='color:#ef4444'>10.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$874.34<div class='err' style='color:#ef4444'>10.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-06-11<div class='day-num'>day Day 9 of 36</div></td><td>$995.87 <span style='color:#22c55e;font-size:11px'>▲11.7%</span></td><td>$956.72<div class='err' style='color:#eab308'>3.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$958.73<div class='err' style='color:#eab308'>3.7%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$947.17<div class='err' style='color:#eab308'>4.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$997.77<div class='err' style='color:#22c55e'>0.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$1074.81<div class='err' style='color:#ef4444'>7.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$877.93<div class='err' style='color:#ef4444'>11.8%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-06-10<div class='day-num'>day Day 8 of 36</div></td><td>$891.88 <span style='color:#ef4444;font-size:11px'>▼4.7%</span></td><td>$942.44<div class='err' style='color:#ef4444'>5.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$957.68<div class='err' style='color:#ef4444'>7.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$941.24<div class='err' style='color:#ef4444'>5.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$1001.39<div class='err' style='color:#ef4444'>12.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1061.46<div class='err' style='color:#ef4444'>19.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$883.09<div class='err' style='color:#22c55e'>1.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-06-09<div class='day-num'>day Day 7 of 36</div></td><td>$935.89 <span style='color:#ef4444;font-size:11px'>▼1.4%</span></td><td>$928.16<div class='err' style='color:#22c55e'>0.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$966.63<div class='err' style='color:#eab308'>3.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$942.19<div class='err' style='color:#22c55e'>0.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$1005.48<div class='err' style='color:#ef4444'>7.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1048.12<div class='err' style='color:#ef4444'>12.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$909.76<div class='err' style='color:#eab308'>2.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-06-08<div class='day-num'>day Day 6 of 36</div></td><td>$949.28 <span style='color:#22c55e;font-size:11px'>▲9.9%</span></td><td>$927.52<div class='err' style='color:#eab308'>2.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$945.59<div class='err' style='color:#22c55e'>0.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$942.85<div class='err' style='color:#22c55e'>0.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$1039.66<div class='err' style='color:#ef4444'>9.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1034.78<div class='err' style='color:#ef4444'>9.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$909.64<div class='err' style='color:#eab308'>4.2%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-06-05<div class='day-num'>day Day 5 of 36</div></td><td>$864.01 <span style='color:#ef4444;font-size:11px'>▼13.3%</span></td><td>$956.72<div class='err' style='color:#ef4444'>10.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$965.54<div class='err' style='color:#ef4444'>11.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$954.46<div class='err' style='color:#ef4444'>10.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$975.64<div class='err' style='color:#ef4444'>12.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1021.43<div class='err' style='color:#ef4444'>18.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$929.94<div class='err' style='color:#ef4444'>7.6%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-06-04<div class='day-num'>day Day 4 of 36</div></td><td>$996.00 <span style='color:#ef4444;font-size:11px'>▼7.7%</span></td><td>$985.28<div class='err' style='color:#22c55e'>1.1%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$971.08<div class='err' style='color:#eab308'>2.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$965.51<div class='err' style='color:#eab308'>3.1%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$1021.07<div class='err' style='color:#eab308'>2.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1017.30<div class='err' style='color:#eab308'>2.1%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$932.02<div class='err' style='color:#ef4444'>6.4%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-06-03<div class='day-num'>day Day 3 of 36</div></td><td>$1079.57 <span style='color:#22c55e;font-size:11px'>▲1.5%</span></td><td>$956.72<div class='err' style='color:#ef4444'>11.4%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$963.96<div class='err' style='color:#ef4444'>10.7%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$944.68<div class='err' style='color:#ef4444'>12.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1025.99<div class='err' style='color:#eab308'>5.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1013.16<div class='err' style='color:#ef4444'>6.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$934.80<div class='err' style='color:#ef4444'>13.4%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-06-02<div class='day-num'>day Day 2 of 36</div></td><td>$1064.10 <span style='color:#22c55e;font-size:11px'>▲2.8%</span></td><td>$956.51<div class='err' style='color:#ef4444'>10.1%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$941.88<div class='err' style='color:#ef4444'>11.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$941.88<div class='err' style='color:#ef4444'>11.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1011.53<div class='err' style='color:#eab308'>4.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1009.03<div class='err' style='color:#ef4444'>5.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$938.66<div class='err' style='color:#ef4444'>11.8%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-06-01<div class='day-num'>day Day 1 of 36</div></td><td>$1035.50 <span style='color:#22c55e;font-size:11px'>▲6.6%</span></td><td>$971.00<div class='err' style='color:#ef4444'>6.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$971.00<div class='err' style='color:#ef4444'>6.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$965.29<div class='err' style='color:#ef4444'>6.8%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1012.77<div class='err' style='color:#eab308'>2.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$1004.89<div class='err' style='color:#eab308'>3.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$965.94<div class='err' style='color:#ef4444'>6.7%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-29<div class='day-num'>day Day 5 of 36</div></td><td>$971.00 <span style='color:#22c55e;font-size:11px'>▲5.1%</span></td><td>$732.40<div class='err' style='color:#ef4444'>24.6%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$694.47<div class='err' style='color:#ef4444'>28.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$695.89<div class='err' style='color:#ef4444'>28.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$768.66<div class='err' style='color:#ef4444'>20.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$784.48<div class='err' style='color:#ef4444'>19.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$638.35<div class='err' style='color:#ef4444'>34.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-28<div class='day-num'>day Day 4 of 36</div></td><td>$923.52 <span style='color:#ef4444;font-size:11px'>▼0.5%</span></td><td>$752.27<div class='err' style='color:#ef4444'>18.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$715.63<div class='err' style='color:#ef4444'>22.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$683.77<div class='err' style='color:#ef4444'>26.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$777.99<div class='err' style='color:#ef4444'>15.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$778.38<div class='err' style='color:#ef4444'>15.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$634.40<div class='err' style='color:#ef4444'>31.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-27<div class='day-num'>day Day 3 of 36</div></td><td>$928.41 <span style='color:#22c55e;font-size:11px'>▲3.6%</span></td><td>$712.06<div class='err' style='color:#ef4444'>23.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$705.90<div class='err' style='color:#ef4444'>24.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$695.46<div class='err' style='color:#ef4444'>25.1%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$799.22<div class='err' style='color:#ef4444'>13.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$772.29<div class='err' style='color:#ef4444'>16.8%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$645.44<div class='err' style='color:#ef4444'>30.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-26<div class='day-num'>day Day 2 of 36</div></td><td>$895.88 <span style='color:#22c55e;font-size:11px'>▲19.3%</span></td><td>$667.49<div class='err' style='color:#ef4444'>25.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$708.29<div class='err' style='color:#ef4444'>20.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$681.12<div class='err' style='color:#ef4444'>24.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$771.03<div class='err' style='color:#ef4444'>13.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$766.20<div class='err' style='color:#ef4444'>14.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$660.45<div class='err' style='color:#ef4444'>26.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-22<div class='day-num'>day Day 2 of 36</div></td><td>$751.00 <span style='color:#ef4444;font-size:11px'>▼1.5%</span></td><td>$687.97<div class='err' style='color:#ef4444'>8.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$676.81<div class='err' style='color:#ef4444'>9.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$697.74<div class='err' style='color:#ef4444'>7.1%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$739.51<div class='err' style='color:#22c55e'>1.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$756.89<div class='err' style='color:#22c55e'>0.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$658.78<div class='err' style='color:#ef4444'>12.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-21<div class='day-num'>day Day 1 of 36</div></td><td>$762.10 <span style='color:#22c55e;font-size:11px'>▲4.1%</span></td><td>$668.68<div class='err' style='color:#ef4444'>12.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$671.94<div class='err' style='color:#ef4444'>11.8%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$701.33<div class='err' style='color:#ef4444'>8.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$662.70<div class='err' style='color:#ef4444'>13.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$751.11<div class='err' style='color:#22c55e'>1.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$669.43<div class='err' style='color:#ef4444'>12.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-20<div class='day-num'>day Day 2 of 36</div></td><td>$731.99 <span style='color:#22c55e;font-size:11px'>▲4.8%</span></td><td>$671.37<div class='err' style='color:#ef4444'>8.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$678.98<div class='err' style='color:#ef4444'>7.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$709.65<div class='err' style='color:#eab308'>3.1%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$682.49<div class='err' style='color:#ef4444'>6.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$797.87<div class='err' style='color:#ef4444'>9.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$674.44<div class='err' style='color:#ef4444'>7.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-19<div class='day-num'>day Day 1 of 36</div></td><td>$698.74 <span style='color:#22c55e;font-size:11px'>▲2.5%</span></td><td>$681.54<div class='err' style='color:#eab308'>2.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$683.92<div class='err' style='color:#eab308'>2.1%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$693.80<div class='err' style='color:#22c55e'>0.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$702.45<div class='err' style='color:#22c55e'>0.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$788.87<div class='err' style='color:#ef4444'>12.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$677.53<div class='err' style='color:#eab308'>3.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-18<div class='day-num'>day Day 5 of 36</div></td><td>$681.54 <span style='color:#ef4444;font-size:11px'>▼6.0%</span></td><td>$788.23<div class='err' style='color:#ef4444'>15.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$789.28<div class='err' style='color:#ef4444'>15.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$805.89<div class='err' style='color:#ef4444'>18.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$705.99<div class='err' style='color:#eab308'>3.6%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$779.87<div class='err' style='color:#ef4444'>14.4%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$752.24<div class='err' style='color:#ef4444'>10.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-15<div class='day-num'>day Day 4 of 36</div></td><td>$724.66 <span style='color:#ef4444;font-size:11px'>▼6.6%</span></td><td>$787.30<div class='err' style='color:#ef4444'>8.6%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$789.30<div class='err' style='color:#ef4444'>8.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$795.33<div class='err' style='color:#ef4444'>9.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$726.74<div class='err' style='color:#22c55e'>0.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$782.79<div class='err' style='color:#ef4444'>8.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$776.59<div class='err' style='color:#ef4444'>7.2%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-14<div class='day-num'>day Day 3 of 36</div></td><td>$776.01 <span style='color:#ef4444;font-size:11px'>▼3.4%</span></td><td>$774.03<div class='err' style='color:#22c55e'>0.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$795.33<div class='err' style='color:#eab308'>2.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$795.33<div class='err' style='color:#eab308'>2.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$743.80<div class='err' style='color:#eab308'>4.2%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$785.72<div class='err' style='color:#22c55e'>1.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$757.95<div class='err' style='color:#eab308'>2.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-13<div class='day-num'>day Day 2 of 36</div></td><td>$803.63 <span style='color:#22c55e;font-size:11px'>▲4.8%</span></td><td>$795.33<div class='err' style='color:#22c55e'>1.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$788.32<div class='err' style='color:#22c55e'>1.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$788.52<div class='err' style='color:#22c55e'>1.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$725.73<div class='err' style='color:#ef4444'>9.7%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$788.65<div class='err' style='color:#22c55e'>1.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$771.03<div class='err' style='color:#eab308'>4.1%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-12<div class='day-num'>day Day 1 of 36</div></td><td>$766.58 <span style='color:#ef4444;font-size:11px'>▼3.6%</span></td><td>$781.38<div class='err' style='color:#22c55e'>1.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$783.46<div class='err' style='color:#eab308'>2.2%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$785.69<div class='err' style='color:#eab308'>2.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$719.41<div class='err' style='color:#ef4444'>6.2%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$791.58<div class='err' style='color:#eab308'>3.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$780.18<div class='err' style='color:#22c55e'>1.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-11<div class='day-num'>day Day 1 of 36</div></td><td>$795.33 <span style='color:#22c55e;font-size:11px'>▲6.5%</span></td><td>$733.71<div class='err' style='color:#ef4444'>7.7%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$738.97<div class='err' style='color:#ef4444'>7.1%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$746.81<div class='err' style='color:#ef4444'>6.1%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$711.47<div class='err' style='color:#ef4444'>10.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$647.71<div class='err' style='color:#ef4444'>18.6%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$742.52<div class='err' style='color:#ef4444'>6.6%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-08<div class='day-num'>day Day 3 of 36</div></td><td>$746.81 <span style='color:#22c55e;font-size:11px'>▲15.5%</span></td><td>$558.67<div class='err' style='color:#ef4444'>25.2%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$576.45<div class='err' style='color:#ef4444'>22.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$580.54<div class='err' style='color:#ef4444'>22.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$642.99<div class='err' style='color:#ef4444'>13.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$645.66<div class='err' style='color:#ef4444'>13.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$580.99<div class='err' style='color:#ef4444'>22.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-07<div class='day-num'>day Day 2 of 36</div></td><td>$646.63 <span style='color:#ef4444;font-size:11px'>▼3.0%</span></td><td>$561.28<div class='err' style='color:#ef4444'>13.2%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$574.41<div class='err' style='color:#ef4444'>11.2%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$576.45<div class='err' style='color:#ef4444'>10.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$608.65<div class='err' style='color:#ef4444'>5.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$643.62<div class='err' style='color:#22c55e'>0.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$576.03<div class='err' style='color:#ef4444'>10.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-06<div class='day-num'>day Day 1 of 36</div></td><td>$666.80 <span style='color:#22c55e;font-size:11px'>▲4.2%</span></td><td>$581.51<div class='err' style='color:#ef4444'>12.8%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$574.32<div class='err' style='color:#ef4444'>13.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$574.64<div class='err' style='color:#ef4444'>13.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$632.70<div class='err' style='color:#ef4444'>5.1%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$641.57<div class='err' style='color:#eab308'>3.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$576.45<div class='err' style='color:#ef4444'>13.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-05<div class='day-num'>day Day 1 of 36</div></td><td>$640.20 <span style='color:#22c55e;font-size:11px'>▲11.1%</span></td><td>$576.45<div class='err' style='color:#ef4444'>10.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$576.45<div class='err' style='color:#ef4444'>10.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$576.45<div class='err' style='color:#ef4444'>10.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$572.71<div class='err' style='color:#ef4444'>10.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$580.41<div class='err' style='color:#ef4444'>9.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$570.85<div class='err' style='color:#ef4444'>10.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-04<div class='day-num'>day Day 1 of 36</div></td><td>$576.45 <span style='color:#22c55e;font-size:11px'>▲6.3%</span></td><td>$542.21<div class='err' style='color:#ef4444'>5.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$542.21<div class='err' style='color:#ef4444'>5.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$540.29<div class='err' style='color:#ef4444'>6.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$534.23<div class='err' style='color:#ef4444'>7.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$543.55<div class='err' style='color:#ef4444'>5.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$533.80<div class='err' style='color:#ef4444'>7.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-05-01<div class='day-num'>day Day 1 of 36</div></td><td>$542.21 <span style='color:#22c55e;font-size:11px'>▲4.3%</span></td><td>$517.71<div class='err' style='color:#eab308'>4.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$518.66<div class='err' style='color:#eab308'>4.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$518.16<div class='err' style='color:#eab308'>4.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$531.29<div class='err' style='color:#22c55e'>2.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$519.35<div class='err' style='color:#eab308'>4.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$516.19<div class='err' style='color:#eab308'>4.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-04-30<div class='day-num'>day Day 2 of 36</div></td><td>$520.00 <span style='color:#22c55e;font-size:11px'>▲0.3%</span></td><td>$497.29<div class='err' style='color:#eab308'>4.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$491.60<div class='err' style='color:#ef4444'>5.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$502.78<div class='err' style='color:#eab308'>3.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$522.41<div class='err' style='color:#22c55e'>0.5%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$505.40<div class='err' style='color:#eab308'>2.8%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$504.29<div class='err' style='color:#eab308'>3.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-04-29<div class='day-num'>day Day 1 of 36</div></td><td>$518.46 <span style='color:#22c55e;font-size:11px'>▲2.8%</span></td><td>$504.29<div class='err' style='color:#eab308'>2.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$499.40<div class='err' style='color:#eab308'>3.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$506.09<div class='err' style='color:#eab308'>2.4%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$522.72<div class='err' style='color:#22c55e'>0.8%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$504.66<div class='err' style='color:#eab308'>2.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$507.85<div class='err' style='color:#22c55e'>2.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-04-28<div class='day-num'>day Day 1 of 36</div></td><td>$504.29 <span style='color:#ef4444;font-size:11px'>▼3.9%</span></td><td>$524.56<div class='err' style='color:#eab308'>4.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$517.05<div class='err' style='color:#eab308'>2.5%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$520.51<div class='err' style='color:#eab308'>3.2%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$554.97<div class='err' style='color:#ef4444'>10.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$526.60<div class='err' style='color:#eab308'>4.4%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$526.52<div class='err' style='color:#eab308'>4.4%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-04-27<div class='day-num'>day Day 1 of 36</div></td><td>$524.56 <span style='color:#22c55e;font-size:11px'>▲4.6%</span></td><td>$501.68<div class='err' style='color:#eab308'>4.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$497.73<div class='err' style='color:#ef4444'>5.1%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$498.04<div class='err' style='color:#ef4444'>5.1%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td class='muted'>—</td><td>$503.34<div class='err' style='color:#eab308'>4.0%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$499.90<div class='err' style='color:#eab308'>4.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-04-24<div class='day-num'>day Day 1 of 36</div></td><td>$501.68 <span style='color:#22c55e;font-size:11px'>▲4.1%</span></td><td>$486.53<div class='err' style='color:#eab308'>3.0%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$479.48<div class='err' style='color:#eab308'>4.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td class='muted'>—</td><td class='muted'>—</td><td>$479.52<div class='err' style='color:#eab308'>4.4%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$489.92<div class='err' style='color:#eab308'>2.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>UP</span><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-04-23<div class='day-num'>day Day 1 of 36</div></td><td>$481.72 <span style='color:#22c55e;font-size:11px'>▲2.0%</span></td><td>$468.80<div class='err' style='color:#eab308'>2.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$469.13<div class='err' style='color:#eab308'>2.6%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td class='muted'>—</td><td class='muted'>—</td><td>$470.85<div class='err' style='color:#eab308'>2.3%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$468.80<div class='err' style='color:#eab308'>2.7%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>DOWN</span><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-04-22<div class='day-num'>day Day 1 of 4</div></td><td>$472.08 <span style='color:#22c55e;font-size:11px'>▲5.1%</span></td><td>$443.23<div class='err' style='color:#ef4444'>6.1%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$452.47<div class='err' style='color:#eab308'>4.2%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td class='muted'>—</td><td class='muted'>—</td><td>$449.14<div class='err' style='color:#eab308'>4.9%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td><td>$443.23<div class='err' style='color:#ef4444'>6.1%</div><div class='badges'><span class='badge' style='background:#ef444420;color:#ef4444'>OUT</span></div></td></tr>
+<tr><td class='date-cell'>2026-04-21<div class='day-num'>day Day 1 of 4</div></td><td>$449.38 <span style='color:#22c55e;font-size:11px'>▲0.8%</span></td><td>$450.51<div class='err' style='color:#22c55e'>0.3%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$441.44<div class='err' style='color:#22c55e'>1.8%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td class='muted'>—</td><td class='muted'>—</td><td>$445.18<div class='err' style='color:#22c55e'>0.9%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td><td>$442.89<div class='err' style='color:#22c55e'>1.4%</div><div class='badges'><span class='badge' style='background:#22c55e20;color:#22c55e'>IN</span></div></td></tr>
+<tr><td class='date-cell'>2026-04-20<div class='day-num'>day Day 1 of 4</div></td><td>$445.89 <span style='color:#ef4444;font-size:11px'>▼2.0%</span></td><td>$451.76<div class='err' style='color:#22c55e'>1.3%</div><div class='badges'></div></td><td>$452.54<div class='err' style='color:#22c55e'>1.5%</div><div class='badges'></div></td><td class='muted'>—</td><td class='muted'>—</td><td class='muted'>—</td><td>$452.08<div class='err' style='color:#22c55e'>1.4%</div><div class='badges'></div></td></tr>
+<tr><td class='date-cell'>2026-04-17<div class='day-num'>day Day 1 of 4</div></td><td>$455.07 <span style='color:#ef4444;font-size:11px'>▼0.3%</span></td><td>$460.58<div class='err' style='color:#22c55e'>1.2%</div><div class='badges'></div></td><td>$447.25<div class='err' style='color:#22c55e'>1.7%</div><div class='badges'></div></td><td class='muted'>—</td><td class='muted'>—</td><td class='muted'>—</td><td>$460.58<div class='err' style='color:#22c55e'>1.2%</div><div class='badges'></div></td></tr></tbody>
+    </table>
+  </div>
+
+  <footer>
+    <strong>Conservative score formula:</strong>
+    0.40 × directional_accuracy + 0.30 × pct_within_3%_error + 0.20 × in_band_rate + 0.10 × (100 − avg_err%).<br>
+    Higher is better. Models with no cone (analog) are penalized on in-band component.
+    Per-day badges: green = correct/in-band, red = miss/out-of-band.
+  </footer>
+
+</div>
+</body>
+</html>

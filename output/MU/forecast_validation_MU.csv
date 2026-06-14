@@ -1,0 +1,4557 @@
+date,day,prior_close,actual,analog,knn,spearman,pearson,cosine,euclidean,mse,kendall,xgboost,leaderboard,lightgbm,knn_label,randomforest,manhattan,mahalanobis,knn2
+2026-04-17,Day 1 of 4,$456.38,"C: $455.07
+O: $466.85
+H: $470.97
+L: $452.20
+moved down 0.29%
+Direction: CORRECT","price: $476.7873 - MISS
+error: $21.72 (4.8%)","low: $441.4148 - HIT
+median: $447.2475 - HIT
+high: $493.7406 - MISS
+range_result: IN BAND
+error: $7.82 (1.7%)","low: N/A
+median: $460.5783 - MISS
+high: N/A
+range_result: N/A
+error: $5.51 (1.2%)","low: N/A
+median: $452.3397 - HIT
+high: N/A
+range_result: N/A
+error: $2.73 (0.6%)","low: N/A
+median: $447.2475 - HIT
+high: N/A
+range_result: N/A
+error: $7.82 (1.7%)","low: N/A
+median: $447.2475 - HIT
+high: N/A
+range_result: N/A
+error: $7.82 (1.7%)","low: N/A
+median: $447.2475 - HIT
+high: N/A
+range_result: N/A
+error: $7.82 (1.7%)","low: N/A
+median: $460.5783 - MISS
+high: N/A
+range_result: N/A
+error: $5.51 (1.2%)",,"1. pearson ($2.73)
+2. spearman ($5.51)
+3. kendall ($5.51)
+4. knn ($7.82)
+5. cosine ($7.82)
+6. euclidean ($7.82)
+7. mse ($7.82)
+8. analog ($21.72)",,,,,,
+2026-04-20,Day 1 of 4,$455.07,"C: $445.89
+O: $458.25
+H: $464.56
+L: $435.90
+moved down 2.02%
+Direction: CORRECT","price: $446.0104 - MISS
+error: $0.13 (0.0%)","low: $436.4921 - HIT
+median: $452.5354 - MISS
+high: $467.1196 - MISS
+range_result: IN BAND
+error: $6.65 (1.5%)","low: N/A
+median: $452.0795 - MISS
+high: N/A
+range_result: N/A
+error: $6.19 (1.4%)","low: N/A
+median: $450.4969 - MISS
+high: N/A
+range_result: N/A
+error: $4.61 (1.0%)","low: N/A
+median: $450.4969 - MISS
+high: N/A
+range_result: N/A
+error: $4.61 (1.0%)","low: N/A
+median: $452.5354 - MISS
+high: N/A
+range_result: N/A
+error: $6.65 (1.5%)","low: N/A
+median: $452.5354 - MISS
+high: N/A
+range_result: N/A
+error: $6.65 (1.5%)","low: N/A
+median: $451.7593 - MISS
+high: N/A
+range_result: N/A
+error: $5.87 (1.3%)",,"1. analog ($0.13)
+2. pearson ($4.61)
+3. cosine ($4.61)
+4. kendall ($5.87)
+5. spearman ($6.19)
+6. knn ($6.65)
+7. euclidean ($6.65)
+8. mse ($6.65)",,,,,,
+2026-04-21,Day 1 of 4,$445.89,"C: $449.38
+O: $451.46
+H: $457.82
+L: $441.30
+moved up 0.78%
+Direction: WRONG","price: $466.3384 - MISS
+error: $16.96 (3.8%)","low: $430.4748 - HIT
+median: $442.8926 - HIT
+high: $466.0532 - MISS
+p90: $430.4748 - HIT
+p60: $434.7706 - HIT
+p50: $442.8926 - HIT
+p20: $463.3521 - MISS
+range_result: IN BAND
+error: $6.49 (1.4%)","low: $430.4748 - HIT
+median: $442.8926 - HIT
+high: $466.0532 - MISS
+p90: $430.4748 - HIT
+p60: $434.7706 - HIT
+p50: $442.8926 - HIT
+p20: $463.3521 - MISS
+range_result: IN BAND
+error: $6.49 (1.4%)","low: $431.5421 - HIT
+median: $445.2223 - HIT
+high: $462.2992 - MISS
+p90: $431.5421 - HIT
+p60: $437.4453 - HIT
+p50: $445.2223 - HIT
+p20: $457.0928 - MISS
+range_result: IN BAND
+error: $4.16 (0.9%)","low: $431.5421 - HIT
+median: $448.0443 - HIT
+high: $462.2992 - MISS
+p90: $431.5421 - HIT
+p60: $439.7029 - HIT
+p50: $448.0443 - HIT
+p20: $457.0928 - MISS
+range_result: IN BAND
+error: $1.34 (0.3%)","low: $431.3960 - HIT
+median: $441.4439 - HIT
+high: $460.5995 - MISS
+p90: $431.3960 - HIT
+p60: $436.1501 - HIT
+p50: $441.4439 - HIT
+p20: $453.7627 - MISS
+range_result: IN BAND
+error: $7.94 (1.8%)","low: $431.3960 - HIT
+median: $441.4439 - HIT
+high: $460.5995 - MISS
+p90: $431.3960 - HIT
+p60: $436.1501 - HIT
+p50: $441.4439 - HIT
+p20: $453.7627 - MISS
+range_result: IN BAND
+error: $7.94 (1.8%)","low: $430.4748 - HIT
+median: $450.5097 - MISS
+high: $466.0532 - MISS
+p90: $430.4748 - HIT
+p60: $441.4304 - HIT
+p50: $450.5097 - MISS
+p20: $463.3521 - MISS
+range_result: IN BAND
+error: $1.13 (0.3%)","low: $425.4552 - HIT
+median: $445.1841 - HIT
+high: $457.0145 - MISS
+p90: $425.4552 - HIT
+p60: $440.2268 - HIT
+p50: $445.1841 - HIT
+p20: $457.0145 - MISS
+range_result: IN BAND
+error: $4.20 (0.9%)","1. kendall ($1.13)
+2. cosine ($1.34)
+3. pearson ($4.16)
+4. xgboost ($4.20)
+5. knn ($6.49)
+6. spearman ($6.49)
+7. euclidean ($7.94)
+8. mse ($7.94)
+9. analog ($16.96)",,,,,,
+2026-04-22,Day 1 of 4,$449.38,"C: $472.08
+O: $462.85
+H: $477.36
+L: $458.56
+moved up 5.05%
+Direction: WRONG","price: $442.7714 - HIT
+error: $29.31 (6.2%)","low: $432.0174 - HIT
+median: $443.2315 - HIT
+high: $459.8328 - HIT
+p90: $432.0174 - HIT
+p60: $442.6666 - HIT
+p50: $443.2315 - HIT
+p20: $455.7545 - HIT
+range_result: ABOVE BAND
+error: $28.85 (6.1%)","low: $432.0174 - HIT
+median: $443.2315 - HIT
+high: $459.8328 - HIT
+p90: $432.0174 - HIT
+p60: $442.6666 - HIT
+p50: $443.2315 - HIT
+p20: $455.7545 - HIT
+range_result: ABOVE BAND
+error: $28.85 (6.1%)","low: $434.5845 - HIT
+median: $446.0757 - HIT
+high: $460.8343 - HIT
+p90: $434.5845 - HIT
+p60: $442.6666 - HIT
+p50: $446.0757 - HIT
+p20: $460.0100 - HIT
+range_result: ABOVE BAND
+error: $26.01 (5.5%)","low: $434.5845 - HIT
+median: $446.0757 - HIT
+high: $478.9458 - MISS
+p90: $434.5845 - HIT
+p60: $442.6666 - HIT
+p50: $446.0757 - HIT
+p20: $460.0100 - HIT
+range_result: IN BAND
+error: $26.01 (5.5%)","low: $434.3425 - HIT
+median: $452.4661 - HIT
+high: $471.7255 - HIT
+p90: $434.3425 - HIT
+p60: $448.5860 - HIT
+p50: $452.4661 - HIT
+p20: $458.9847 - HIT
+range_result: ABOVE BAND
+error: $19.62 (4.2%)","low: $434.3425 - HIT
+median: $452.4661 - HIT
+high: $471.7255 - HIT
+p90: $434.3425 - HIT
+p60: $448.5860 - HIT
+p50: $452.4661 - HIT
+p20: $458.9847 - HIT
+range_result: ABOVE BAND
+error: $19.62 (4.2%)","low: $434.5845 - HIT
+median: $443.2315 - HIT
+high: $459.8328 - HIT
+p90: $434.5845 - HIT
+p60: $442.6666 - HIT
+p50: $443.2315 - HIT
+p20: $455.7545 - HIT
+range_result: ABOVE BAND
+error: $28.85 (6.1%)","low: $430.8075 - HIT
+median: $449.1378 - HIT
+high: $462.7669 - HIT
+p90: $430.8075 - HIT
+p60: $445.5034 - HIT
+p50: $449.1378 - HIT
+p20: $462.7669 - HIT
+range_result: ABOVE BAND
+error: $22.95 (4.9%)","1. euclidean ($19.62)
+2. mse ($19.62)
+3. xgboost ($22.95)
+4. pearson ($26.01)
+5. cosine ($26.01)
+6. knn ($28.85)
+7. spearman ($28.85)
+8. kendall ($28.85)
+9. analog ($29.31)",,,,,,
+2026-04-23,Day 1 of 36,$472.08,"C: $481.72
+O: $482.17
+H: $493.62
+L: $471.80
+moved up 2.04%
+Direction: WRONG","price: $457.9900 - HIT
+error: $23.73 (4.9%)
+direction: DOWN - CORRECT",,"low: $458.0000 - HIT
+median: $468.8000 - HIT
+high: $492.6400 - MISS
+p90: $458.0000 - HIT
+p60: $465.4800 - HIT
+p50: $468.8000 - HIT
+p20: $481.7500 - MISS
+pdcp20: $481.7500 - MISS
+range_result: IN BAND
+error: $12.92 (2.7%)
+direction: DOWN - CORRECT","low: $446.2900 - HIT
+median: $466.3600 - HIT
+high: $482.2200 - MISS
+p90: $446.2900 - HIT
+p60: $459.7000 - HIT
+p50: $466.3600 - HIT
+p20: $477.8200 - HIT
+pdcp20: $477.8200 - HIT
+range_result: IN BAND
+error: $15.36 (3.2%)
+direction: DOWN - CORRECT","low: $446.2900 - HIT
+median: $466.3600 - HIT
+high: $482.2200 - MISS
+p90: $446.2900 - HIT
+p60: $459.7000 - HIT
+p50: $466.3600 - HIT
+p20: $477.8200 - HIT
+pdcp20: $477.8200 - HIT
+range_result: IN BAND
+error: $15.36 (3.2%)
+direction: DOWN - CORRECT","low: $447.1200 - HIT
+median: $469.1300 - HIT
+high: $493.1000 - MISS
+p90: $447.1200 - HIT
+p60: $464.3800 - HIT
+p50: $469.1300 - HIT
+p20: $489.9800 - MISS
+pdcp20: $489.9800 - MISS
+range_result: IN BAND
+error: $12.59 (2.6%)
+direction: DOWN - CORRECT",,"low: $450.5800 - HIT
+median: $468.8000 - HIT
+high: $492.6400 - MISS
+p90: $450.5800 - HIT
+p60: $464.1200 - HIT
+p50: $468.8000 - HIT
+p20: $481.7500 - MISS
+pdcp20: $481.7500 - MISS
+range_result: IN BAND
+error: $12.92 (2.7%)
+direction: DOWN - CORRECT","low: $450.4800 - HIT
+median: $470.8500 - HIT
+high: $486.5700 - MISS
+p90: $450.4800 - HIT
+p60: $466.6000 - HIT
+p50: $470.8500 - HIT
+p20: $486.5700 - MISS
+pdcp20: $486.5700 - MISS
+range_result: IN BAND
+error: $10.87 (2.3%)
+direction: DOWN - MISS","1. lightgbm ($6.55)
+2. xgboost ($10.87)
+3. euclidean ($12.59)
+4. spearman ($12.92)
+5. kendall ($12.92)
+6. pearson ($15.36)
+7. cosine ($15.36)
+8. analog ($23.73)","low: $452.6400 - HIT
+median: $475.1700 - HIT
+high: $491.9200 - MISS
+p90: $452.6400 - HIT
+p60: $472.3200 - HIT
+p50: $475.1700 - HIT
+p20: $491.9200 - MISS
+pdcp60: $472.3200 - HIT
+pdcp20: $491.9200 - MISS
+range_result: IN BAND
+error: $6.55 (1.4%)
+direction: UP - MISS",,n/a,n/a,,n/a
+2026-04-24,Day 1 of 36,$481.72,"C: $501.68
+O: $496.10
+H: $506.99
+L: $489.36
+moved up 4.14%
+Direction: WRONG","price: $467.2400 - HIT
+error: $34.44 (6.9%)
+direction: DOWN - CORRECT",,"low: $469.7200 - HIT
+median: $489.9200 - HIT
+high: $499.1700 - HIT
+p90: $469.7200 - HIT
+p60: $486.2900 - HIT
+p50: $489.9200 - HIT
+p20: $494.2100 - HIT
+pdcp60: $486.2900 - HIT
+pdcp20: $494.2100 - HIT
+range_result: ABOVE BAND
+error: $11.76 (2.3%)
+direction: UP - MISS","low: $464.6600 - HIT
+median: $475.7600 - HIT
+high: $501.1500 - HIT
+p90: $464.6600 - HIT
+p60: $471.8700 - HIT
+p50: $475.7600 - HIT
+p20: $493.3600 - HIT
+pdcp20: $493.3600 - HIT
+range_result: ABOVE BAND
+error: $25.92 (5.2%)
+direction: DOWN - CORRECT","low: $469.0500 - HIT
+median: $492.7200 - HIT
+high: $503.9700 - MISS
+p90: $469.0500 - HIT
+p60: $485.8700 - HIT
+p50: $492.7200 - HIT
+p20: $501.5200 - HIT
+pdcp60: $485.8700 - HIT
+pdcp20: $501.5200 - HIT
+range_result: IN BAND
+error: $8.96 (1.8%)
+direction: UP - MISS","low: $462.2800 - HIT
+median: $479.4800 - HIT
+high: $498.6800 - HIT
+p90: $462.2800 - HIT
+p60: $472.2700 - HIT
+p50: $479.4800 - HIT
+p20: $488.6700 - HIT
+pdcp20: $488.6700 - HIT
+range_result: ABOVE BAND
+error: $22.20 (4.4%)
+direction: DOWN - CORRECT",,"low: $467.4100 - HIT
+median: $486.5300 - HIT
+high: $499.1000 - HIT
+p90: $467.4100 - HIT
+p60: $483.1600 - HIT
+p50: $486.5300 - HIT
+p20: $493.6100 - HIT
+pdcp60: $483.1600 - HIT
+pdcp20: $493.6100 - HIT
+range_result: ABOVE BAND
+error: $15.15 (3.0%)
+direction: UP - MISS","low: $460.2400 - HIT
+median: $479.5200 - HIT
+high: $495.6600 - HIT
+p90: $460.2400 - HIT
+p60: $476.1500 - HIT
+p50: $479.5200 - HIT
+p20: $495.6600 - HIT
+pdcp20: $495.6600 - HIT
+range_result: ABOVE BAND
+error: $22.16 (4.4%)
+direction: DOWN - MISS","1. cosine ($8.96)
+2. spearman ($11.76)
+3. kendall ($15.15)
+4. lightgbm ($19.85)
+5. xgboost ($22.16)
+6. euclidean ($22.20)
+7. pearson ($25.92)
+8. analog ($34.44)","low: $469.5300 - HIT
+median: $481.8300 - HIT
+high: $496.1000 - HIT
+p90: $469.5300 - HIT
+p60: $482.3900 - HIT
+p50: $481.8300 - HIT
+p20: $496.1000 - HIT
+pdcp60: $482.3900 - HIT
+pdcp20: $496.1000 - HIT
+range_result: ABOVE BAND
+error: $19.85 (4.0%)
+direction: UP - MISS",,n/a,n/a,,n/a
+2026-04-27,Day 1 of 36,$501.68,"C: $524.56
+O: $510.56
+H: $531.36
+L: $510.02
+moved up 4.56%
+Direction: WRONG","price: $473.5200 - HIT
+error: $51.04 (9.7%)
+direction: DOWN - CORRECT",,"low: $470.5200 - HIT
+median: $499.9000 - HIT
+high: $527.1800 - MISS
+p90: $470.5200 - HIT
+p60: $496.9700 - HIT
+p50: $499.9000 - HIT
+p20: $522.3600 - HIT
+pdcp20: $522.3600 - HIT
+range_result: IN BAND
+error: $24.66 (4.7%)
+direction: DOWN - CORRECT","low: $469.9300 - HIT
+median: $494.9900 - HIT
+high: $522.2200 - HIT
+p90: $469.9300 - HIT
+p60: $493.5500 - HIT
+p50: $494.9900 - HIT
+p20: $511.8300 - HIT
+pdcp20: $511.8300 - HIT
+range_result: ABOVE BAND
+error: $29.57 (5.6%)
+direction: DOWN - CORRECT","low: $469.9500 - HIT
+median: $487.9300 - HIT
+high: $505.7300 - HIT
+p90: $469.9500 - HIT
+p60: $478.4000 - HIT
+p50: $487.9300 - HIT
+p20: $497.9300 - HIT
+range_result: ABOVE BAND
+error: $36.63 (7.0%)
+direction: DOWN - CORRECT","low: $479.0100 - HIT
+median: $497.7300 - HIT
+high: $525.5700 - MISS
+p90: $479.0100 - HIT
+p60: $494.8600 - HIT
+p50: $497.7300 - HIT
+p20: $516.3900 - HIT
+pdcp20: $516.3900 - HIT
+range_result: IN BAND
+error: $26.83 (5.1%)
+direction: DOWN - CORRECT",,"low: $466.7300 - HIT
+median: $501.6800 - HIT
+high: $534.6000 - MISS
+p90: $466.7300 - HIT
+p60: $499.6500 - HIT
+p50: $501.6800 - HIT
+p20: $512.6500 - HIT
+pdcp20: $512.6500 - HIT
+range_result: IN BAND
+error: $22.88 (4.4%)
+direction: DOWN - CORRECT","low: $483.9500 - HIT
+median: $503.3400 - HIT
+high: $520.2600 - HIT
+p90: $483.9500 - HIT
+p60: $498.5600 - HIT
+p50: $503.3400 - HIT
+p20: $520.2600 - HIT
+pdcp20: $520.2600 - HIT
+range_result: ABOVE BAND
+error: $21.22 (4.0%)
+direction: UP - CORRECT","1. lightgbm ($14.35)
+2. xgboost ($21.22)
+3. randomforest ($21.59)
+4. kendall ($22.88)
+5. spearman ($24.66)
+6. manhattan ($26.52)
+7. euclidean ($26.83)
+8. pearson ($29.57)
+9. cosine ($36.63)
+10. analog ($51.04)","low: $496.0400 - HIT
+median: $510.2100 - HIT
+high: $510.9900 - HIT
+p90: $496.0400 - HIT
+p60: $504.6800 - HIT
+p50: $510.2100 - HIT
+p20: $510.9900 - HIT
+pdcp60: $504.6800 - HIT
+pdcp20: $510.9900 - HIT
+range_result: ABOVE BAND
+error: $14.35 (2.7%)
+direction: UP - MISS",,"low: $492.0600 - HIT
+median: $502.9700 - HIT
+high: $515.5200 - HIT
+p90: $492.0600 - HIT
+p60: $500.8800 - HIT
+p50: $502.9700 - HIT
+p20: $515.5200 - HIT
+pdcp20: $515.5200 - HIT
+range_result: ABOVE BAND
+error: $21.59 (4.1%)
+direction: UP - MISS","low: $479.0100 - HIT
+median: $498.0400 - HIT
+high: $523.6600 - HIT
+p90: $479.0100 - HIT
+p60: $496.7700 - HIT
+p50: $498.0400 - HIT
+p20: $516.5100 - HIT
+pdcp20: $516.5100 - HIT
+range_result: ABOVE BAND
+error: $26.52 (5.1%)
+direction: DOWN - CORRECT",,n/a
+2026-04-28,Day 1 of 36,$524.56,"C: $504.29
+O: $503.99
+H: $518.83
+L: $488.24
+moved down 3.86%
+Direction: WRONG","price: $528.9300 - MISS
+error: $24.64 (4.9%)
+direction: UP - MISS",,"low: $492.7200 - HIT
+median: $526.5200 - MISS
+high: $551.2200 - MISS
+p90: $492.7200 - HIT
+p60: $520.1900 - MISS
+p50: $526.5200 - MISS
+p20: $546.1800 - MISS
+pdcp20: $546.1800 - MISS
+range_result: IN BAND
+error: $22.23 (4.4%)
+direction: UP - MISS","low: $491.3600 - HIT
+median: $518.2600 - MISS
+high: $546.0300 - MISS
+p90: $491.3600 - HIT
+p60: $516.2900 - MISS
+p50: $518.2600 - MISS
+p20: $536.4400 - MISS
+pdcp20: $536.4400 - MISS
+range_result: IN BAND
+error: $13.97 (2.8%)
+direction: DOWN - CORRECT","low: $491.3800 - HIT
+median: $520.5800 - MISS
+high: $547.8800 - MISS
+p90: $491.3800 - HIT
+p60: $514.8200 - MISS
+p50: $520.5800 - MISS
+p20: $539.8100 - MISS
+pdcp20: $539.8100 - MISS
+range_result: IN BAND
+error: $16.29 (3.2%)
+direction: DOWN - CORRECT","low: $500.8500 - HIT
+median: $517.0500 - MISS
+high: $547.5400 - MISS
+p90: $500.8500 - HIT
+p60: $511.2700 - MISS
+p50: $517.0500 - MISS
+p20: $539.9300 - MISS
+pdcp20: $539.9300 - MISS
+range_result: IN BAND
+error: $12.76 (2.5%)
+direction: DOWN - CORRECT",,"low: $488.0200 - HIT
+median: $524.5600 - MISS
+high: $558.9800 - MISS
+p90: $488.0200 - HIT
+p60: $522.4400 - MISS
+p50: $524.5600 - MISS
+p20: $536.0300 - MISS
+pdcp20: $536.0300 - MISS
+range_result: IN BAND
+error: $20.27 (4.0%)
+direction: DOWN - CORRECT","low: $494.7600 - HIT
+median: $526.6000 - MISS
+high: $543.6800 - MISS
+p90: $494.7600 - HIT
+p60: $523.8600 - MISS
+p50: $526.6000 - MISS
+p20: $543.6800 - MISS
+pdcp20: $543.6800 - MISS
+range_result: IN BAND
+error: $22.31 (4.4%)
+direction: UP - MISS","1. euclidean ($12.76)
+2. pearson ($13.97)
+3. manhattan ($16.22)
+4. cosine ($16.29)
+5. lightgbm ($19.06)
+6. kendall ($20.27)
+7. spearman ($22.23)
+8. xgboost ($22.31)
+9. randomforest ($22.31)
+10. analog ($24.64)
+11. knn2 ($50.68)","low: $515.6300 - MISS
+median: $523.3500 - MISS
+high: $541.4300 - MISS
+p90: $515.6300 - MISS
+p60: $520.6200 - MISS
+p50: $523.3500 - MISS
+p20: $541.4300 - MISS
+pdcp20: $541.4300 - MISS
+range_result: BELOW BAND
+error: $19.06 (3.8%)
+direction: DOWN - CORRECT",,"low: $512.7200 - MISS
+median: $526.6000 - MISS
+high: $539.9600 - MISS
+p90: $512.7200 - MISS
+p60: $522.8700 - MISS
+p50: $526.6000 - MISS
+p20: $539.9600 - MISS
+pdcp20: $539.9600 - MISS
+range_result: BELOW BAND
+error: $22.31 (4.4%)
+direction: UP - MISS","low: $500.8500 - HIT
+median: $520.5100 - MISS
+high: $547.5400 - MISS
+p90: $500.8500 - HIT
+p60: $517.2900 - MISS
+p50: $520.5100 - MISS
+p20: $539.8700 - MISS
+pdcp20: $539.8700 - MISS
+range_result: IN BAND
+error: $16.22 (3.2%)
+direction: DOWN - CORRECT",,"low: $504.1300 - HIT
+median: $554.9700 - MISS
+high: $558.7200 - MISS
+p90: $558.7200 - MISS
+p60: $554.9700 - MISS
+p50: $553.7200 - MISS
+p20: $504.1300 - HIT
+pdcp90: $558.7200 - MISS
+pdcp60: $554.9700 - MISS
+range_result: IN BAND
+error: $50.68 (10.0%)
+direction: UP - MISS"
+2026-04-29,Day 1 of 36,$504.29,"C: $518.46
+O: $526.00
+H: $531.00
+L: $508.80
+moved up 2.81%
+Direction: WRONG","price: $508.4900 - HIT
+error: $9.97 (1.9%)
+direction: UP - MISS",,"low: $474.2200 - HIT
+median: $507.8500 - HIT
+high: $530.9500 - MISS
+p90: $474.2200 - HIT
+p60: $504.2900 - HIT
+p50: $507.8500 - HIT
+p20: $525.0700 - MISS
+pdcp20: $525.0700 - MISS
+range_result: IN BAND
+error: $10.61 (2.0%)
+direction: UP - MISS","low: $486.1900 - HIT
+median: $504.2900 - HIT
+high: $520.9800 - MISS
+p90: $486.1900 - HIT
+p60: $501.4500 - HIT
+p50: $504.2900 - HIT
+p20: $515.6900 - HIT
+pdcp20: $515.6900 - HIT
+range_result: IN BAND
+error: $14.17 (2.7%)
+direction: DOWN - CORRECT","low: $473.5900 - HIT
+median: $502.5000 - HIT
+high: $525.2200 - MISS
+p90: $473.5900 - HIT
+p60: $499.3100 - HIT
+p50: $502.5000 - HIT
+p20: $516.5900 - HIT
+pdcp20: $516.5900 - HIT
+range_result: IN BAND
+error: $15.96 (3.1%)
+direction: DOWN - CORRECT","low: $473.3900 - HIT
+median: $499.4000 - HIT
+high: $524.9300 - MISS
+p90: $473.3900 - HIT
+p60: $494.2000 - HIT
+p50: $499.4000 - HIT
+p20: $517.7400 - HIT
+pdcp20: $517.7400 - HIT
+range_result: IN BAND
+error: $19.06 (3.7%)
+direction: DOWN - CORRECT",,"low: $500.3500 - HIT
+median: $504.2900 - HIT
+high: $556.6700 - MISS
+p90: $500.3500 - HIT
+p60: $503.4000 - HIT
+p50: $504.2900 - HIT
+p20: $547.1200 - MISS
+pdcp20: $547.1200 - MISS
+range_result: IN BAND
+error: $14.17 (2.7%)
+direction: DOWN - CORRECT","low: $486.0900 - HIT
+median: $504.6600 - HIT
+high: $522.2500 - MISS
+p90: $486.0900 - HIT
+p60: $502.4400 - HIT
+p50: $504.6600 - HIT
+p20: $522.2500 - MISS
+pdcp20: $522.2500 - MISS
+range_result: IN BAND
+error: $13.80 (2.7%)
+direction: UP - CORRECT","1. knn2 ($4.26)
+2. analog ($9.97)
+3. randomforest ($9.99)
+4. spearman ($10.61)
+5. lightgbm ($11.75)
+6. manhattan ($12.37)
+7. xgboost ($13.80)
+8. pearson ($14.17)
+9. kendall ($14.17)
+10. cosine ($15.96)
+11. euclidean ($19.06)","low: $485.7600 - HIT
+median: $506.7100 - HIT
+high: $523.5800 - MISS
+p90: $485.7600 - HIT
+p60: $497.2400 - HIT
+p50: $506.7100 - HIT
+p20: $523.5800 - MISS
+pdcp20: $523.5800 - MISS
+range_result: IN BAND
+error: $11.75 (2.3%)
+direction: UP - MISS",,"low: $495.7800 - HIT
+median: $508.4700 - HIT
+high: $520.8200 - MISS
+p90: $495.7800 - HIT
+p60: $505.9900 - HIT
+p50: $508.4700 - HIT
+p20: $520.8200 - MISS
+pdcp60: $505.9900 - HIT
+pdcp20: $520.8200 - MISS
+range_result: IN BAND
+error: $9.99 (1.9%)
+direction: UP - MISS","low: $483.4400 - HIT
+median: $506.0900 - HIT
+high: $524.9300 - MISS
+p90: $483.4400 - HIT
+p60: $501.8700 - HIT
+p50: $506.0900 - HIT
+p20: $517.5700 - HIT
+pdcp20: $517.5700 - HIT
+range_result: IN BAND
+error: $12.37 (2.4%)
+direction: UP - MISS",,"low: $510.4100 - HIT
+median: $522.7200 - MISS
+high: $523.8600 - MISS
+p90: $523.8600 - MISS
+p60: $522.7200 - MISS
+p50: $522.3400 - MISS
+p20: $510.4100 - HIT
+pdcp90: $523.8600 - MISS
+pdcp60: $522.7200 - MISS
+pdcp20: $510.4100 - HIT
+range_result: IN BAND
+error: $4.26 (0.8%)
+direction: UP - MISS"
+2026-04-30,Day 2 of 36,$518.46,"C: $520.00
+O: $529.74
+H: $535.50
+L: $517.55
+moved up 0.30%
+Direction: WRONG","price: $546.5800 - MISS
+error: $26.58 (5.1%)
+direction: UP - MISS",,"low: $462.9600 - HIT
+median: $504.2900 - HIT
+high: $541.2700 - MISS
+p90: $462.9600 - HIT
+p60: $502.1900 - HIT
+p50: $504.2900 - HIT
+p20: $521.6900 - MISS
+pdcp20: $521.6900 - MISS
+range_result: IN BAND
+error: $15.71 (3.0%)
+direction: DOWN - CORRECT","low: $455.4300 - HIT
+median: $499.2200 - HIT
+high: $526.8200 - MISS
+p90: $455.4300 - HIT
+p60: $490.6500 - HIT
+p50: $499.2200 - HIT
+p20: $514.3000 - HIT
+pdcp20: $514.3000 - HIT
+range_result: IN BAND
+error: $20.78 (4.0%)
+direction: DOWN - CORRECT","low: $461.8000 - HIT
+median: $492.9200 - HIT
+high: $515.2500 - HIT
+p90: $461.8000 - HIT
+p60: $486.4200 - HIT
+p50: $492.9200 - HIT
+p20: $504.2900 - HIT
+range_result: ABOVE BAND
+error: $27.08 (5.2%)
+direction: DOWN - CORRECT","low: $462.7600 - HIT
+median: $491.6000 - HIT
+high: $518.7500 - HIT
+p90: $462.7600 - HIT
+p60: $486.4600 - HIT
+p50: $491.6000 - HIT
+p20: $509.4400 - HIT
+pdcp20: $509.4400 - HIT
+range_result: ABOVE BAND
+error: $28.40 (5.5%)
+direction: DOWN - CORRECT",,"low: $485.8400 - HIT
+median: $497.2900 - HIT
+high: $633.7600 - MISS
+p90: $485.8400 - HIT
+p60: $493.8700 - HIT
+p50: $497.2900 - HIT
+p20: $630.0200 - MISS
+pdcp20: $630.0200 - MISS
+range_result: IN BAND
+error: $22.71 (4.4%)
+direction: DOWN - CORRECT","low: $480.4900 - HIT
+median: $505.4000 - HIT
+high: $530.2000 - MISS
+p90: $480.4900 - HIT
+p60: $500.1000 - HIT
+p50: $505.4000 - HIT
+p20: $530.2000 - MISS
+pdcp20: $530.2000 - MISS
+range_result: IN BAND
+error: $14.60 (2.8%)
+direction: UP - MISS","1. knn2 ($2.41)
+2. randomforest ($11.08)
+3. lightgbm ($12.88)
+4. xgboost ($14.60)
+5. spearman ($15.71)
+6. manhattan ($17.22)
+7. pearson ($20.78)
+8. kendall ($22.71)
+9. analog ($26.58)
+10. cosine ($27.08)
+11. euclidean ($28.40)","low: $486.4100 - HIT
+median: $507.1200 - HIT
+high: $525.3400 - MISS
+p90: $486.4100 - HIT
+p60: $498.9500 - HIT
+p50: $507.1200 - HIT
+p20: $525.3400 - MISS
+pdcp20: $525.3400 - MISS
+range_result: IN BAND
+error: $12.88 (2.5%)
+direction: UP - MISS",,"low: $489.1500 - HIT
+median: $508.9200 - HIT
+high: $526.2100 - MISS
+p90: $489.1500 - HIT
+p60: $505.2100 - HIT
+p50: $508.9200 - HIT
+p20: $526.2100 - MISS
+pdcp60: $505.2100 - HIT
+pdcp20: $526.2100 - MISS
+range_result: IN BAND
+error: $11.08 (2.1%)
+direction: UP - MISS","low: $471.2700 - HIT
+median: $502.7800 - HIT
+high: $558.1400 - MISS
+p90: $471.2700 - HIT
+p60: $487.7300 - HIT
+p50: $502.7800 - HIT
+p20: $525.2700 - MISS
+pdcp20: $525.2700 - MISS
+range_result: IN BAND
+error: $17.22 (3.3%)
+direction: DOWN - CORRECT",,"low: $512.9700 - HIT
+median: $522.4100 - MISS
+high: $523.3600 - MISS
+p90: $523.3600 - MISS
+p60: $522.4100 - MISS
+p50: $522.0900 - MISS
+p20: $512.9700 - HIT
+pdcp90: $523.3600 - MISS
+pdcp60: $522.4100 - MISS
+pdcp20: $512.9700 - HIT
+range_result: IN BAND
+error: $2.41 (0.5%)
+direction: UP - MISS"
+2026-05-01,Day 1 of 36,$520.00,"C: $542.21
+O: $511.78
+H: $545.91
+L: $510.21
+moved up 4.27%
+Direction: WRONG","price: $546.1400 - MISS
+error: $3.93 (0.7%)
+direction: UP - MISS",,"low: $496.9000 - HIT
+median: $516.1900 - HIT
+high: $537.0200 - HIT
+p90: $496.9000 - HIT
+p60: $512.4700 - HIT
+p50: $516.1900 - HIT
+p20: $529.2000 - HIT
+pdcp20: $529.2000 - HIT
+range_result: ABOVE BAND
+error: $26.02 (4.8%)
+direction: DOWN - CORRECT","low: $488.4400 - HIT
+median: $513.3100 - HIT
+high: $537.0200 - HIT
+p90: $488.4400 - HIT
+p60: $509.6300 - HIT
+p50: $513.3100 - HIT
+p20: $528.2100 - HIT
+pdcp20: $528.2100 - HIT
+range_result: ABOVE BAND
+error: $28.90 (5.3%)
+direction: DOWN - CORRECT","low: $488.3400 - HIT
+median: $516.3900 - HIT
+high: $533.2100 - HIT
+p90: $488.3400 - HIT
+p60: $511.4400 - HIT
+p50: $516.3900 - HIT
+p20: $529.5000 - HIT
+pdcp20: $529.5000 - HIT
+range_result: ABOVE BAND
+error: $25.82 (4.8%)
+direction: DOWN - CORRECT","low: $501.5000 - HIT
+median: $518.6600 - HIT
+high: $534.4300 - HIT
+p90: $501.5000 - HIT
+p60: $516.2500 - HIT
+p50: $518.6600 - HIT
+p20: $530.0200 - HIT
+pdcp20: $530.0200 - HIT
+range_result: ABOVE BAND
+error: $23.55 (4.3%)
+direction: DOWN - CORRECT",,"low: $459.7300 - HIT
+median: $517.7100 - HIT
+high: $558.3200 - MISS
+p90: $459.7300 - HIT
+p60: $495.8000 - HIT
+p50: $517.7100 - HIT
+p20: $532.7700 - HIT
+pdcp20: $532.7700 - HIT
+range_result: IN BAND
+error: $24.50 (4.5%)
+direction: DOWN - CORRECT","low: $501.5400 - HIT
+median: $519.3500 - HIT
+high: $535.3400 - HIT
+p90: $501.5400 - HIT
+p60: $517.6800 - HIT
+p50: $519.3500 - HIT
+p20: $535.3400 - HIT
+pdcp20: $535.3400 - HIT
+range_result: ABOVE BAND
+error: $22.86 (4.2%)
+direction: DOWN - MISS","1. analog ($3.93)
+2. knn2 ($10.92)
+3. randomforest ($17.67)
+4. xgboost ($22.86)
+5. euclidean ($23.55)
+6. manhattan ($24.05)
+7. kendall ($24.50)
+8. lightgbm ($25.58)
+9. cosine ($25.82)
+10. spearman ($26.02)
+11. pearson ($28.90)","low: $500.4300 - HIT
+median: $516.6300 - HIT
+high: $527.5600 - HIT
+p90: $500.4300 - HIT
+p60: $514.9400 - HIT
+p50: $516.6300 - HIT
+p20: $527.5600 - HIT
+pdcp20: $527.5600 - HIT
+range_result: ABOVE BAND
+error: $25.58 (4.7%)
+direction: DOWN - CORRECT",,"low: $506.5900 - HIT
+median: $524.5400 - HIT
+high: $537.3400 - HIT
+p90: $506.5900 - HIT
+p60: $520.2100 - HIT
+p50: $524.5400 - HIT
+p20: $537.3400 - HIT
+pdcp60: $520.2100 - HIT
+pdcp20: $537.3400 - HIT
+range_result: ABOVE BAND
+error: $17.67 (3.3%)
+direction: UP - MISS","low: $501.5000 - HIT
+median: $518.1600 - HIT
+high: $541.9400 - HIT
+p90: $501.5000 - HIT
+p60: $516.1500 - HIT
+p50: $518.1600 - HIT
+p20: $531.4000 - HIT
+pdcp20: $531.4000 - HIT
+range_result: ABOVE BAND
+error: $24.05 (4.4%)
+direction: DOWN - CORRECT",,"low: $516.2000 - HIT
+median: $531.2900 - HIT
+high: $536.2700 - HIT
+p90: $536.2700 - HIT
+p60: $531.2900 - HIT
+p50: $529.6300 - HIT
+p20: $516.2000 - HIT
+pdcp90: $536.2700 - HIT
+pdcp60: $531.2900 - HIT
+pdcp20: $527.5900 - HIT
+range_result: ABOVE BAND
+error: $10.92 (2.0%)
+direction: DOWN - CORRECT"
+2026-05-04,Day 1 of 36,$542.21,"C: $576.45
+O: $560.88
+H: $592.77
+L: $557.79
+moved up 6.31%
+Direction: WRONG","price: $533.2000 - HIT
+error: $43.25 (7.5%)
+direction: DOWN - CORRECT",,"low: $509.8800 - HIT
+median: $533.8000 - HIT
+high: $559.9600 - HIT
+p90: $509.8800 - HIT
+p60: $530.3800 - HIT
+p50: $533.8000 - HIT
+p20: $552.9600 - HIT
+pdcp20: $552.9600 - HIT
+range_result: ABOVE BAND
+error: $42.65 (7.4%)
+direction: DOWN - CORRECT","low: $509.3000 - HIT
+median: $540.4600 - HIT
+high: $564.6500 - HIT
+p90: $509.3000 - HIT
+p60: $534.9500 - HIT
+p50: $540.4600 - HIT
+p20: $553.8900 - HIT
+pdcp20: $553.8900 - HIT
+range_result: ABOVE BAND
+error: $35.99 (6.2%)
+direction: DOWN - CORRECT","low: $509.2000 - HIT
+median: $535.1700 - HIT
+high: $551.8800 - HIT
+p90: $509.2000 - HIT
+p60: $528.0400 - HIT
+p50: $535.1700 - HIT
+p20: $551.2000 - HIT
+pdcp20: $551.2000 - HIT
+range_result: ABOVE BAND
+error: $41.28 (7.2%)
+direction: DOWN - CORRECT","low: $508.9900 - HIT
+median: $542.2100 - HIT
+high: $564.4000 - HIT
+p90: $508.9900 - HIT
+p60: $541.0900 - HIT
+p50: $542.2100 - HIT
+p20: $554.2300 - HIT
+pdcp20: $554.2300 - HIT
+range_result: ABOVE BAND
+error: $34.24 (5.9%)
+direction: DOWN - CORRECT",,"low: $503.6700 - HIT
+median: $542.2100 - HIT
+high: $588.1900 - MISS
+p90: $503.6700 - HIT
+p60: $539.3800 - HIT
+p50: $542.2100 - HIT
+p20: $567.5800 - HIT
+pdcp20: $567.5800 - HIT
+range_result: IN BAND
+error: $34.24 (5.9%)
+direction: DOWN - CORRECT","low: $521.8900 - HIT
+median: $543.5500 - HIT
+high: $563.3500 - HIT
+p90: $521.8900 - HIT
+p60: $540.1700 - HIT
+p50: $543.5500 - HIT
+p20: $563.3500 - HIT
+pdcp20: $563.3500 - HIT
+range_result: ABOVE BAND
+error: $32.90 (5.7%)
+direction: UP - CORRECT","1. lightgbm ($16.19)
+2. randomforest ($25.62)
+3. xgboost ($32.90)
+4. euclidean ($34.24)
+5. kendall ($34.24)
+6. pearson ($35.99)
+7. manhattan ($36.16)
+8. cosine ($41.28)
+9. knn2 ($42.22)
+10. spearman ($42.65)
+11. analog ($43.25)","low: $529.7700 - HIT
+median: $560.2600 - HIT
+high: $562.0700 - HIT
+p90: $529.7700 - HIT
+p60: $544.8600 - HIT
+p50: $560.2600 - HIT
+p20: $562.0700 - HIT
+pdcp60: $544.8600 - HIT
+pdcp20: $562.0700 - HIT
+range_result: ABOVE BAND
+error: $16.19 (2.8%)
+direction: UP - MISS",,"low: $531.7200 - HIT
+median: $550.8300 - HIT
+high: $564.0300 - HIT
+p90: $531.7200 - HIT
+p60: $545.1600 - HIT
+p50: $550.8300 - HIT
+p20: $564.0300 - HIT
+pdcp60: $545.1600 - HIT
+pdcp20: $564.0300 - HIT
+range_result: ABOVE BAND
+error: $25.62 (4.4%)
+direction: UP - MISS","low: $523.7200 - HIT
+median: $540.2900 - HIT
+high: $554.5800 - HIT
+p90: $523.7200 - HIT
+p60: $538.1900 - HIT
+p50: $540.2900 - HIT
+p20: $552.6300 - HIT
+pdcp20: $552.6300 - HIT
+range_result: ABOVE BAND
+error: $36.16 (6.3%)
+direction: DOWN - CORRECT",,"low: $524.3600 - HIT
+median: $534.2300 - HIT
+high: $545.5200 - HIT
+p90: $545.5200 - HIT
+p60: $534.2300 - HIT
+p50: $532.3900 - HIT
+p20: $524.3600 - HIT
+pdcp90: $545.5200 - HIT
+pdcp60: $533.1500 - HIT
+pdcp20: $516.4200 - HIT
+range_result: ABOVE BAND
+error: $42.22 (7.3%)
+direction: DOWN - CORRECT"
+2026-05-05,Day 1 of 36,$576.45,"C: $640.20
+O: $609.47
+H: $651.74
+L: $605.47
+moved up 11.06%
+Direction: WRONG","price: $577.2400 - HIT
+error: $62.96 (9.8%)
+direction: UP - MISS",,"low: $547.0800 - HIT
+median: $570.8500 - HIT
+high: $595.3200 - HIT
+p90: $547.0800 - HIT
+p60: $568.1000 - HIT
+p50: $570.8500 - HIT
+p20: $590.0200 - HIT
+pdcp20: $590.0200 - HIT
+range_result: ABOVE BAND
+error: $69.35 (10.8%)
+direction: DOWN - CORRECT","low: $541.4600 - HIT
+median: $574.9900 - HIT
+high: $606.4000 - HIT
+p90: $541.4600 - HIT
+p60: $570.2800 - HIT
+p50: $574.9900 - HIT
+p20: $598.8500 - HIT
+pdcp20: $598.8500 - HIT
+range_result: ABOVE BAND
+error: $65.21 (10.2%)
+direction: DOWN - CORRECT","low: $541.3500 - HIT
+median: $564.7300 - HIT
+high: $586.3000 - HIT
+p90: $541.3500 - HIT
+p60: $559.0100 - HIT
+p50: $564.7300 - HIT
+p20: $582.3100 - HIT
+pdcp20: $582.3100 - HIT
+range_result: ABOVE BAND
+error: $75.47 (11.8%)
+direction: DOWN - CORRECT","low: $558.6700 - HIT
+median: $576.4500 - HIT
+high: $593.6700 - HIT
+p90: $558.6700 - HIT
+p60: $576.4500 - HIT
+p50: $576.4500 - HIT
+p20: $591.5100 - HIT
+pdcp20: $591.5100 - HIT
+range_result: ABOVE BAND
+error: $63.75 (10.0%)
+direction: DOWN - CORRECT",,"low: $569.3700 - HIT
+median: $576.4500 - HIT
+high: $644.0800 - MISS
+p90: $569.3700 - HIT
+p60: $575.4300 - HIT
+p50: $576.4500 - HIT
+p20: $640.9200 - MISS
+pdcp20: $640.9200 - MISS
+range_result: IN BAND
+error: $63.75 (10.0%)
+direction: DOWN - CORRECT","low: $554.7100 - HIT
+median: $580.4100 - HIT
+high: $598.7900 - HIT
+p90: $554.7100 - HIT
+p60: $576.3900 - HIT
+p50: $580.4100 - HIT
+p20: $598.7900 - HIT
+pdcp20: $598.7900 - HIT
+range_result: ABOVE BAND
+error: $59.79 (9.3%)
+direction: UP - CORRECT","1. xgboost ($59.79)
+2. randomforest ($60.91)
+3. analog ($62.96)
+4. euclidean ($63.75)
+5. kendall ($63.75)
+6. manhattan ($63.75)
+7. pearson ($65.21)
+8. lightgbm ($66.67)
+9. knn2 ($67.49)
+10. spearman ($69.35)
+11. cosine ($75.47)","low: $559.0300 - HIT
+median: $573.5300 - HIT
+high: $580.3600 - HIT
+p90: $559.0300 - HIT
+p60: $568.2800 - HIT
+p50: $573.5300 - HIT
+p20: $580.3600 - HIT
+pdcp20: $580.3600 - HIT
+range_result: ABOVE BAND
+error: $66.67 (10.4%)
+direction: DOWN - CORRECT",,"low: $561.6000 - HIT
+median: $579.2900 - HIT
+high: $598.5200 - HIT
+p90: $561.6000 - HIT
+p60: $574.9300 - HIT
+p50: $579.2900 - HIT
+p20: $598.5200 - HIT
+pdcp20: $598.5200 - HIT
+range_result: ABOVE BAND
+error: $60.91 (9.5%)
+direction: UP - MISS","low: $558.6700 - HIT
+median: $576.4500 - HIT
+high: $600.7700 - HIT
+p90: $558.6700 - HIT
+p60: $572.6400 - HIT
+p50: $576.4500 - HIT
+p20: $589.4500 - HIT
+pdcp20: $589.4500 - HIT
+range_result: ABOVE BAND
+error: $63.75 (10.0%)
+direction: DOWN - CORRECT",,"low: $557.5200 - HIT
+median: $572.7100 - HIT
+high: $578.2800 - HIT
+p90: $578.2800 - HIT
+p60: $572.7100 - HIT
+p50: $562.1500 - HIT
+p20: $557.5200 - HIT
+pdcp90: $578.2800 - HIT
+pdcp60: $548.9700 - HIT
+pdcp20: $513.0700 - HIT
+range_result: ABOVE BAND
+error: $67.49 (10.5%)
+direction: UP - MISS"
+2026-05-06,Day 1 of 36,$640.20,"C: $666.80
+O: $660.42
+H: $667.67
+L: $627.58
+moved up 4.15%
+Direction: WRONG","price: $592.6600 - HIT
+error: $74.14 (11.1%)
+direction: UP - MISS",,"low: $540.6600 - HIT
+median: $576.4500 - HIT
+high: $608.8200 - HIT
+p90: $540.6600 - HIT
+p60: $567.5300 - HIT
+p50: $576.4500 - HIT
+p20: $595.8700 - HIT
+pdcp20: $595.8700 - HIT
+range_result: ABOVE BAND
+error: $90.35 (13.5%)
+direction: DOWN - CORRECT","low: $523.1500 - HIT
+median: $572.4500 - HIT
+high: $609.1500 - HIT
+p90: $523.1500 - HIT
+p60: $553.5400 - HIT
+p50: $572.4500 - HIT
+p20: $603.2200 - HIT
+pdcp20: $603.2200 - HIT
+range_result: ABOVE BAND
+error: $94.35 (14.1%)
+direction: DOWN - CORRECT","low: $527.8800 - HIT
+median: $567.3000 - HIT
+high: $583.8600 - HIT
+p90: $527.8800 - HIT
+p60: $561.4300 - HIT
+p50: $567.3000 - HIT
+p20: $579.0300 - HIT
+pdcp20: $579.0300 - HIT
+range_result: ABOVE BAND
+error: $99.50 (14.9%)
+direction: DOWN - CORRECT","low: $528.9800 - HIT
+median: $574.3200 - HIT
+high: $600.2000 - HIT
+p90: $528.9800 - HIT
+p60: $565.7000 - HIT
+p50: $574.3200 - HIT
+p20: $596.3100 - HIT
+pdcp20: $596.3100 - HIT
+range_result: ABOVE BAND
+error: $92.48 (13.9%)
+direction: DOWN - CORRECT",,"low: $562.5800 - HIT
+median: $581.5100 - HIT
+high: $669.7900 - MISS
+p90: $562.5800 - HIT
+p60: $576.2800 - HIT
+p50: $581.5100 - HIT
+p20: $621.5400 - HIT
+pdcp20: $621.5400 - HIT
+range_result: IN BAND
+error: $85.29 (12.8%)
+direction: UP - MISS","low: $615.1600 - HIT
+median: $641.5700 - HIT
+high: $664.8700 - HIT
+p90: $615.1600 - HIT
+p60: $637.3800 - HIT
+p50: $641.5700 - HIT
+p20: $664.8700 - HIT
+pdcp20: $664.8700 - HIT
+range_result: ABOVE BAND
+error: $25.23 (3.8%)
+direction: UP - CORRECT","1. lightgbm ($24.86)
+2. xgboost ($25.23)
+3. randomforest ($25.73)
+4. knn2 ($34.10)
+5. analog ($74.14)
+6. kendall ($85.29)
+7. spearman ($90.35)
+8. manhattan ($92.16)
+9. euclidean ($92.48)
+10. pearson ($94.35)
+11. cosine ($99.50)","low: $615.0500 - HIT
+median: $641.9400 - HIT
+high: $653.8800 - HIT
+p90: $615.0500 - HIT
+p60: $626.8600 - HIT
+p50: $641.9400 - HIT
+p20: $653.8800 - HIT
+pdcp20: $653.8800 - HIT
+range_result: ABOVE BAND
+error: $24.86 (3.7%)
+direction: UP - MISS",,"low: $623.7300 - HIT
+median: $641.0700 - HIT
+high: $662.0000 - HIT
+p90: $623.7300 - HIT
+p60: $637.9400 - HIT
+p50: $641.0700 - HIT
+p20: $662.0000 - HIT
+pdcp20: $662.0000 - HIT
+range_result: ABOVE BAND
+error: $25.73 (3.9%)
+direction: UP - MISS","low: $544.2400 - HIT
+median: $574.6400 - HIT
+high: $616.4800 - HIT
+p90: $544.2400 - HIT
+p60: $570.6900 - HIT
+p50: $574.6400 - HIT
+p20: $597.2700 - HIT
+pdcp20: $597.2700 - HIT
+range_result: ABOVE BAND
+error: $92.16 (13.8%)
+direction: DOWN - CORRECT",,"low: $630.7400 - HIT
+median: $632.7000 - HIT
+high: $638.6500 - HIT
+p90: $638.6500 - HIT
+p60: $632.7000 - HIT
+p50: $632.2100 - HIT
+p20: $630.7400 - HIT
+pdcp90: $614.7800 - HIT
+pdcp60: $582.7300 - HIT
+pdcp20: $506.2000 - HIT
+range_result: ABOVE BAND
+error: $34.10 (5.1%)
+direction: DOWN - CORRECT"
+2026-05-07,Day 2 of 36,$666.80,"C: $646.63
+O: $650.36
+H: $683.09
+L: $635.42
+moved down 3.02%
+Direction: WRONG","price: $596.5900 - HIT
+error: $50.04 (7.7%)
+direction: UP - MISS",,"low: $536.3200 - HIT
+median: $576.0300 - HIT
+high: $638.5500 - HIT
+p90: $536.3200 - HIT
+p60: $563.4800 - HIT
+p50: $576.0300 - HIT
+p20: $608.0600 - HIT
+pdcp20: $608.0600 - HIT
+range_result: ABOVE BAND
+error: $70.60 (10.9%)
+direction: DOWN - CORRECT","low: $522.3400 - HIT
+median: $581.4800 - HIT
+high: $617.5700 - HIT
+p90: $522.3400 - HIT
+p60: $569.3700 - HIT
+p50: $581.4800 - HIT
+p20: $604.4200 - HIT
+pdcp20: $604.4200 - HIT
+range_result: ABOVE BAND
+error: $65.15 (10.1%)
+direction: UP - MISS","low: $515.8200 - HIT
+median: $576.0300 - HIT
+high: $593.9100 - HIT
+p90: $515.8200 - HIT
+p60: $564.3100 - HIT
+p50: $576.0300 - HIT
+p20: $588.6300 - HIT
+pdcp20: $588.6300 - HIT
+range_result: ABOVE BAND
+error: $70.60 (10.9%)
+direction: DOWN - CORRECT","low: $535.1200 - HIT
+median: $574.4100 - HIT
+high: $625.4400 - HIT
+p90: $535.1200 - HIT
+p60: $571.5100 - HIT
+p50: $574.4100 - HIT
+p20: $608.1300 - HIT
+pdcp20: $608.1300 - HIT
+range_result: ABOVE BAND
+error: $72.22 (11.2%)
+direction: DOWN - CORRECT",,"low: $552.9000 - HIT
+median: $561.2800 - HIT
+high: $639.4500 - HIT
+p90: $552.9000 - HIT
+p60: $558.2100 - HIT
+p50: $561.2800 - HIT
+p20: $611.4200 - HIT
+pdcp20: $611.4200 - HIT
+range_result: ABOVE BAND
+error: $85.35 (13.2%)
+direction: DOWN - CORRECT","low: $606.9800 - HIT
+median: $643.6200 - HIT
+high: $669.2300 - MISS
+p90: $606.9800 - HIT
+p60: $636.3400 - HIT
+p50: $643.6200 - HIT
+p20: $669.2300 - MISS
+pdcp20: $669.2300 - MISS
+range_result: IN BAND
+error: $3.01 (0.5%)
+direction: UP - CORRECT","1. randomforest ($1.95)
+2. xgboost ($3.01)
+3. lightgbm ($3.50)
+4. knn2 ($37.98)
+5. analog ($50.04)
+6. pearson ($65.15)
+7. manhattan ($70.18)
+8. spearman ($70.60)
+9. cosine ($70.60)
+10. euclidean ($72.22)
+11. kendall ($85.35)","low: $609.1400 - HIT
+median: $643.1300 - HIT
+high: $657.4300 - MISS
+p90: $609.1400 - HIT
+p60: $629.4800 - HIT
+p50: $643.1300 - HIT
+p20: $657.4300 - MISS
+pdcp20: $657.4300 - MISS
+range_result: IN BAND
+error: $3.50 (0.5%)
+direction: UP - MISS",,"low: $614.7100 - HIT
+median: $644.6800 - HIT
+high: $669.1000 - MISS
+p90: $614.7100 - HIT
+p60: $639.1300 - HIT
+p50: $644.6800 - HIT
+p20: $669.1000 - MISS
+pdcp20: $669.1000 - MISS
+range_result: IN BAND
+error: $1.95 (0.3%)
+direction: UP - MISS","low: $556.2400 - HIT
+median: $576.4500 - HIT
+high: $626.9000 - HIT
+p90: $556.2400 - HIT
+p60: $571.5100 - HIT
+p50: $576.4500 - HIT
+p20: $605.6500 - HIT
+pdcp20: $605.6500 - HIT
+range_result: ABOVE BAND
+error: $70.18 (10.9%)
+direction: DOWN - CORRECT",,"low: $601.6100 - HIT
+median: $608.6500 - HIT
+high: $679.9900 - MISS
+p90: $679.9900 - MISS
+p60: $608.6500 - HIT
+p50: $606.8900 - HIT
+p20: $601.6100 - HIT
+pdcp90: $679.9900 - MISS
+pdcp60: $611.3200 - HIT
+pdcp20: $509.0000 - HIT
+range_result: IN BAND
+error: $37.98 (5.9%)
+direction: DOWN - CORRECT"
+2026-05-08,Day 3 of 36,$646.63,"C: $746.81
+O: $676.43
+H: $747.21
+L: $676.36
+moved up 15.49%
+Direction: WRONG","price: $593.2600 - HIT
+error: $153.55 (20.6%)
+direction: UP - MISS",,"low: $541.5200 - HIT
+median: $580.9900 - HIT
+high: $665.6300 - HIT
+p90: $541.5200 - HIT
+p60: $576.4500 - HIT
+p50: $580.9900 - HIT
+p20: $629.8000 - HIT
+pdcp20: $629.8000 - HIT
+range_result: ABOVE BAND
+error: $165.82 (22.2%)
+direction: UP - MISS","low: $505.0000 - HIT
+median: $581.6600 - HIT
+high: $627.3200 - HIT
+p90: $505.0000 - HIT
+p60: $574.0700 - HIT
+p50: $581.6600 - HIT
+p20: $609.0600 - HIT
+pdcp20: $609.0600 - HIT
+range_result: ABOVE BAND
+error: $165.15 (22.1%)
+direction: UP - MISS","low: $538.8600 - HIT
+median: $578.8900 - HIT
+high: $626.6100 - HIT
+p90: $538.8600 - HIT
+p60: $574.4400 - HIT
+p50: $578.8900 - HIT
+p20: $608.1200 - HIT
+pdcp20: $608.1200 - HIT
+range_result: ABOVE BAND
+error: $167.92 (22.5%)
+direction: UP - MISS","low: $548.5500 - HIT
+median: $576.4500 - HIT
+high: $629.7300 - HIT
+p90: $548.5500 - HIT
+p60: $572.2900 - HIT
+p50: $576.4500 - HIT
+p20: $610.7900 - HIT
+pdcp20: $610.7900 - HIT
+range_result: ABOVE BAND
+error: $170.36 (22.8%)
+direction: DOWN - CORRECT",,"low: $533.3000 - HIT
+median: $558.6700 - HIT
+high: $645.5100 - HIT
+p90: $533.3000 - HIT
+p60: $552.9700 - HIT
+p50: $558.6700 - HIT
+p20: $613.4500 - HIT
+pdcp20: $613.4500 - HIT
+range_result: ABOVE BAND
+error: $188.14 (25.2%)
+direction: DOWN - CORRECT","low: $598.8100 - HIT
+median: $645.6600 - HIT
+high: $673.5900 - HIT
+p90: $598.8100 - HIT
+p60: $635.2900 - HIT
+p50: $645.6600 - HIT
+p20: $673.5900 - HIT
+pdcp20: $673.5900 - HIT
+range_result: ABOVE BAND
+error: $101.15 (13.5%)
+direction: UP - MISS","1. randomforest ($98.52)
+2. xgboost ($101.15)
+3. lightgbm ($102.49)
+4. knn2 ($103.82)
+5. analog ($153.55)
+6. pearson ($165.15)
+7. spearman ($165.82)
+8. manhattan ($166.27)
+9. cosine ($167.92)
+10. euclidean ($170.36)
+11. kendall ($188.14)","low: $603.2400 - HIT
+median: $644.3200 - HIT
+high: $660.9900 - HIT
+p90: $603.2400 - HIT
+p60: $632.1100 - HIT
+p50: $644.3200 - HIT
+p20: $660.9900 - HIT
+pdcp20: $660.9900 - HIT
+range_result: ABOVE BAND
+error: $102.49 (13.7%)
+direction: UP - MISS",,"low: $605.6900 - HIT
+median: $648.2900 - HIT
+high: $676.1900 - HIT
+p90: $605.6900 - HIT
+p60: $640.3300 - HIT
+p50: $648.2900 - HIT
+p20: $676.1900 - HIT
+pdcp60: $640.3300 - HIT
+pdcp20: $676.1900 - HIT
+range_result: ABOVE BAND
+error: $98.52 (13.2%)
+direction: UP - MISS","low: $552.9400 - HIT
+median: $580.5400 - HIT
+high: $665.0300 - HIT
+p90: $552.9400 - HIT
+p60: $572.2900 - HIT
+p50: $580.5400 - HIT
+p20: $614.6800 - HIT
+pdcp20: $614.6800 - HIT
+range_result: ABOVE BAND
+error: $166.27 (22.3%)
+direction: UP - MISS",,"low: $640.7600 - HIT
+median: $642.9900 - HIT
+high: $645.9800 - HIT
+p90: $645.9800 - HIT
+p60: $642.9900 - HIT
+p50: $642.4300 - HIT
+p20: $640.7600 - HIT
+pdcp90: $645.9800 - HIT
+pdcp60: $642.9900 - HIT
+pdcp20: $640.7600 - HIT
+range_result: ABOVE BAND
+error: $103.82 (13.9%)
+direction: DOWN - CORRECT"
+2026-05-11,Day 1 of 36,$746.81,"C: $795.33
+O: $792.77
+H: $818.67
+L: $768.68
+moved up 6.50%
+Direction: WRONG","price: $729.6100 - HIT
+pdcp: null
+error: $65.72 (8.3%)
+direction: DOWN - MISS",,"low: $703.0000 - HIT
+median: $742.5200 - HIT
+high: $769.0700 - HIT
+p90: $703.0000 - HIT
+p60: $736.9200 - HIT
+p50: $742.5200 - HIT
+p20: $757.8600 - HIT
+pdcp20: $757.8600 - HIT
+range_result: ABOVE BAND
+error: $52.81 (6.6%)
+direction: DOWN - MISS","low: $699.0900 - HIT
+median: $734.8400 - HIT
+high: $756.8300 - HIT
+p90: $699.0900 - HIT
+p60: $730.0600 - HIT
+p50: $734.8400 - HIT
+p20: $746.8100 - HIT
+range_result: ABOVE BAND
+error: $60.49 (7.6%)
+direction: DOWN - MISS","low: $721.4000 - HIT
+median: $734.4000 - HIT
+high: $752.0000 - HIT
+p90: $721.4000 - HIT
+p60: $731.4800 - HIT
+p50: $734.4000 - HIT
+p20: $748.9400 - HIT
+pdcp20: $748.9400 - HIT
+range_result: ABOVE BAND
+error: $60.93 (7.7%)
+direction: DOWN - MISS","low: $716.9400 - HIT
+median: $738.9700 - HIT
+high: $764.7600 - HIT
+p90: $716.9400 - HIT
+p60: $734.1200 - HIT
+p50: $738.9700 - HIT
+p20: $759.3200 - HIT
+pdcp20: $759.3200 - HIT
+range_result: ABOVE BAND
+error: $56.36 (7.1%)
+direction: DOWN - MISS",,"low: $680.7200 - HIT
+median: $733.7100 - HIT
+high: $767.7500 - HIT
+p90: $680.7200 - HIT
+p60: $726.6300 - HIT
+p50: $733.7100 - HIT
+p20: $753.7900 - HIT
+pdcp20: $753.7900 - HIT
+range_result: ABOVE BAND
+error: $61.62 (7.7%)
+direction: DOWN - MISS","low: $590.6400 - HIT
+median: $647.7100 - HIT
+high: $677.9600 - HIT
+p90: $590.6400 - HIT
+p60: $634.2400 - HIT
+p50: $647.7100 - HIT
+p20: $677.9600 - HIT
+pdcp20: $677.9600 - HIT
+range_result: ABOVE BAND
+error: $147.62 (18.6%)
+direction: UP - MISS","1. manhattan ($48.52)
+2. spearman ($52.81)
+3. euclidean ($56.36)
+4. pearson ($60.49)
+5. cosine ($60.93)
+6. kendall ($61.62)
+7. analog ($65.72)
+8. knn2 ($83.86)
+9. randomforest ($143.43)
+10. xgboost ($147.62)
+11. lightgbm ($149.82)","low: $597.3300 - HIT
+median: $645.5100 - HIT
+high: $664.5400 - HIT
+p90: $597.3300 - HIT
+p60: $634.7300 - HIT
+p50: $645.5100 - HIT
+p20: $664.5400 - HIT
+pdcp20: $664.5400 - HIT
+range_result: ABOVE BAND
+error: $149.82 (18.8%)
+direction: UP - CORRECT",,"low: $596.6800 - HIT
+median: $651.9000 - HIT
+high: $683.2900 - HIT
+p90: $596.6800 - HIT
+p60: $641.5200 - HIT
+p50: $651.9000 - HIT
+p20: $683.2900 - HIT
+pdcp60: $641.5200 - HIT
+pdcp20: $683.2900 - HIT
+range_result: ABOVE BAND
+error: $143.43 (18.0%)
+direction: UP - CORRECT","low: $712.2800 - HIT
+median: $746.8100 - HIT
+high: $773.2200 - HIT
+p90: $712.2800 - HIT
+p60: $738.7000 - HIT
+p50: $746.8100 - HIT
+p20: $769.6200 - HIT
+pdcp20: $769.6200 - HIT
+range_result: ABOVE BAND
+error: $48.52 (6.1%)
+direction: DOWN - MISS",,"low: $708.9200 - HIT
+median: $711.4700 - HIT
+high: $713.8800 - HIT
+p90: $713.8800 - HIT
+p60: $711.4700 - HIT
+p50: $710.7200 - HIT
+p20: $708.9200 - HIT
+pdcp90: $656.1000 - HIT
+pdcp60: $644.2500 - HIT
+pdcp20: $640.5500 - HIT
+range_result: ABOVE BAND
+error: $83.86 (10.5%)
+direction: DOWN - MISS"
+2026-05-12,Day 1 of 36,$795.33,"C: $766.58
+O: $774.70
+H: $782.76
+L: $706.62
+moved down 3.61%
+Direction: WRONG","price: $790.9000 - MISS
+pdcp: null
+error: $24.32 (3.2%)
+direction: DOWN - CORRECT",,"low: $735.0200 - HIT
+median: $780.1800 - MISS
+high: $803.5600 - MISS
+p90: $735.0200 - HIT
+p60: $777.4300 - MISS
+p50: $780.1800 - MISS
+p20: $795.3300 - MISS
+range_result: IN BAND
+error: $13.60 (1.8%)
+direction: DOWN - CORRECT","low: $754.7600 - HIT
+median: $786.0200 - MISS
+high: $805.5600 - MISS
+p90: $754.7600 - HIT
+p60: $784.1500 - MISS
+p50: $786.0200 - MISS
+p20: $795.3300 - MISS
+range_result: IN BAND
+error: $19.44 (2.5%)
+direction: DOWN - CORRECT","low: $777.7300 - MISS
+median: $799.3700 - MISS
+high: $818.0400 - MISS
+p90: $777.7300 - MISS
+p60: $794.3300 - MISS
+p50: $799.3700 - MISS
+p20: $812.2400 - MISS
+pdcp20: $812.2400 - MISS
+range_result: BELOW BAND
+error: $32.79 (4.3%)
+direction: UP - MISS","low: $763.5200 - HIT
+median: $783.4600 - MISS
+high: $821.9000 - MISS
+p90: $763.5200 - HIT
+p60: $781.8100 - MISS
+p50: $783.4600 - MISS
+p20: $810.2400 - MISS
+pdcp20: $810.2400 - MISS
+range_result: IN BAND
+error: $16.88 (2.2%)
+direction: DOWN - CORRECT",,"low: $723.8600 - HIT
+median: $781.3800 - MISS
+high: $790.7900 - MISS
+p90: $723.8600 - HIT
+p60: $772.7600 - MISS
+p50: $781.3800 - MISS
+p20: $786.2400 - MISS
+range_result: IN BAND
+error: $14.80 (1.9%)
+direction: DOWN - CORRECT","low: $759.0600 - HIT
+median: $791.5800 - MISS
+high: $833.1000 - MISS
+p90: $759.0600 - HIT
+p60: $785.0100 - MISS
+p50: $791.5800 - MISS
+p20: $833.1000 - MISS
+pdcp20: $833.1000 - MISS
+range_result: IN BAND
+error: $25.00 (3.3%)
+direction: DOWN - CORRECT","1. spearman ($13.60)
+2. kendall ($14.80)
+3. euclidean ($16.88)
+4. manhattan ($19.11)
+5. pearson ($19.44)
+6. analog ($24.32)
+7. xgboost ($25.00)
+8. cosine ($32.79)
+9. randomforest ($42.34)
+10. knn2 ($47.17)
+11. lightgbm ($119.89)","low: $591.4300 - HIT
+median: $646.6900 - HIT
+high: $668.1000 - HIT
+p90: $591.4300 - HIT
+p60: $637.3600 - HIT
+p50: $646.6900 - HIT
+p20: $668.1000 - HIT
+pdcp20: $668.1000 - HIT
+range_result: ABOVE BAND
+error: $119.89 (15.6%)
+direction: UP - MISS",,"low: $767.3200 - MISS
+median: $808.9200 - MISS
+high: $835.8000 - MISS
+p90: $767.3200 - MISS
+p60: $800.9500 - MISS
+p50: $808.9200 - MISS
+p20: $835.8000 - MISS
+pdcp60: $800.9500 - MISS
+pdcp20: $835.8000 - MISS
+range_result: BELOW BAND
+error: $42.34 (5.5%)
+direction: UP - MISS","low: $747.1300 - HIT
+median: $785.6900 - MISS
+high: $821.6400 - MISS
+p90: $747.1300 - HIT
+p60: $780.3900 - MISS
+p50: $785.6900 - MISS
+p20: $810.4300 - MISS
+pdcp20: $810.4300 - MISS
+range_result: IN BAND
+error: $19.11 (2.5%)
+direction: DOWN - CORRECT",,"low: $719.4100 - HIT
+median: $719.4100 - HIT
+high: $804.7300 - MISS
+p90: $804.7300 - MISS
+p60: $719.4100 - HIT
+p50: $719.4100 - HIT
+p20: $719.4100 - HIT
+pdcp90: $804.7300 - MISS
+pdcp60: $603.0900 - HIT
+pdcp20: $537.3200 - HIT
+range_result: IN BAND
+error: $47.17 (6.2%)
+direction: DOWN - CORRECT"
+2026-05-13,Day 2 of 36,$766.58,"C: $803.63
+O: $813.16
+H: $814.95
+L: $779.47
+moved up 4.83%
+Direction: WRONG","price: $772.6800 - HIT
+pdcp: null
+error: $30.95 (3.9%)
+direction: DOWN - MISS",,"low: $722.7900 - HIT
+median: $771.0300 - HIT
+high: $814.8000 - MISS
+p90: $722.7900 - HIT
+p60: $756.5100 - HIT
+p50: $771.0300 - HIT
+p20: $806.0100 - MISS
+pdcp20: $806.0100 - MISS
+range_result: IN BAND
+error: $32.60 (4.1%)
+direction: DOWN - MISS","low: $731.2000 - HIT
+median: $777.3400 - HIT
+high: $814.8000 - MISS
+p90: $731.2000 - HIT
+p60: $768.5200 - HIT
+p50: $777.3400 - HIT
+p20: $798.0400 - HIT
+pdcp20: $798.0400 - HIT
+range_result: IN BAND
+error: $26.29 (3.3%)
+direction: DOWN - MISS","low: $763.6900 - HIT
+median: $789.5400 - HIT
+high: $847.3200 - MISS
+p90: $763.6900 - HIT
+p60: $787.8900 - HIT
+p50: $789.5400 - HIT
+p20: $831.4900 - MISS
+pdcp20: $831.4900 - MISS
+range_result: IN BAND
+error: $14.09 (1.8%)
+direction: DOWN - MISS","low: $754.9200 - HIT
+median: $788.3200 - HIT
+high: $823.7700 - MISS
+p90: $754.9200 - HIT
+p60: $786.2700 - HIT
+p50: $788.3200 - HIT
+p20: $796.5200 - HIT
+pdcp20: $796.5200 - HIT
+range_result: IN BAND
+error: $15.31 (1.9%)
+direction: DOWN - MISS",,"low: $725.2800 - HIT
+median: $795.3300 - HIT
+high: $808.9600 - MISS
+p90: $725.2800 - HIT
+p60: $788.9000 - HIT
+p50: $795.3300 - HIT
+p20: $799.8700 - HIT
+pdcp20: $799.8700 - HIT
+range_result: IN BAND
+error: $8.30 (1.0%)
+direction: DOWN - MISS","low: $747.6200 - HIT
+median: $788.6500 - HIT
+high: $838.2200 - MISS
+p90: $747.6200 - HIT
+p60: $781.8500 - HIT
+p50: $788.6500 - HIT
+p20: $838.2200 - MISS
+pdcp20: $838.2200 - MISS
+range_result: IN BAND
+error: $14.98 (1.9%)
+direction: DOWN - CORRECT","1. randomforest ($7.29)
+2. kendall ($8.30)
+3. cosine ($14.09)
+4. xgboost ($14.98)
+5. manhattan ($15.11)
+6. euclidean ($15.31)
+7. pearson ($26.29)
+8. analog ($30.95)
+9. spearman ($32.60)
+10. knn2 ($77.90)
+11. lightgbm ($156.10)","low: $601.9100 - HIT
+median: $647.5300 - HIT
+high: $665.8000 - HIT
+p90: $601.9100 - HIT
+p60: $638.9200 - HIT
+p50: $647.5300 - HIT
+p20: $665.8000 - HIT
+pdcp20: $665.8000 - HIT
+range_result: ABOVE BAND
+error: $156.10 (19.4%)
+direction: UP - CORRECT",,"low: $759.9500 - HIT
+median: $810.9200 - MISS
+high: $852.5000 - MISS
+p90: $759.9500 - HIT
+p60: $802.6000 - HIT
+p50: $810.9200 - MISS
+p20: $852.5000 - MISS
+pdcp60: $802.6000 - HIT
+pdcp20: $852.5000 - MISS
+range_result: IN BAND
+error: $7.29 (0.9%)
+direction: UP - CORRECT","low: $730.1500 - HIT
+median: $788.5200 - HIT
+high: $857.4300 - MISS
+p90: $730.1500 - HIT
+p60: $784.6800 - HIT
+p50: $788.5200 - HIT
+p20: $807.2500 - MISS
+pdcp20: $807.2500 - MISS
+range_result: IN BAND
+error: $15.11 (1.9%)
+direction: DOWN - MISS",,"low: $724.1500 - HIT
+median: $725.7300 - HIT
+high: $780.4600 - HIT
+p90: $780.4600 - HIT
+p60: $725.7300 - HIT
+p50: $725.3300 - HIT
+p20: $724.1500 - HIT
+pdcp90: $661.9600 - HIT
+pdcp60: $617.3900 - HIT
+range_result: ABOVE BAND
+error: $77.90 (9.7%)
+direction: DOWN - MISS"
+2026-05-14,Day 3 of 36,$803.63,"C: $776.01
+O: $787.62
+H: $812.00
+L: $775.63
+moved down 3.44%
+Direction: WRONG","price: $764.5300 - HIT
+pdcp: null
+error: $11.48 (1.5%)
+direction: DOWN - CORRECT",,"low: $707.3900 - HIT
+median: $757.9500 - HIT
+high: $811.9400 - MISS
+p90: $707.3900 - HIT
+p60: $744.2000 - HIT
+p50: $757.9500 - HIT
+p20: $807.2900 - MISS
+pdcp20: $807.2900 - MISS
+range_result: IN BAND
+error: $18.06 (2.3%)
+direction: DOWN - CORRECT","low: $734.7700 - HIT
+median: $782.0700 - MISS
+high: $833.1100 - MISS
+p90: $734.7700 - HIT
+p60: $771.2000 - HIT
+p50: $782.0700 - MISS
+p20: $807.2900 - MISS
+pdcp20: $807.2900 - MISS
+range_result: IN BAND
+error: $6.06 (0.8%)
+direction: DOWN - CORRECT","low: $769.8100 - HIT
+median: $801.2700 - MISS
+high: $880.9400 - MISS
+p90: $769.8100 - HIT
+p60: $795.3300 - MISS
+p50: $801.2700 - MISS
+p20: $833.4500 - MISS
+pdcp60: $795.3300 - MISS
+pdcp20: $833.4500 - MISS
+range_result: IN BAND
+error: $25.26 (3.3%)
+direction: UP - MISS","low: $745.9000 - HIT
+median: $795.3300 - MISS
+high: $838.0900 - MISS
+p90: $745.9000 - HIT
+p60: $787.6100 - MISS
+p50: $795.3300 - MISS
+p20: $806.5000 - MISS
+pdcp20: $806.5000 - MISS
+range_result: IN BAND
+error: $19.32 (2.5%)
+direction: DOWN - CORRECT",,"low: $718.7900 - HIT
+median: $774.0300 - HIT
+high: $853.9300 - MISS
+p90: $718.7900 - HIT
+p60: $763.2700 - HIT
+p50: $774.0300 - HIT
+p20: $814.8600 - MISS
+pdcp20: $814.8600 - MISS
+range_result: IN BAND
+error: $1.98 (0.3%)
+direction: DOWN - CORRECT","low: $736.1800 - HIT
+median: $785.7200 - MISS
+high: $843.3300 - MISS
+p90: $736.1800 - HIT
+p60: $778.7000 - MISS
+p50: $785.7200 - MISS
+p20: $843.3300 - MISS
+pdcp20: $843.3300 - MISS
+range_result: IN BAND
+error: $9.71 (1.3%)
+direction: DOWN - CORRECT","1. kendall ($1.98)
+2. pearson ($6.06)
+3. xgboost ($9.71)
+4. analog ($11.48)
+5. spearman ($18.06)
+6. euclidean ($19.32)
+7. manhattan ($19.32)
+8. cosine ($25.26)
+9. knn2 ($32.21)
+10. randomforest ($36.91)
+11. lightgbm ($127.64)","low: $612.3800 - HIT
+median: $648.3700 - HIT
+high: $663.5000 - HIT
+p90: $612.3800 - HIT
+p60: $640.4700 - HIT
+p50: $648.3700 - HIT
+p20: $663.5000 - HIT
+pdcp60: $640.4700 - HIT
+pdcp20: $663.5000 - HIT
+range_result: ABOVE BAND
+error: $127.64 (16.4%)
+direction: UP - MISS",,"low: $752.5700 - HIT
+median: $812.9200 - MISS
+high: $869.2000 - MISS
+p90: $752.5700 - HIT
+p60: $804.2500 - MISS
+p50: $812.9200 - MISS
+p20: $869.2000 - MISS
+pdcp60: $804.2500 - MISS
+pdcp20: $869.2000 - MISS
+range_result: IN BAND
+error: $36.91 (4.8%)
+direction: UP - MISS","low: $719.2500 - HIT
+median: $795.3300 - MISS
+high: $876.5200 - MISS
+p90: $719.2500 - HIT
+p60: $792.5100 - MISS
+p50: $795.3300 - MISS
+p20: $860.5400 - MISS
+pdcp20: $860.5400 - MISS
+range_result: IN BAND
+error: $19.32 (2.5%)
+direction: DOWN - CORRECT",,"low: $719.2000 - HIT
+median: $743.8000 - HIT
+high: $806.6100 - MISS
+p90: $806.6100 - MISS
+p60: $743.8000 - HIT
+p50: $737.6500 - HIT
+p20: $719.2000 - HIT
+pdcp90: $806.6100 - MISS
+pdcp60: $602.1100 - HIT
+pdcp20: $535.3000 - HIT
+range_result: IN BAND
+error: $32.21 (4.2%)
+direction: DOWN - CORRECT"
+2026-05-15,Day 4 of 36,$776.01,"C: $724.66
+O: $732.39
+H: $749.59
+L: $719.00
+moved down 6.62%
+Direction: WRONG","price: $752.7600 - MISS
+pdcp: null
+error: $28.10 (3.9%)
+direction: DOWN - CORRECT",,"low: $700.0600 - HIT
+median: $776.5900 - MISS
+high: $840.3800 - MISS
+p90: $700.0600 - HIT
+p60: $764.6700 - MISS
+p50: $776.5900 - MISS
+p20: $805.0200 - MISS
+pdcp20: $805.0200 - MISS
+range_result: IN BAND
+error: $51.93 (7.2%)
+direction: DOWN - CORRECT","low: $723.0300 - HIT
+median: $783.7200 - MISS
+high: $837.1300 - MISS
+p90: $723.0300 - HIT
+p60: $776.5500 - MISS
+p50: $783.7200 - MISS
+p20: $808.4400 - MISS
+pdcp20: $808.4400 - MISS
+range_result: IN BAND
+error: $59.06 (8.2%)
+direction: DOWN - CORRECT","low: $764.4700 - MISS
+median: $801.2700 - MISS
+high: $898.1400 - MISS
+p90: $764.4700 - MISS
+p60: $793.1500 - MISS
+p50: $801.2700 - MISS
+p20: $839.1800 - MISS
+pdcp20: $839.1800 - MISS
+range_result: BELOW BAND
+error: $76.61 (10.6%)
+direction: UP - MISS","low: $762.4400 - MISS
+median: $789.3000 - MISS
+high: $843.2100 - MISS
+p90: $762.4400 - MISS
+p60: $781.2800 - MISS
+p50: $789.3000 - MISS
+p20: $820.9800 - MISS
+pdcp20: $820.9800 - MISS
+range_result: BELOW BAND
+error: $64.64 (8.9%)
+direction: DOWN - CORRECT",,"low: $726.0200 - MISS
+median: $787.3000 - MISS
+high: $926.1700 - MISS
+p90: $726.0200 - MISS
+p60: $784.8300 - MISS
+p50: $787.3000 - MISS
+p20: $861.6700 - MISS
+pdcp20: $861.6700 - MISS
+range_result: BELOW BAND
+error: $62.64 (8.6%)
+direction: DOWN - CORRECT","low: $724.7400 - MISS
+median: $782.7900 - MISS
+high: $848.4500 - MISS
+p90: $724.7400 - MISS
+p60: $775.5500 - MISS
+p50: $782.7900 - MISS
+p20: $848.4500 - MISS
+pdcp20: $848.4500 - MISS
+range_result: BELOW BAND
+error: $58.13 (8.0%)
+direction: DOWN - MISS","1. knn2 ($2.08)
+2. analog ($28.10)
+3. spearman ($51.93)
+4. xgboost ($58.13)
+5. pearson ($59.06)
+6. kendall ($62.64)
+7. euclidean ($64.64)
+8. manhattan ($70.67)
+9. lightgbm ($75.45)
+10. cosine ($76.61)
+11. randomforest ($90.26)","low: $622.8600 - HIT
+median: $649.2100 - HIT
+high: $661.2000 - HIT
+p90: $622.8600 - HIT
+p60: $642.0300 - HIT
+p50: $649.2100 - HIT
+p20: $661.2000 - HIT
+pdcp60: $642.0300 - HIT
+pdcp20: $661.2000 - HIT
+range_result: ABOVE BAND
+error: $75.45 (10.4%)
+direction: UP - MISS",,"low: $745.2000 - MISS
+median: $814.9200 - MISS
+high: $885.9000 - MISS
+p90: $745.2000 - MISS
+p60: $805.9000 - MISS
+p50: $814.9200 - MISS
+p20: $885.9000 - MISS
+pdcp60: $805.9000 - MISS
+pdcp20: $885.9000 - MISS
+range_result: BELOW BAND
+error: $90.26 (12.5%)
+direction: UP - MISS","low: $758.2700 - MISS
+median: $795.3300 - MISS
+high: $892.5500 - MISS
+p90: $758.2700 - MISS
+p60: $785.4600 - MISS
+p50: $795.3300 - MISS
+p20: $843.2400 - MISS
+pdcp20: $843.2400 - MISS
+range_result: BELOW BAND
+error: $70.67 (9.8%)
+direction: DOWN - CORRECT",,"low: $724.3500 - HIT
+median: $726.7400 - MISS
+high: $796.3700 - MISS
+p90: $796.3700 - MISS
+p60: $726.7400 - MISS
+p50: $726.1400 - MISS
+p20: $724.3500 - HIT
+pdcp90: $796.3700 - MISS
+pdcp60: $674.0600 - HIT
+pdcp20: $543.7000 - HIT
+range_result: IN BAND
+error: $2.08 (0.3%)
+direction: DOWN - CORRECT"
+2026-05-18,Day 5 of 36,$724.66,"C: $681.54
+O: $750.46
+H: $757.00
+L: $663.25
+moved down 5.95%
+Direction: WRONG","price: $777.0300 - MISS
+pdcp: null
+error: $95.49 (14.0%)
+direction: DOWN - CORRECT",,"low: $711.8700 - MISS
+median: $752.2400 - MISS
+high: $837.5300 - MISS
+p90: $711.8700 - MISS
+p60: $751.2300 - MISS
+p50: $752.2400 - MISS
+p20: $809.2000 - MISS
+pdcp20: $809.2000 - MISS
+range_result: BELOW BAND
+error: $70.70 (10.4%)
+direction: DOWN - CORRECT","low: $707.6000 - MISS
+median: $776.6100 - MISS
+high: $885.4300 - MISS
+p90: $707.6000 - MISS
+p60: $762.7300 - MISS
+p50: $776.6100 - MISS
+p20: $825.5000 - MISS
+pdcp20: $825.5000 - MISS
+range_result: BELOW BAND
+error: $95.07 (13.9%)
+direction: DOWN - CORRECT","low: $747.8400 - MISS
+median: $798.7600 - MISS
+high: $909.2000 - MISS
+p90: $747.8400 - MISS
+p60: $788.7000 - MISS
+p50: $798.7600 - MISS
+p20: $877.5500 - MISS
+pdcp20: $877.5500 - MISS
+range_result: BELOW BAND
+error: $117.22 (17.2%)
+direction: UP - MISS","low: $751.6400 - MISS
+median: $789.2800 - MISS
+high: $822.1000 - MISS
+p90: $751.6400 - MISS
+p60: $783.8800 - MISS
+p50: $789.2800 - MISS
+p20: $816.6000 - MISS
+pdcp20: $816.6000 - MISS
+range_result: BELOW BAND
+error: $107.74 (15.8%)
+direction: DOWN - CORRECT",,"low: $712.4900 - MISS
+median: $788.2300 - MISS
+high: $897.9500 - MISS
+p90: $712.4900 - MISS
+p60: $778.2200 - MISS
+p50: $788.2300 - MISS
+p20: $874.9800 - MISS
+pdcp20: $874.9800 - MISS
+range_result: BELOW BAND
+error: $106.69 (15.7%)
+direction: DOWN - CORRECT","low: $713.3000 - MISS
+median: $779.8700 - MISS
+high: $853.5700 - MISS
+p90: $713.3000 - MISS
+p60: $772.3900 - MISS
+p50: $779.8700 - MISS
+p20: $853.5700 - MISS
+pdcp20: $853.5700 - MISS
+range_result: BELOW BAND
+error: $98.33 (14.4%)
+direction: DOWN - MISS","1. knn2 ($24.45)
+2. lightgbm ($31.48)
+3. spearman ($70.70)
+4. pearson ($95.07)
+5. analog ($95.49)
+6. xgboost ($98.33)
+7. kendall ($106.69)
+8. euclidean ($107.74)
+9. cosine ($117.22)
+10. manhattan ($124.35)
+11. randomforest ($135.38)","low: $633.3400 - HIT
+median: $650.0600 - HIT
+high: $658.9100 - HIT
+p90: $633.3400 - HIT
+p60: $643.5900 - HIT
+p50: $650.0600 - HIT
+p20: $658.9100 - HIT
+pdcp60: $643.5900 - HIT
+pdcp20: $658.9100 - HIT
+range_result: ABOVE BAND
+error: $31.48 (4.6%)
+direction: UP - MISS",,"low: $737.8200 - MISS
+median: $816.9200 - MISS
+high: $902.6000 - MISS
+p90: $737.8200 - MISS
+p60: $807.5500 - MISS
+p50: $816.9200 - MISS
+p20: $902.6000 - MISS
+pdcp60: $807.5500 - MISS
+pdcp20: $902.6000 - MISS
+range_result: BELOW BAND
+error: $135.38 (19.9%)
+direction: UP - MISS","low: $728.8300 - MISS
+median: $805.8900 - MISS
+high: $886.9100 - MISS
+p90: $728.8300 - MISS
+p60: $795.3300 - MISS
+p50: $805.8900 - MISS
+p20: $860.9900 - MISS
+pdcp20: $860.9900 - MISS
+range_result: BELOW BAND
+error: $124.35 (18.2%)
+direction: UP - MISS",,"low: $696.5600 - MISS
+median: $705.9900 - MISS
+high: $732.1100 - MISS
+p90: $732.1100 - MISS
+p60: $705.9900 - MISS
+p50: $703.6300 - MISS
+p20: $696.5600 - MISS
+pdcp90: $679.4200 - HIT
+pdcp60: $677.9400 - HIT
+pdcp20: $555.7200 - HIT
+range_result: BELOW BAND
+error: $24.45 (3.6%)
+direction: DOWN - CORRECT"
+2026-05-19,Day 1 of 36,$681.54,"C: $698.74
+O: $665.58
+H: $725.95
+L: $652.21
+moved up 2.52%
+Direction: WRONG","price: $663.8200 - HIT
+pdcp: null
+error: $34.92 (5.0%)
+direction: DOWN - MISS",,"low: $655.4400 - HIT
+median: $677.5300 - HIT
+high: $698.2800 - HIT
+p90: $655.4400 - HIT
+p60: $670.1300 - HIT
+p50: $677.5300 - HIT
+p20: $690.9600 - HIT
+pdcp20: $690.9600 - HIT
+range_result: ABOVE BAND
+error: $21.21 (3.0%)
+direction: DOWN - MISS","low: $657.1700 - HIT
+median: $676.3000 - HIT
+high: $696.5300 - HIT
+p90: $657.1700 - HIT
+p60: $674.5500 - HIT
+p50: $676.3000 - HIT
+p20: $691.0400 - HIT
+pdcp20: $691.0400 - HIT
+range_result: ABOVE BAND
+error: $22.44 (3.2%)
+direction: DOWN - MISS","low: $652.6800 - HIT
+median: $690.9500 - HIT
+high: $698.2800 - HIT
+p90: $652.6800 - HIT
+p60: $687.2100 - HIT
+p50: $690.9500 - HIT
+p20: $692.3300 - HIT
+pdcp60: $687.2100 - HIT
+pdcp20: $692.3300 - HIT
+range_result: ABOVE BAND
+error: $7.79 (1.1%)
+direction: UP - CORRECT","low: $660.8200 - HIT
+median: $683.9200 - HIT
+high: $718.4200 - MISS
+p90: $660.8200 - HIT
+p60: $672.3100 - HIT
+p50: $683.9200 - HIT
+p20: $703.0100 - MISS
+pdcp20: $703.0100 - MISS
+range_result: IN BAND
+error: $14.82 (2.1%)
+direction: UP - CORRECT",,"low: $648.1900 - HIT
+median: $681.5400 - HIT
+high: $712.4000 - MISS
+p90: $648.1900 - HIT
+p60: $670.3000 - HIT
+p50: $681.5400 - HIT
+p20: $705.3900 - MISS
+pdcp20: $705.3900 - MISS
+range_result: IN BAND
+error: $17.20 (2.5%)
+direction: DOWN - MISS","low: $710.7900 - MISS
+median: $788.8700 - MISS
+high: $861.3500 - MISS
+p90: $710.7900 - MISS
+p60: $779.0300 - MISS
+p50: $788.8700 - MISS
+p20: $861.3500 - MISS
+pdcp20: $861.3500 - MISS
+range_result: BELOW BAND
+error: $90.13 (12.9%)
+direction: DOWN - CORRECT","1. knn2 ($3.71)
+2. manhattan ($4.94)
+3. cosine ($7.79)
+4. randomforest ($14.44)
+5. euclidean ($14.82)
+6. kendall ($17.20)
+7. spearman ($21.21)
+8. pearson ($22.44)
+9. lightgbm ($25.98)
+10. analog ($34.92)
+11. xgboost ($90.13)","low: $647.3100 - HIT
+median: $672.7600 - HIT
+high: $684.8400 - HIT
+p90: $647.3100 - HIT
+p60: $661.4500 - HIT
+p50: $672.7600 - HIT
+p20: $684.8400 - HIT
+pdcp20: $684.8400 - HIT
+range_result: ABOVE BAND
+error: $25.98 (3.7%)
+direction: DOWN - MISS",,"low: $656.2400 - HIT
+median: $684.3000 - HIT
+high: $706.0500 - MISS
+p90: $656.2400 - HIT
+p60: $676.9300 - HIT
+p50: $684.3000 - HIT
+p20: $706.0500 - MISS
+pdcp20: $706.0500 - MISS
+range_result: IN BAND
+error: $14.44 (2.1%)
+direction: UP - CORRECT","low: $669.7500 - HIT
+median: $693.8000 - HIT
+high: $732.5100 - MISS
+p90: $669.7500 - HIT
+p60: $691.0200 - HIT
+p50: $693.8000 - HIT
+p20: $718.9900 - MISS
+pdcp60: $691.0200 - HIT
+pdcp20: $718.9900 - MISS
+range_result: IN BAND
+error: $4.94 (0.7%)
+direction: UP - CORRECT",,"low: $701.9200 - MISS
+median: $702.4500 - MISS
+high: $708.5000 - MISS
+p90: $708.5000 - MISS
+p60: $702.4500 - MISS
+p50: $702.3100 - MISS
+p20: $701.9200 - MISS
+pdcp90: $708.5000 - MISS
+pdcp60: $702.4500 - MISS
+pdcp20: $701.9200 - MISS
+range_result: BELOW BAND
+error: $3.71 (0.5%)
+direction: UP - CORRECT"
+2026-05-20,Day 2 of 36,$698.74,"C: $731.99
+O: $734.96
+H: $735.66
+L: $700.66
+moved up 4.76%
+Direction: WRONG","price: $660.7000 - HIT
+pdcp: null
+error: $71.29 (9.7%)
+direction: DOWN - MISS",,"low: $637.9100 - HIT
+median: $674.4400 - HIT
+high: $702.9800 - HIT
+p90: $637.9100 - HIT
+p60: $662.7000 - HIT
+p50: $674.4400 - HIT
+p20: $690.4300 - HIT
+pdcp20: $690.4300 - HIT
+range_result: ABOVE BAND
+error: $57.55 (7.9%)
+direction: DOWN - MISS","low: $652.4800 - HIT
+median: $681.5400 - HIT
+high: $726.8200 - HIT
+p90: $652.4800 - HIT
+p60: $667.1300 - HIT
+p50: $681.5400 - HIT
+p20: $709.6600 - HIT
+pdcp20: $709.6600 - HIT
+range_result: ABOVE BAND
+error: $50.45 (6.9%)
+direction: DOWN - MISS","low: $640.2300 - HIT
+median: $661.4800 - HIT
+high: $701.8400 - HIT
+p90: $640.2300 - HIT
+p60: $659.1800 - HIT
+p50: $661.4800 - HIT
+p20: $676.9500 - HIT
+range_result: ABOVE BAND
+error: $70.51 (9.6%)
+direction: DOWN - MISS","low: $644.8600 - HIT
+median: $678.9800 - HIT
+high: $750.4600 - MISS
+p90: $644.8600 - HIT
+p60: $662.7000 - HIT
+p50: $678.9800 - HIT
+p20: $710.6200 - HIT
+pdcp20: $710.6200 - HIT
+range_result: IN BAND
+error: $53.01 (7.2%)
+direction: DOWN - MISS",,"low: $634.4100 - HIT
+median: $671.3700 - HIT
+high: $699.5000 - HIT
+p90: $634.4100 - HIT
+p60: $665.1500 - HIT
+p50: $671.3700 - HIT
+p20: $692.2100 - HIT
+pdcp20: $692.2100 - HIT
+range_result: ABOVE BAND
+error: $60.62 (8.3%)
+direction: DOWN - MISS","low: $708.2800 - HIT
+median: $797.8700 - MISS
+high: $869.1300 - MISS
+p90: $708.2800 - HIT
+p60: $785.6600 - MISS
+p50: $797.8700 - MISS
+p20: $869.1300 - MISS
+pdcp20: $869.1300 - MISS
+range_result: IN BAND
+error: $65.88 (9.0%)
+direction: UP - CORRECT","1. manhattan ($22.34)
+2. randomforest ($40.57)
+3. lightgbm ($40.97)
+4. knn2 ($49.50)
+5. pearson ($50.45)
+6. euclidean ($53.01)
+7. spearman ($57.55)
+8. kendall ($60.62)
+9. xgboost ($65.88)
+10. cosine ($70.51)
+11. analog ($71.29)","low: $646.8000 - HIT
+median: $691.0200 - HIT
+high: $700.5800 - HIT
+p90: $646.8000 - HIT
+p60: $674.7300 - HIT
+p50: $691.0200 - HIT
+p20: $700.5800 - HIT
+pdcp20: $700.5800 - HIT
+range_result: ABOVE BAND
+error: $40.97 (5.6%)
+direction: UP - CORRECT",,"low: $653.3500 - HIT
+median: $691.4200 - HIT
+high: $724.4300 - HIT
+p90: $653.3500 - HIT
+p60: $683.2000 - HIT
+p50: $691.4200 - HIT
+p20: $724.4300 - HIT
+pdcp60: $683.2000 - HIT
+pdcp20: $724.4300 - HIT
+range_result: ABOVE BAND
+error: $40.57 (5.5%)
+direction: UP - CORRECT","low: $661.9500 - HIT
+median: $709.6500 - HIT
+high: $756.0100 - MISS
+p90: $661.9500 - HIT
+p60: $693.9000 - HIT
+p50: $709.6500 - HIT
+p20: $744.6400 - MISS
+pdcp60: $693.9000 - HIT
+pdcp20: $744.6400 - MISS
+range_result: IN BAND
+error: $22.34 (3.1%)
+direction: UP - CORRECT",,"low: $681.7300 - HIT
+median: $682.4900 - HIT
+high: $693.1100 - HIT
+p90: $693.1100 - HIT
+p60: $682.4900 - HIT
+p50: $682.3000 - HIT
+p20: $681.7300 - HIT
+pdcp90: $693.1100 - HIT
+pdcp60: $682.4900 - HIT
+pdcp20: $681.7300 - HIT
+range_result: ABOVE BAND
+error: $49.50 (6.8%)
+direction: UP - CORRECT"
+2026-05-21,Day 1 of 36,$731.99,"C: $762.10
+O: $736.36
+H: $764.90
+L: $732.23
+moved up 4.11%
+Direction: WRONG","price: $625.7900 - HIT
+pdcp: null
+error: $136.31 (17.9%)
+direction: DOWN - MISS",,"low: $635.2800 - HIT
+median: $669.4300 - HIT
+high: $707.2700 - HIT
+p90: $635.2800 - HIT
+p60: $662.9900 - HIT
+p50: $669.4300 - HIT
+p20: $691.9400 - HIT
+pdcp20: $691.9400 - HIT
+range_result: ABOVE BAND
+error: $92.67 (12.2%)
+direction: DOWN - MISS","low: $632.3300 - HIT
+median: $681.5400 - HIT
+high: $731.7300 - HIT
+p90: $632.3300 - HIT
+p60: $667.5600 - HIT
+p50: $681.5400 - HIT
+p20: $717.1700 - HIT
+pdcp20: $717.1700 - HIT
+range_result: ABOVE BAND
+error: $80.56 (10.6%)
+direction: DOWN - MISS","low: $631.7800 - HIT
+median: $691.2800 - HIT
+high: $739.7900 - HIT
+p90: $631.7800 - HIT
+p60: $677.6500 - HIT
+p50: $691.2800 - HIT
+p20: $718.6000 - HIT
+pdcp20: $718.6000 - HIT
+range_result: ABOVE BAND
+error: $70.82 (9.3%)
+direction: UP - CORRECT","low: $635.2800 - HIT
+median: $671.9400 - HIT
+high: $754.0200 - HIT
+p90: $635.2800 - HIT
+p60: $661.5100 - HIT
+p50: $671.9400 - HIT
+p20: $712.3700 - HIT
+pdcp20: $712.3700 - HIT
+range_result: ABOVE BAND
+error: $90.16 (11.8%)
+direction: DOWN - MISS",,"low: $616.9800 - HIT
+median: $668.6800 - HIT
+high: $712.4000 - HIT
+p90: $616.9800 - HIT
+p60: $668.2000 - HIT
+p50: $668.6800 - HIT
+p20: $705.3900 - HIT
+pdcp20: $705.3900 - HIT
+range_result: ABOVE BAND
+error: $93.42 (12.3%)
+direction: DOWN - MISS","low: $700.4400 - HIT
+median: $751.1100 - HIT
+high: $764.4200 - MISS
+p90: $700.4400 - HIT
+p60: $737.9800 - HIT
+p50: $751.1100 - HIT
+p20: $764.4200 - MISS
+pdcp60: $737.9800 - HIT
+pdcp20: $764.4200 - MISS
+range_result: IN BAND
+error: $10.99 (1.4%)
+direction: UP - CORRECT","1. xgboost ($10.99)
+2. lightgbm ($52.82)
+3. manhattan ($60.77)
+4. randomforest ($63.56)
+5. cosine ($70.82)
+6. pearson ($80.56)
+7. euclidean ($90.16)
+8. spearman ($92.67)
+9. kendall ($93.42)
+10. knn2 ($99.40)
+11. analog ($136.31)","low: $646.2900 - HIT
+median: $709.2800 - HIT
+high: $716.3100 - HIT
+p90: $646.2900 - HIT
+p60: $688.0200 - HIT
+p50: $709.2800 - HIT
+p20: $716.3100 - HIT
+pdcp60: $688.0200 - HIT
+pdcp20: $716.3100 - HIT
+range_result: ABOVE BAND
+error: $52.82 (6.9%)
+direction: UP - CORRECT",,"low: $650.4600 - HIT
+median: $698.5400 - HIT
+high: $742.8100 - HIT
+p90: $650.4600 - HIT
+p60: $689.4600 - HIT
+p50: $698.5400 - HIT
+p20: $742.8100 - HIT
+pdcp60: $689.4600 - HIT
+pdcp20: $742.8100 - HIT
+range_result: ABOVE BAND
+error: $63.56 (8.3%)
+direction: UP - CORRECT","low: $648.5800 - HIT
+median: $701.3300 - HIT
+high: $774.5200 - MISS
+p90: $648.5800 - HIT
+p60: $687.7500 - HIT
+p50: $701.3300 - HIT
+p20: $759.9300 - HIT
+pdcp60: $687.7500 - HIT
+pdcp20: $759.9300 - HIT
+range_result: IN BAND
+error: $60.77 (8.0%)
+direction: UP - CORRECT",,"low: $655.6200 - HIT
+median: $662.7000 - HIT
+high: $663.7100 - HIT
+p90: $663.7100 - HIT
+p60: $662.7000 - HIT
+p50: $657.1000 - HIT
+p20: $655.6200 - HIT
+pdcp90: $735.9900 - HIT
+pdcp60: $722.4700 - HIT
+pdcp20: $584.6900 - HIT
+range_result: ABOVE BAND
+error: $99.40 (13.0%)
+direction: UP - CORRECT"
+2026-05-22,Day 2 of 36,$762.10,"C: $751.00
+O: $756.82
+H: $780.20
+L: $747.27
+moved down 1.46%
+Direction: WRONG","price: $612.7600 - HIT
+pdcp: null
+error: $138.24 (18.4%)
+direction: DOWN - MISS",,"low: $598.5800 - HIT
+median: $658.7800 - HIT
+high: $708.3100 - HIT
+p90: $598.5800 - HIT
+p60: $649.2800 - HIT
+p50: $658.7800 - HIT
+p20: $669.0100 - HIT
+range_result: ABOVE BAND
+error: $92.22 (12.3%)
+direction: DOWN - MISS","low: $614.8500 - HIT
+median: $663.1200 - HIT
+high: $737.1800 - HIT
+p90: $614.8500 - HIT
+p60: $648.1300 - HIT
+p50: $663.1200 - HIT
+p20: $724.0500 - HIT
+pdcp20: $724.0500 - HIT
+range_result: ABOVE BAND
+error: $87.88 (11.7%)
+direction: DOWN - MISS","low: $623.3300 - HIT
+median: $662.0700 - HIT
+high: $743.5400 - HIT
+p90: $623.3300 - HIT
+p60: $651.2800 - HIT
+p50: $662.0700 - HIT
+p20: $728.8000 - HIT
+pdcp20: $728.8000 - HIT
+range_result: ABOVE BAND
+error: $88.93 (11.8%)
+direction: DOWN - MISS","low: $631.1100 - HIT
+median: $676.8100 - HIT
+high: $765.6300 - MISS
+p90: $631.1100 - HIT
+p60: $666.2600 - HIT
+p50: $676.8100 - HIT
+p20: $724.2500 - HIT
+pdcp20: $724.2500 - HIT
+range_result: IN BAND
+error: $74.19 (9.9%)
+direction: DOWN - MISS",,"low: $625.2200 - HIT
+median: $687.9700 - HIT
+high: $761.3400 - MISS
+p90: $625.2200 - HIT
+p60: $676.9700 - HIT
+p50: $687.9700 - HIT
+p20: $714.9200 - HIT
+pdcp20: $714.9200 - HIT
+range_result: IN BAND
+error: $63.03 (8.4%)
+direction: UP - CORRECT","low: $693.1900 - HIT
+median: $756.8900 - MISS
+high: $795.6200 - MISS
+p90: $693.1900 - HIT
+p60: $743.2000 - HIT
+p50: $756.8900 - MISS
+p20: $795.6200 - MISS
+pdcp60: $743.2000 - HIT
+pdcp20: $795.6200 - MISS
+range_result: IN BAND
+error: $5.89 (0.8%)
+direction: UP - CORRECT","1. xgboost ($5.89)
+2. knn2 ($11.49)
+3. lightgbm ($23.46)
+4. randomforest ($45.35)
+5. manhattan ($53.26)
+6. kendall ($63.03)
+7. euclidean ($74.19)
+8. pearson ($87.88)
+9. cosine ($88.93)
+10. spearman ($92.22)
+11. analog ($138.24)","low: $645.7900 - HIT
+median: $727.5400 - HIT
+high: $732.0500 - HIT
+p90: $645.7900 - HIT
+p60: $701.3100 - HIT
+p50: $727.5400 - HIT
+p20: $732.0500 - HIT
+pdcp60: $701.3100 - HIT
+pdcp20: $732.0500 - HIT
+range_result: ABOVE BAND
+error: $23.46 (3.1%)
+direction: UP - CORRECT",,"low: $647.5800 - HIT
+median: $705.6500 - HIT
+high: $761.1900 - MISS
+p90: $647.5800 - HIT
+p60: $695.7200 - HIT
+p50: $705.6500 - HIT
+p20: $761.1900 - MISS
+pdcp60: $695.7200 - HIT
+pdcp20: $761.1900 - MISS
+range_result: IN BAND
+error: $45.35 (6.0%)
+direction: UP - CORRECT","low: $643.3900 - HIT
+median: $697.7400 - HIT
+high: $775.3000 - MISS
+p90: $643.3900 - HIT
+p60: $677.7500 - HIT
+p50: $697.7400 - HIT
+p20: $758.6400 - MISS
+pdcp20: $758.6400 - MISS
+range_result: IN BAND
+error: $53.26 (7.1%)
+direction: UP - CORRECT",,"low: $735.5600 - HIT
+median: $739.5100 - HIT
+high: $753.0000 - MISS
+p90: $753.0000 - MISS
+p60: $739.5100 - HIT
+p50: $738.5200 - HIT
+p20: $735.5600 - HIT
+pdcp90: $727.4700 - HIT
+pdcp60: $723.0800 - HIT
+pdcp20: $586.9200 - HIT
+range_result: IN BAND
+error: $11.49 (1.5%)
+direction: UP - CORRECT"
+2026-05-26,Day 2 of 36,$751.00,"C: $895.88
+O: $820.50
+H: $916.76
+L: $820.29
+moved up 19.29%
+Direction: WRONG","price: $622.6600 - HIT
+pdcp: null
+error: $273.22 (30.5%)
+direction: DOWN - MISS",,"low: $525.4400 - HIT
+median: $660.4500 - HIT
+high: $676.9300 - HIT
+p90: $525.4400 - HIT
+p60: $643.0300 - HIT
+p50: $660.4500 - HIT
+p20: $669.6700 - HIT
+range_result: ABOVE BAND
+error: $235.43 (26.3%)
+direction: DOWN - MISS","low: $585.0200 - HIT
+median: $657.2000 - HIT
+high: $720.3400 - HIT
+p90: $585.0200 - HIT
+p60: $651.3600 - HIT
+p50: $657.2000 - HIT
+p20: $683.0200 - HIT
+pdcp20: $683.0200 - HIT
+range_result: ABOVE BAND
+error: $238.68 (26.6%)
+direction: DOWN - MISS","low: $622.9300 - HIT
+median: $646.7500 - HIT
+high: $727.2000 - HIT
+p90: $622.9300 - HIT
+p60: $641.5600 - HIT
+p50: $646.7500 - HIT
+p20: $712.4200 - HIT
+pdcp20: $712.4200 - HIT
+range_result: ABOVE BAND
+error: $249.13 (27.8%)
+direction: DOWN - MISS","low: $600.6500 - HIT
+median: $708.2900 - HIT
+high: $767.4900 - HIT
+p90: $600.6500 - HIT
+p60: $675.6500 - HIT
+p50: $708.2900 - HIT
+p20: $746.9100 - HIT
+pdcp20: $746.9100 - HIT
+range_result: ABOVE BAND
+error: $187.59 (20.9%)
+direction: UP - CORRECT",,"low: $614.0700 - HIT
+median: $667.4900 - HIT
+high: $777.5600 - HIT
+p90: $614.0700 - HIT
+p60: $660.9000 - HIT
+p50: $667.4900 - HIT
+p20: $722.1200 - HIT
+pdcp20: $722.1200 - HIT
+range_result: ABOVE BAND
+error: $228.39 (25.5%)
+direction: DOWN - MISS","low: $706.6100 - HIT
+median: $766.2000 - HIT
+high: $792.6600 - HIT
+p90: $706.6100 - HIT
+p60: $756.9300 - HIT
+p50: $766.2000 - HIT
+p20: $792.6600 - HIT
+pdcp60: $756.9300 - HIT
+pdcp20: $792.6600 - HIT
+range_result: ABOVE BAND
+error: $129.68 (14.5%)
+direction: UP - CORRECT","1. knn2 ($124.85)
+2. lightgbm ($127.83)
+3. xgboost ($129.68)
+4. randomforest ($174.33)
+5. euclidean ($187.59)
+6. manhattan ($214.76)
+7. kendall ($228.39)
+8. spearman ($235.43)
+9. pearson ($238.68)
+10. cosine ($249.13)
+11. analog ($273.22)","low: $655.9200 - HIT
+median: $768.0500 - HIT
+high: $784.9900 - HIT
+p90: $655.9200 - HIT
+p60: $739.4100 - HIT
+p50: $768.0500 - HIT
+p20: $784.9900 - HIT
+pdcp60: $739.4100 - HIT
+pdcp20: $784.9900 - HIT
+range_result: ABOVE BAND
+error: $127.83 (14.3%)
+direction: UP - CORRECT",,"low: $643.7700 - HIT
+median: $721.5500 - HIT
+high: $797.8900 - HIT
+p90: $643.7700 - HIT
+p60: $705.9900 - HIT
+p50: $721.5500 - HIT
+p20: $797.8900 - HIT
+pdcp60: $705.9900 - HIT
+pdcp20: $797.8900 - HIT
+range_result: ABOVE BAND
+error: $174.33 (19.5%)
+direction: UP - CORRECT","low: $598.7200 - HIT
+median: $681.1200 - HIT
+high: $785.3200 - HIT
+p90: $598.7200 - HIT
+p60: $665.3300 - HIT
+p50: $681.1200 - HIT
+p20: $769.0600 - HIT
+pdcp20: $769.0600 - HIT
+range_result: ABOVE BAND
+error: $214.76 (24.0%)
+direction: DOWN - MISS",,"low: $665.3100 - HIT
+median: $771.0300 - HIT
+high: $783.8000 - HIT
+p90: $783.8000 - HIT
+p60: $771.0300 - HIT
+p50: $691.5600 - HIT
+p20: $665.3100 - HIT
+pdcp90: $783.8000 - HIT
+pdcp60: $771.0300 - HIT
+pdcp20: $601.6700 - HIT
+range_result: ABOVE BAND
+error: $124.85 (13.9%)
+direction: UP - CORRECT"
+2026-05-27,Day 3 of 36,$895.88,"C: $928.41
+O: $955.66
+H: $956.16
+L: $888.15
+moved up 3.63%
+Direction: WRONG","price: $614.8400 - HIT
+pdcp: null
+error: $313.57 (33.8%)
+direction: DOWN - MISS",,"low: $577.6800 - HIT
+median: $645.4400 - HIT
+high: $728.3500 - HIT
+p90: $577.6800 - HIT
+p60: $630.7400 - HIT
+p50: $645.4400 - HIT
+p20: $692.1400 - HIT
+pdcp20: $692.1400 - HIT
+range_result: ABOVE BAND
+error: $282.97 (30.5%)
+direction: DOWN - MISS","low: $582.1200 - HIT
+median: $662.0700 - HIT
+high: $732.3300 - HIT
+p90: $582.1200 - HIT
+p60: $655.2400 - HIT
+p50: $662.0700 - HIT
+p20: $719.8700 - HIT
+pdcp20: $719.8700 - HIT
+range_result: ABOVE BAND
+error: $266.34 (28.7%)
+direction: DOWN - MISS","low: $606.5700 - HIT
+median: $664.1500 - HIT
+high: $733.7200 - HIT
+p90: $606.5700 - HIT
+p60: $656.3400 - HIT
+p50: $664.1500 - HIT
+p20: $721.9400 - HIT
+pdcp20: $721.9400 - HIT
+range_result: ABOVE BAND
+error: $264.26 (28.5%)
+direction: DOWN - MISS","low: $583.0200 - HIT
+median: $705.9000 - HIT
+high: $757.2400 - HIT
+p90: $583.0200 - HIT
+p60: $658.8000 - HIT
+p50: $705.9000 - HIT
+p20: $744.9400 - HIT
+pdcp20: $744.9400 - HIT
+range_result: ABOVE BAND
+error: $222.51 (24.0%)
+direction: UP - CORRECT",,"low: $619.7900 - HIT
+median: $712.0600 - HIT
+high: $801.8500 - HIT
+p90: $619.7900 - HIT
+p60: $697.0400 - HIT
+p50: $712.0600 - HIT
+p20: $758.0800 - HIT
+pdcp60: $697.0400 - HIT
+pdcp20: $758.0800 - HIT
+range_result: ABOVE BAND
+error: $216.35 (23.3%)
+direction: UP - CORRECT","low: $704.0300 - HIT
+median: $772.2900 - HIT
+high: $798.1600 - HIT
+p90: $704.0300 - HIT
+p60: $763.8300 - HIT
+p50: $772.2900 - HIT
+p20: $798.1600 - HIT
+pdcp60: $763.8300 - HIT
+pdcp20: $798.1600 - HIT
+range_result: ABOVE BAND
+error: $156.12 (16.8%)
+direction: UP - MISS","1. knn2 ($129.19)
+2. lightgbm ($138.11)
+3. xgboost ($156.12)
+4. randomforest ($198.07)
+5. kendall ($216.35)
+6. euclidean ($222.51)
+7. manhattan ($232.95)
+8. cosine ($264.26)
+9. pearson ($266.34)
+10. spearman ($282.97)
+11. analog ($313.57)","low: $666.5700 - HIT
+median: $790.3000 - HIT
+high: $822.2000 - HIT
+p90: $666.5700 - HIT
+p60: $764.2400 - HIT
+p50: $790.3000 - HIT
+p20: $822.2000 - HIT
+pdcp60: $764.2400 - HIT
+pdcp20: $822.2000 - HIT
+range_result: ABOVE BAND
+error: $138.11 (14.9%)
+direction: UP - CORRECT",,"low: $642.8400 - HIT
+median: $730.3400 - HIT
+high: $816.2000 - HIT
+p90: $642.8400 - HIT
+p60: $709.9900 - HIT
+p50: $730.3400 - HIT
+p20: $816.2000 - HIT
+pdcp60: $709.9900 - HIT
+pdcp20: $816.2000 - HIT
+range_result: ABOVE BAND
+error: $198.07 (21.3%)
+direction: UP - CORRECT","low: $587.8900 - HIT
+median: $695.4600 - HIT
+high: $767.3300 - HIT
+p90: $587.8900 - HIT
+p60: $658.8000 - HIT
+p50: $695.4600 - HIT
+p20: $754.1500 - HIT
+pdcp20: $754.1500 - HIT
+range_result: ABOVE BAND
+error: $232.95 (25.1%)
+direction: UP - CORRECT",,"low: $746.4900 - HIT
+median: $799.2200 - HIT
+high: $799.2900 - HIT
+p90: $799.2900 - HIT
+p60: $799.2200 - HIT
+p50: $746.8600 - HIT
+p20: $746.4900 - HIT
+pdcp90: $799.2900 - HIT
+pdcp60: $799.2200 - HIT
+pdcp20: $585.7000 - HIT
+range_result: ABOVE BAND
+error: $129.19 (13.9%)
+direction: UP - CORRECT"
+2026-05-28,Day 4 of 36,$928.41,"C: $923.52
+O: $929.83
+H: $949.49
+L: $904.78
+moved down 0.53%
+Direction: WRONG","price: $612.2400 - HIT
+pdcp: null
+error: $311.28 (33.7%)
+direction: DOWN - MISS",,"low: $561.2600 - HIT
+median: $634.4000 - HIT
+high: $710.3600 - HIT
+p90: $561.2600 - HIT
+p60: $621.4900 - HIT
+p50: $634.4000 - HIT
+p20: $684.3800 - HIT
+pdcp20: $684.3800 - HIT
+range_result: ABOVE BAND
+error: $289.12 (31.3%)
+direction: DOWN - MISS","low: $572.1700 - HIT
+median: $671.0500 - HIT
+high: $721.2600 - HIT
+p90: $572.1700 - HIT
+p60: $640.8700 - HIT
+p50: $671.0500 - HIT
+p20: $708.7900 - HIT
+pdcp20: $708.7900 - HIT
+range_result: ABOVE BAND
+error: $252.47 (27.3%)
+direction: DOWN - MISS","low: $590.2100 - HIT
+median: $667.1000 - HIT
+high: $732.8200 - HIT
+p90: $590.2100 - HIT
+p60: $653.4000 - HIT
+p50: $667.1000 - HIT
+p20: $710.4600 - HIT
+pdcp20: $710.4600 - HIT
+range_result: ABOVE BAND
+error: $256.42 (27.8%)
+direction: DOWN - MISS","low: $571.9000 - HIT
+median: $715.6300 - HIT
+high: $784.9600 - HIT
+p90: $571.9000 - HIT
+p60: $657.2800 - HIT
+p50: $715.6300 - HIT
+p20: $750.8300 - HIT
+pdcp20: $750.8300 - HIT
+range_result: ABOVE BAND
+error: $207.89 (22.5%)
+direction: UP - CORRECT",,"low: $593.1200 - HIT
+median: $752.2700 - HIT
+high: $876.6200 - HIT
+p90: $593.1200 - HIT
+p60: $723.9800 - HIT
+p50: $752.2700 - HIT
+p20: $794.0400 - HIT
+pdcp60: $723.9800 - HIT
+pdcp20: $794.0400 - HIT
+range_result: ABOVE BAND
+error: $171.25 (18.5%)
+direction: UP - CORRECT","low: $701.4600 - HIT
+median: $778.3800 - HIT
+high: $803.6700 - HIT
+p90: $701.4600 - HIT
+p60: $770.7300 - HIT
+p50: $778.3800 - HIT
+p20: $803.6700 - HIT
+pdcp60: $770.7300 - HIT
+pdcp20: $803.6700 - HIT
+range_result: ABOVE BAND
+error: $145.14 (15.7%)
+direction: UP - CORRECT","1. lightgbm ($110.98)
+2. xgboost ($145.14)
+3. knn2 ($145.53)
+4. kendall ($171.25)
+5. randomforest ($184.40)
+6. euclidean ($207.89)
+7. manhattan ($239.75)
+8. pearson ($252.47)
+9. cosine ($256.42)
+10. spearman ($289.12)
+11. analog ($311.28)","low: $677.2100 - HIT
+median: $812.5400 - HIT
+high: $859.4100 - HIT
+p90: $677.2100 - HIT
+p60: $789.0600 - HIT
+p50: $812.5400 - HIT
+p20: $859.4100 - HIT
+pdcp60: $789.0600 - HIT
+pdcp20: $859.4100 - HIT
+range_result: ABOVE BAND
+error: $110.98 (12.0%)
+direction: UP - CORRECT",,"low: $641.9200 - HIT
+median: $739.1200 - HIT
+high: $834.5200 - HIT
+p90: $641.9200 - HIT
+p60: $714.0000 - HIT
+p50: $739.1200 - HIT
+p20: $834.5200 - HIT
+pdcp60: $714.0000 - HIT
+pdcp20: $834.5200 - HIT
+range_result: ABOVE BAND
+error: $184.40 (20.0%)
+direction: UP - CORRECT","low: $576.5100 - HIT
+median: $683.7700 - HIT
+high: $784.9600 - HIT
+p90: $576.5100 - HIT
+p60: $631.8100 - HIT
+p50: $683.7700 - HIT
+p20: $755.4800 - HIT
+pdcp20: $755.4800 - HIT
+range_result: ABOVE BAND
+error: $239.75 (26.0%)
+direction: UP - CORRECT",,"low: $746.4100 - HIT
+median: $777.9900 - HIT
+high: $788.1200 - HIT
+p90: $788.1200 - HIT
+p60: $777.9900 - HIT
+p50: $748.8500 - HIT
+p20: $746.4100 - HIT
+pdcp90: $788.1200 - HIT
+pdcp60: $777.9900 - HIT
+pdcp20: $563.1300 - HIT
+range_result: ABOVE BAND
+error: $145.53 (15.8%)
+direction: UP - CORRECT"
+2026-05-29,Day 5 of 36,$923.52,"C: $971.00
+O: $956.47
+H: $981.00
+L: $940.51
+moved up 5.14%
+Direction: WRONG","price: $642.4600 - HIT
+pdcp: null
+error: $328.54 (33.8%)
+direction: DOWN - MISS",,"low: $544.9100 - HIT
+median: $638.3500 - HIT
+high: $725.6100 - HIT
+p90: $544.9100 - HIT
+p60: $624.8100 - HIT
+p50: $638.3500 - HIT
+p20: $692.0600 - HIT
+pdcp20: $692.0600 - HIT
+range_result: ABOVE BAND
+error: $332.65 (34.3%)
+direction: DOWN - MISS","low: $541.9200 - HIT
+median: $662.0700 - HIT
+high: $767.2900 - HIT
+p90: $541.9200 - HIT
+p60: $640.8000 - HIT
+p50: $662.0700 - HIT
+p20: $693.1000 - HIT
+pdcp20: $693.1000 - HIT
+range_result: ABOVE BAND
+error: $308.93 (31.8%)
+direction: DOWN - MISS","low: $564.3200 - HIT
+median: $662.2300 - HIT
+high: $716.4700 - HIT
+p90: $564.3200 - HIT
+p60: $649.1200 - HIT
+p50: $662.2300 - HIT
+p20: $694.0800 - HIT
+pdcp20: $694.0800 - HIT
+range_result: ABOVE BAND
+error: $308.77 (31.8%)
+direction: DOWN - MISS","low: $562.6600 - HIT
+median: $694.4700 - HIT
+high: $790.1100 - HIT
+p90: $562.6600 - HIT
+p60: $649.8100 - HIT
+p50: $694.4700 - HIT
+p20: $749.1800 - HIT
+pdcp20: $749.1800 - HIT
+range_result: ABOVE BAND
+error: $276.53 (28.5%)
+direction: UP - CORRECT",,"low: $616.4800 - HIT
+median: $732.4000 - HIT
+high: $875.2900 - HIT
+p90: $616.4800 - HIT
+p60: $731.7300 - HIT
+p50: $732.4000 - HIT
+p20: $803.9900 - HIT
+pdcp60: $731.7300 - HIT
+pdcp20: $803.9900 - HIT
+range_result: ABOVE BAND
+error: $238.60 (24.6%)
+direction: UP - CORRECT","low: $698.8800 - HIT
+median: $784.4800 - HIT
+high: $809.1700 - HIT
+p90: $698.8800 - HIT
+p60: $777.6300 - HIT
+p50: $784.4800 - HIT
+p20: $809.1700 - HIT
+pdcp60: $777.6300 - HIT
+pdcp20: $809.1700 - HIT
+range_result: ABOVE BAND
+error: $186.52 (19.2%)
+direction: UP - MISS","1. lightgbm ($136.21)
+2. xgboost ($186.52)
+3. knn2 ($202.34)
+4. randomforest ($223.10)
+5. kendall ($238.60)
+6. manhattan ($275.11)
+7. euclidean ($276.53)
+8. cosine ($308.77)
+9. pearson ($308.93)
+10. analog ($328.54)
+11. spearman ($332.65)","low: $687.8500 - HIT
+median: $834.7900 - HIT
+high: $896.6200 - HIT
+p90: $687.8500 - HIT
+p60: $813.8800 - HIT
+p50: $834.7900 - HIT
+p20: $896.6200 - HIT
+pdcp90: $687.8500 - HIT
+pdcp60: $813.8800 - HIT
+pdcp20: $896.6200 - HIT
+range_result: ABOVE BAND
+error: $136.21 (14.0%)
+direction: UP - CORRECT",,"low: $640.9900 - HIT
+median: $747.9000 - HIT
+high: $852.8300 - HIT
+p90: $640.9900 - HIT
+p60: $718.0000 - HIT
+p50: $747.9000 - HIT
+p20: $852.8300 - HIT
+pdcp60: $718.0000 - HIT
+pdcp20: $852.8300 - HIT
+range_result: ABOVE BAND
+error: $223.10 (23.0%)
+direction: UP - CORRECT","low: $548.9600 - HIT
+median: $695.8900 - HIT
+high: $787.4600 - HIT
+p90: $548.9600 - HIT
+p60: $647.7500 - HIT
+p50: $695.8900 - HIT
+p20: $767.7700 - HIT
+pdcp20: $767.7700 - HIT
+range_result: ABOVE BAND
+error: $275.11 (28.3%)
+direction: UP - CORRECT",,"low: $756.4200 - HIT
+median: $768.6600 - HIT
+high: $770.7500 - HIT
+p90: $770.7500 - HIT
+p60: $768.6600 - HIT
+p50: $767.9400 - HIT
+p20: $756.4200 - HIT
+pdcp90: $770.7500 - HIT
+pdcp60: $768.6600 - HIT
+pdcp20: $549.1400 - HIT
+range_result: ABOVE BAND
+error: $202.34 (20.8%)
+direction: UP - CORRECT"
+2026-06-01,Day 1 of 36,$971.00,"C: $1035.50
+O: $1009.72
+H: $1046.97
+L: $1009.50
+moved up 6.64%
+Direction: WRONG","price: $971.0000 - HIT
+pdcp: null
+error: $64.50 (6.2%)
+direction: DOWN - MISS",,"low: $928.5800 - HIT
+median: $965.9400 - HIT
+high: $992.6100 - HIT
+p90: $928.5800 - HIT
+p60: $959.0400 - HIT
+p50: $965.9400 - HIT
+p20: $984.4200 - HIT
+pdcp20: $984.4200 - HIT
+range_result: ABOVE BAND
+error: $69.56 (6.7%)
+direction: DOWN - MISS","low: $927.2800 - HIT
+median: $971.0000 - HIT
+high: $986.0400 - HIT
+p90: $927.2800 - HIT
+p60: $956.2900 - HIT
+p50: $971.0000 - HIT
+p20: $984.5300 - HIT
+pdcp20: $984.5300 - HIT
+range_result: ABOVE BAND
+error: $64.50 (6.2%)
+direction: DOWN - MISS","low: $925.2400 - HIT
+median: $971.7600 - HIT
+high: $986.2100 - HIT
+p90: $925.2400 - HIT
+p60: $955.9800 - HIT
+p50: $971.7600 - HIT
+p20: $985.3800 - HIT
+pdcp20: $985.3800 - HIT
+range_result: ABOVE BAND
+error: $63.74 (6.2%)
+direction: UP - CORRECT","low: $932.5100 - HIT
+median: $971.0000 - HIT
+high: $1002.4900 - HIT
+p90: $932.5100 - HIT
+p60: $961.2900 - HIT
+p50: $971.0000 - HIT
+p20: $997.9600 - HIT
+pdcp20: $997.9600 - HIT
+range_result: ABOVE BAND
+error: $64.50 (6.2%)
+direction: DOWN - MISS",,"low: $929.1400 - HIT
+median: $971.0000 - HIT
+high: $992.0600 - HIT
+p90: $929.1400 - HIT
+p60: $967.4700 - HIT
+p50: $971.0000 - HIT
+p20: $984.1300 - HIT
+pdcp20: $984.1300 - HIT
+range_result: ABOVE BAND
+error: $64.50 (6.2%)
+direction: DOWN - MISS","low: $949.9100 - HIT
+median: $1004.8900 - HIT
+high: $1011.0600 - HIT
+p90: $949.9100 - HIT
+p60: $986.3800 - HIT
+p50: $1004.8900 - HIT
+p20: $1011.0600 - HIT
+pdcp60: $986.3800 - HIT
+pdcp20: $1011.0600 - HIT
+range_result: ABOVE BAND
+error: $30.61 (3.0%)
+direction: UP - CORRECT","1. knn2 ($22.73)
+2. xgboost ($30.61)
+3. lightgbm ($52.63)
+4. randomforest ($61.80)
+5. cosine ($63.74)
+6. analog ($64.50)
+7. pearson ($64.50)
+8. euclidean ($64.50)
+9. kendall ($64.50)
+10. spearman ($69.56)
+11. manhattan ($70.21)","low: $948.3100 - HIT
+median: $982.8700 - HIT
+high: $1012.1900 - HIT
+p90: $948.3100 - HIT
+p60: $964.0200 - HIT
+p50: $982.8700 - HIT
+p20: $1012.1900 - HIT
+pdcp20: $1012.1900 - HIT
+range_result: ABOVE BAND
+error: $52.63 (5.1%)
+direction: UP - CORRECT",,"low: $942.7900 - HIT
+median: $973.7000 - HIT
+high: $1003.3700 - HIT
+p90: $942.7900 - HIT
+p60: $964.9500 - HIT
+p50: $973.7000 - HIT
+p20: $1003.3700 - HIT
+pdcp20: $1003.3700 - HIT
+range_result: ABOVE BAND
+error: $61.80 (6.0%)
+direction: UP - CORRECT","low: $932.5100 - HIT
+median: $965.2900 - HIT
+high: $986.7300 - HIT
+p90: $932.5100 - HIT
+p60: $955.7000 - HIT
+p50: $965.2900 - HIT
+p20: $985.0400 - HIT
+pdcp20: $985.0400 - HIT
+range_result: ABOVE BAND
+error: $70.21 (6.8%)
+direction: DOWN - MISS",,"low: $981.4100 - HIT
+median: $1012.7700 - HIT
+high: $1018.5600 - HIT
+p90: $1018.5600 - HIT
+p60: $1012.7700 - HIT
+p50: $991.5500 - HIT
+p20: $981.4100 - HIT
+pdcp90: $1018.5600 - HIT
+pdcp60: $1012.7700 - HIT
+pdcp20: $981.4100 - HIT
+range_result: ABOVE BAND
+error: $22.73 (2.2%)
+direction: DOWN - MISS"
+2026-06-02,Day 2 of 36,$1035.50,"C: $1064.10
+O: $1050.00
+H: $1076.56
+L: $1017.20
+moved up 2.76%
+Direction: WRONG","price: $945.4500 - HIT
+pdcp: null
+error: $118.65 (11.2%)
+direction: DOWN - MISS",,"low: $870.8200 - HIT
+median: $938.6600 - HIT
+high: $1033.6000 - HIT
+p90: $870.8200 - HIT
+p60: $929.2400 - HIT
+p50: $938.6600 - HIT
+p20: $997.5700 - HIT
+pdcp20: $997.5700 - HIT
+range_result: ABOVE BAND
+error: $125.44 (11.8%)
+direction: DOWN - MISS","low: $896.1800 - HIT
+median: $952.6800 - HIT
+high: $1065.1600 - MISS
+p90: $896.1800 - HIT
+p60: $944.4700 - HIT
+p50: $952.6800 - HIT
+p20: $1002.9200 - HIT
+pdcp20: $1002.9200 - HIT
+range_result: IN BAND
+error: $111.42 (10.5%)
+direction: DOWN - MISS","low: $889.9900 - HIT
+median: $948.1100 - HIT
+high: $1015.1400 - HIT
+p90: $889.9900 - HIT
+p60: $939.1400 - HIT
+p50: $948.1100 - HIT
+p20: $971.0000 - HIT
+pdcp20: $971.0000 - HIT
+range_result: ABOVE BAND
+error: $115.99 (10.9%)
+direction: DOWN - MISS","low: $897.7900 - HIT
+median: $941.8800 - HIT
+high: $1051.7000 - HIT
+p90: $897.7900 - HIT
+p60: $933.7700 - HIT
+p50: $941.8800 - HIT
+p20: $1009.7400 - HIT
+pdcp20: $1009.7400 - HIT
+range_result: ABOVE BAND
+error: $122.22 (11.5%)
+direction: DOWN - MISS",,"low: $917.6800 - HIT
+median: $956.5100 - HIT
+high: $965.7000 - HIT
+p90: $917.6800 - HIT
+p60: $954.9800 - HIT
+p50: $956.5100 - HIT
+p20: $960.4100 - HIT
+range_result: ABOVE BAND
+error: $107.59 (10.1%)
+direction: DOWN - MISS","low: $946.1900 - HIT
+median: $1009.0300 - HIT
+high: $1016.8300 - HIT
+p90: $946.1900 - HIT
+p60: $983.2800 - HIT
+p50: $1009.0300 - HIT
+p20: $1016.8300 - HIT
+pdcp60: $983.2800 - HIT
+pdcp20: $1016.8300 - HIT
+range_result: ABOVE BAND
+error: $55.07 (5.2%)
+direction: UP - MISS","1. knn2 ($52.57)
+2. xgboost ($55.07)
+3. lightgbm ($91.00)
+4. randomforest ($97.14)
+5. kendall ($107.59)
+6. pearson ($111.42)
+7. cosine ($115.99)
+8. analog ($118.65)
+9. euclidean ($122.22)
+10. manhattan ($122.22)
+11. spearman ($125.44)","low: $928.3700 - HIT
+median: $973.1000 - HIT
+high: $1010.4800 - HIT
+p90: $928.3700 - HIT
+p60: $957.3100 - HIT
+p50: $973.1000 - HIT
+p20: $1010.4800 - HIT
+pdcp20: $1010.4800 - HIT
+range_result: ABOVE BAND
+error: $91.00 (8.6%)
+direction: UP - CORRECT",,"low: $926.0800 - HIT
+median: $966.9600 - HIT
+high: $1007.6100 - HIT
+p90: $926.0800 - HIT
+p60: $956.6200 - HIT
+p50: $966.9600 - HIT
+p20: $1007.6100 - HIT
+pdcp20: $1007.6100 - HIT
+range_result: ABOVE BAND
+error: $97.14 (9.1%)
+direction: DOWN - MISS","low: $901.6500 - HIT
+median: $941.8800 - HIT
+high: $1017.3100 - HIT
+p90: $901.6500 - HIT
+p60: $934.3900 - HIT
+p50: $941.8800 - HIT
+p20: $995.1300 - HIT
+pdcp20: $995.1300 - HIT
+range_result: ABOVE BAND
+error: $122.22 (11.5%)
+direction: DOWN - MISS",,"low: $974.8600 - HIT
+median: $1011.5300 - HIT
+high: $1012.8200 - HIT
+p90: $1012.8200 - HIT
+p60: $1011.5300 - HIT
+p50: $980.1300 - HIT
+p20: $974.8600 - HIT
+pdcp90: $1012.8200 - HIT
+pdcp60: $1011.5300 - HIT
+pdcp20: $974.8600 - HIT
+range_result: ABOVE BAND
+error: $52.57 (4.9%)
+direction: DOWN - MISS"
+2026-06-03,Day 3 of 36,$1064.10,"C: $1079.57
+O: $1079.01
+H: $1089.29
+L: $1038.50
+moved up 1.45%
+Direction: WRONG","price: $962.4800 - HIT
+pdcp: null
+error: $117.09 (10.8%)
+direction: DOWN - MISS",,"low: $901.2200 - HIT
+median: $934.8000 - HIT
+high: $1063.9600 - HIT
+p90: $901.2200 - HIT
+p60: $924.3900 - HIT
+p50: $934.8000 - HIT
+p20: $1001.1800 - HIT
+pdcp20: $1001.1800 - HIT
+range_result: ABOVE BAND
+error: $144.77 (13.4%)
+direction: DOWN - MISS","low: $900.8900 - HIT
+median: $941.0600 - HIT
+high: $1056.0800 - HIT
+p90: $900.8900 - HIT
+p60: $931.0100 - HIT
+p50: $941.0600 - HIT
+p20: $1016.0800 - HIT
+pdcp20: $1016.0800 - HIT
+range_result: ABOVE BAND
+error: $138.51 (12.8%)
+direction: DOWN - MISS","low: $900.1100 - HIT
+median: $984.8700 - HIT
+high: $1047.7100 - HIT
+p90: $900.1100 - HIT
+p60: $958.9900 - HIT
+p50: $984.8700 - HIT
+p20: $1014.4800 - HIT
+pdcp20: $1014.4800 - HIT
+range_result: ABOVE BAND
+error: $94.70 (8.8%)
+direction: UP - CORRECT","low: $904.6700 - HIT
+median: $963.9600 - HIT
+high: $1038.9700 - HIT
+p90: $904.6700 - HIT
+p60: $940.1000 - HIT
+p50: $963.9600 - HIT
+p20: $1011.8000 - HIT
+pdcp20: $1011.8000 - HIT
+range_result: ABOVE BAND
+error: $115.61 (10.7%)
+direction: DOWN - MISS",,"low: $903.2200 - HIT
+median: $956.7200 - HIT
+high: $999.3800 - HIT
+p90: $903.2200 - HIT
+p60: $948.3100 - HIT
+p50: $956.7200 - HIT
+p20: $998.7800 - HIT
+pdcp20: $998.7800 - HIT
+range_result: ABOVE BAND
+error: $122.85 (11.4%)
+direction: DOWN - MISS","low: $942.4700 - HIT
+median: $1013.1600 - HIT
+high: $1022.5900 - HIT
+p90: $942.4700 - HIT
+p60: $980.1700 - HIT
+p50: $1013.1600 - HIT
+p20: $1022.5900 - HIT
+pdcp60: $980.1700 - HIT
+pdcp20: $1022.5900 - HIT
+range_result: ABOVE BAND
+error: $66.41 (6.2%)
+direction: UP - MISS","1. knn2 ($53.58)
+2. xgboost ($66.41)
+3. cosine ($94.70)
+4. euclidean ($115.61)
+5. lightgbm ($116.23)
+6. analog ($117.09)
+7. randomforest ($119.34)
+8. kendall ($122.85)
+9. manhattan ($134.89)
+10. pearson ($138.51)
+11. spearman ($144.77)","low: $908.4300 - HIT
+median: $963.3400 - HIT
+high: $1008.7800 - HIT
+p90: $908.4300 - HIT
+p60: $950.5900 - HIT
+p50: $963.3400 - HIT
+p20: $1008.7800 - HIT
+pdcp20: $1008.7800 - HIT
+range_result: ABOVE BAND
+error: $116.23 (10.8%)
+direction: DOWN - MISS",,"low: $909.3600 - HIT
+median: $960.2300 - HIT
+high: $1011.8500 - HIT
+p90: $909.3600 - HIT
+p60: $948.2900 - HIT
+p50: $960.2300 - HIT
+p20: $1011.8500 - HIT
+pdcp20: $1011.8500 - HIT
+range_result: ABOVE BAND
+error: $119.34 (11.1%)
+direction: DOWN - MISS","low: $905.1000 - HIT
+median: $944.6800 - HIT
+high: $1042.7200 - HIT
+p90: $905.1000 - HIT
+p60: $939.5800 - HIT
+p50: $944.6800 - HIT
+p20: $1012.9900 - HIT
+pdcp20: $1012.9900 - HIT
+range_result: ABOVE BAND
+error: $134.89 (12.5%)
+direction: DOWN - MISS",,"low: $976.2100 - HIT
+median: $1025.9900 - HIT
+high: $1034.3700 - HIT
+p90: $1034.3700 - HIT
+p60: $1025.9900 - HIT
+p50: $979.1100 - HIT
+p20: $976.2100 - HIT
+pdcp90: $1034.3700 - HIT
+pdcp60: $1025.9900 - HIT
+pdcp20: $976.2100 - HIT
+range_result: ABOVE BAND
+error: $53.58 (5.0%)
+direction: DOWN - MISS"
+2026-06-04,Day 4 of 36,$1079.57,"C: $996.00
+O: $1007.10
+H: $1036.37
+L: $971.68
+moved down 7.74%
+Direction: WRONG","price: $962.4800 - HIT
+pdcp: null
+error: $33.52 (3.4%)
+direction: DOWN - MISS",,"low: $850.3500 - HIT
+median: $932.0200 - HIT
+high: $1065.9300 - MISS
+p90: $850.3500 - HIT
+p60: $912.4700 - HIT
+p50: $932.0200 - HIT
+p20: $971.0000 - HIT
+range_result: IN BAND
+error: $63.98 (6.4%)
+direction: DOWN - MISS","low: $867.6100 - HIT
+median: $944.7600 - HIT
+high: $1089.4300 - MISS
+p90: $867.6100 - HIT
+p60: $932.2300 - HIT
+p50: $944.7600 - HIT
+p20: $1017.7200 - MISS
+pdcp20: $1017.7200 - MISS
+range_result: IN BAND
+error: $51.24 (5.1%)
+direction: DOWN - MISS","low: $865.9700 - HIT
+median: $939.5200 - HIT
+high: $1057.1700 - MISS
+p90: $865.9700 - HIT
+p60: $918.0200 - HIT
+p50: $939.5200 - HIT
+p20: $1026.3700 - MISS
+pdcp20: $1026.3700 - MISS
+range_result: IN BAND
+error: $56.48 (5.7%)
+direction: DOWN - MISS","low: $893.6100 - HIT
+median: $971.0800 - HIT
+high: $1078.4700 - MISS
+p90: $893.6100 - HIT
+p60: $954.1400 - HIT
+p50: $971.0800 - HIT
+p20: $1026.5800 - MISS
+pdcp20: $1026.5800 - MISS
+range_result: IN BAND
+error: $24.92 (2.5%)
+direction: UP - CORRECT",,"low: $908.1900 - HIT
+median: $985.2800 - HIT
+high: $1004.2800 - MISS
+p90: $908.1900 - HIT
+p60: $959.1300 - HIT
+p50: $985.2800 - HIT
+p20: $991.7500 - HIT
+pdcp20: $991.7500 - HIT
+range_result: IN BAND
+error: $10.72 (1.1%)
+direction: UP - CORRECT","low: $938.7500 - HIT
+median: $1017.3000 - MISS
+high: $1028.3500 - MISS
+p90: $938.7500 - HIT
+p60: $977.0600 - HIT
+p50: $1017.3000 - MISS
+p20: $1028.3500 - MISS
+pdcp60: $977.0600 - HIT
+pdcp20: $1028.3500 - MISS
+range_result: IN BAND
+error: $21.30 (2.1%)
+direction: UP - CORRECT","1. kendall ($10.72)
+2. xgboost ($21.30)
+3. euclidean ($24.92)
+4. knn2 ($25.07)
+5. manhattan ($30.49)
+6. analog ($33.52)
+7. lightgbm ($42.43)
+8. randomforest ($42.51)
+9. pearson ($51.24)
+10. cosine ($56.48)
+11. spearman ($63.98)","low: $888.4800 - HIT
+median: $953.5700 - HIT
+high: $1007.0700 - MISS
+p90: $888.4800 - HIT
+p60: $943.8700 - HIT
+p50: $953.5700 - HIT
+p20: $1007.0700 - MISS
+pdcp20: $1007.0700 - MISS
+range_result: IN BAND
+error: $42.43 (4.3%)
+direction: DOWN - MISS",,"low: $892.6400 - HIT
+median: $953.4900 - HIT
+high: $1016.0800 - MISS
+p90: $892.6400 - HIT
+p60: $939.9600 - HIT
+p50: $953.4900 - HIT
+p20: $1016.0800 - MISS
+pdcp20: $1016.0800 - MISS
+range_result: IN BAND
+error: $42.51 (4.3%)
+direction: DOWN - MISS","low: $883.4000 - HIT
+median: $965.5100 - HIT
+high: $1080.4500 - MISS
+p90: $883.4000 - HIT
+p60: $954.7500 - HIT
+p50: $965.5100 - HIT
+p20: $1028.0600 - MISS
+pdcp20: $1028.0600 - MISS
+range_result: IN BAND
+error: $30.49 (3.1%)
+direction: DOWN - MISS",,"low: $1016.8600 - MISS
+median: $1021.0700 - MISS
+high: $1024.5100 - MISS
+p90: $1024.5100 - MISS
+p60: $1021.0700 - MISS
+p50: $1020.0200 - MISS
+p20: $1016.8600 - MISS
+pdcp90: $1024.5100 - MISS
+pdcp60: $1021.0700 - MISS
+pdcp20: $1016.8600 - MISS
+range_result: BELOW BAND
+error: $25.07 (2.5%)
+direction: DOWN - MISS"
+2026-06-05,Day 5 of 36,$996.00,"C: $864.01
+O: $944.40
+H: $961.89
+L: $864.01
+moved down 13.25%
+Direction: WRONG","price: $979.5200 - MISS
+pdcp: $979.5200 - MISS
+error: $115.51 (13.4%)
+direction: UP - MISS",,"low: $747.8800 - HIT
+median: $929.9400 - MISS
+high: $1083.0100 - MISS
+p90: $747.8800 - HIT
+p60: $910.6700 - MISS
+p50: $929.9400 - MISS
+p20: $957.9300 - MISS
+range_result: IN BAND
+error: $65.93 (7.6%)
+direction: DOWN - CORRECT","low: $821.7300 - HIT
+median: $941.0600 - MISS
+high: $1075.5800 - MISS
+p90: $821.7300 - HIT
+p60: $929.2500 - MISS
+p50: $941.0600 - MISS
+p20: $1026.1300 - MISS
+pdcp20: $1026.1300 - MISS
+range_result: IN BAND
+error: $77.05 (8.9%)
+direction: DOWN - CORRECT","low: $848.0700 - HIT
+median: $954.3800 - MISS
+high: $1063.6900 - MISS
+p90: $848.0700 - HIT
+p60: $942.4500 - MISS
+p50: $954.3800 - MISS
+p20: $1037.1700 - MISS
+pdcp20: $1037.1700 - MISS
+range_result: IN BAND
+error: $90.37 (10.5%)
+direction: DOWN - CORRECT","low: $843.0000 - HIT
+median: $965.5400 - MISS
+high: $1046.6900 - MISS
+p90: $843.0000 - HIT
+p60: $951.8100 - MISS
+p50: $965.5400 - MISS
+p20: $1034.9600 - MISS
+pdcp20: $1034.9600 - MISS
+range_result: IN BAND
+error: $101.53 (11.8%)
+direction: DOWN - CORRECT",,"low: $876.7800 - MISS
+median: $956.7200 - MISS
+high: $998.4800 - MISS
+p90: $876.7800 - MISS
+p60: $931.7700 - MISS
+p50: $956.7200 - MISS
+p20: $980.1600 - MISS
+pdcp20: $980.1600 - MISS
+range_result: BELOW BAND
+error: $92.71 (10.7%)
+direction: DOWN - CORRECT","low: $935.0300 - MISS
+median: $1021.4300 - MISS
+high: $1034.1200 - MISS
+p90: $935.0300 - MISS
+p60: $973.9500 - MISS
+p50: $1021.4300 - MISS
+p20: $1034.1200 - MISS
+pdcp60: $973.9500 - MISS
+pdcp20: $1034.1200 - MISS
+range_result: BELOW BAND
+error: $157.42 (18.2%)
+direction: UP - MISS","1. spearman ($65.93)
+2. pearson ($77.05)
+3. lightgbm ($79.80)
+4. randomforest ($82.75)
+5. cosine ($90.37)
+6. manhattan ($90.45)
+7. kendall ($92.71)
+8. euclidean ($101.53)
+9. knn2 ($111.63)
+10. analog ($115.51)
+11. xgboost ($157.42)","low: $868.5400 - MISS
+median: $943.8100 - MISS
+high: $1005.3600 - MISS
+p90: $868.5400 - MISS
+p60: $937.1600 - MISS
+p50: $943.8100 - MISS
+p20: $1005.3600 - MISS
+pdcp20: $1005.3600 - MISS
+range_result: BELOW BAND
+error: $79.80 (9.2%)
+direction: DOWN - CORRECT",,"low: $875.9200 - MISS
+median: $946.7600 - MISS
+high: $1020.3200 - MISS
+p90: $875.9200 - MISS
+p60: $931.6300 - MISS
+p50: $946.7600 - MISS
+p20: $1020.3200 - MISS
+pdcp20: $1020.3200 - MISS
+range_result: BELOW BAND
+error: $82.75 (9.6%)
+direction: DOWN - CORRECT","low: $867.8500 - MISS
+median: $954.4600 - MISS
+high: $1042.5000 - MISS
+p90: $867.8500 - MISS
+p60: $942.0400 - MISS
+p50: $954.4600 - MISS
+p20: $1007.7500 - MISS
+pdcp20: $1007.7500 - MISS
+range_result: BELOW BAND
+error: $90.45 (10.5%)
+direction: DOWN - CORRECT",,"low: $948.8600 - MISS
+median: $975.6400 - MISS
+high: $999.4200 - MISS
+p90: $999.4200 - MISS
+p60: $975.6400 - MISS
+p50: $967.8100 - MISS
+p20: $948.8600 - MISS
+pdcp90: $999.4200 - MISS
+pdcp60: $975.6400 - MISS
+pdcp20: $699.6000 - HIT
+range_result: BELOW BAND
+error: $111.63 (12.9%)
+direction: DOWN - CORRECT"
+2026-06-08,Day 6 of 36,$864.01,"C: $949.28
+O: $938.27
+H: $962.95
+L: $916.50
+moved up 9.87%
+Direction: WRONG","price: $953.9700 - MISS
+pdcp: null
+error: $4.69 (0.5%)
+direction: DOWN - CORRECT",,"low: $771.3900 - HIT
+median: $909.6400 - HIT
+high: $1091.3300 - MISS
+p90: $771.3900 - HIT
+p60: $899.8300 - HIT
+p50: $909.6400 - HIT
+p20: $955.1500 - MISS
+range_result: IN BAND
+error: $39.64 (4.2%)
+direction: DOWN - CORRECT","low: $800.6400 - HIT
+median: $911.1100 - HIT
+high: $1096.6000 - MISS
+p90: $800.6400 - HIT
+p60: $902.9500 - HIT
+p50: $911.1100 - HIT
+p20: $1053.0300 - MISS
+pdcp20: $1053.0300 - MISS
+range_result: IN BAND
+error: $38.17 (4.0%)
+direction: DOWN - CORRECT","low: $847.3900 - HIT
+median: $917.7700 - HIT
+high: $1076.9300 - MISS
+p90: $847.3900 - HIT
+p60: $906.8700 - HIT
+p50: $917.7700 - HIT
+p20: $1026.6100 - MISS
+pdcp20: $1026.6100 - MISS
+range_result: IN BAND
+error: $31.51 (3.3%)
+direction: DOWN - CORRECT","low: $866.0300 - HIT
+median: $945.5900 - HIT
+high: $1087.0300 - MISS
+p90: $866.0300 - HIT
+p60: $938.6700 - HIT
+p50: $945.5900 - HIT
+p20: $1030.7800 - MISS
+pdcp20: $1030.7800 - MISS
+range_result: IN BAND
+error: $3.69 (0.4%)
+direction: DOWN - CORRECT",,"low: $844.8700 - HIT
+median: $927.5200 - HIT
+high: $950.1700 - MISS
+p90: $844.8700 - HIT
+p60: $922.0700 - HIT
+p50: $927.5200 - HIT
+p20: $938.5000 - HIT
+range_result: IN BAND
+error: $21.76 (2.3%)
+direction: DOWN - CORRECT","low: $944.8800 - HIT
+median: $1034.7800 - MISS
+high: $1047.2800 - MISS
+p90: $944.8800 - HIT
+p60: $988.3600 - MISS
+p50: $1034.7800 - MISS
+p20: $1047.2800 - MISS
+pdcp60: $988.3600 - MISS
+pdcp20: $1047.2800 - MISS
+range_result: IN BAND
+error: $85.50 (9.0%)
+direction: UP - CORRECT","1. euclidean ($3.69)
+2. analog ($4.69)
+3. manhattan ($6.43)
+4. kendall ($21.76)
+5. randomforest ($22.98)
+6. lightgbm ($23.55)
+7. cosine ($31.51)
+8. pearson ($38.17)
+9. spearman ($39.64)
+10. xgboost ($85.50)
+11. knn2 ($90.38)","low: $889.1500 - HIT
+median: $972.8300 - MISS
+high: $1030.8800 - MISS
+p90: $889.1500 - HIT
+p60: $962.8400 - MISS
+p50: $972.8300 - MISS
+p20: $1030.8800 - MISS
+pdcp20: $1030.8800 - MISS
+range_result: IN BAND
+error: $23.55 (2.5%)
+direction: UP - MISS",,"low: $894.2600 - HIT
+median: $972.2600 - MISS
+high: $1037.8900 - MISS
+p90: $894.2600 - HIT
+p60: $956.7800 - MISS
+p50: $972.2600 - MISS
+p20: $1037.8900 - MISS
+pdcp20: $1037.8900 - MISS
+range_result: IN BAND
+error: $22.98 (2.4%)
+direction: UP - MISS","low: $832.5400 - HIT
+median: $942.8500 - HIT
+high: $1014.0900 - MISS
+p90: $832.5400 - HIT
+p60: $916.1400 - HIT
+p50: $942.8500 - HIT
+p20: $998.8800 - MISS
+pdcp20: $998.8800 - MISS
+range_result: IN BAND
+error: $6.43 (0.7%)
+direction: DOWN - CORRECT",,"low: $1033.6100 - MISS
+median: $1039.6600 - MISS
+high: $1041.0500 - MISS
+p90: $1041.0500 - MISS
+p60: $1039.6600 - MISS
+p50: $1039.1600 - MISS
+p20: $1033.6100 - MISS
+pdcp90: $1041.0500 - MISS
+pdcp60: $1039.6600 - MISS
+pdcp20: $1033.6100 - MISS
+range_result: BELOW BAND
+error: $90.38 (9.5%)
+direction: DOWN - CORRECT"
+2026-06-09,Day 7 of 36,$949.28,"C: $935.89
+O: $988.18
+H: $989.15
+L: $854.35
+moved down 1.41%
+Direction: WRONG","price: $945.4500 - MISS
+pdcp: null
+error: $9.56 (1.0%)
+direction: DOWN - CORRECT",,"low: $763.3300 - HIT
+median: $909.7600 - HIT
+high: $1135.2200 - MISS
+p90: $763.3300 - HIT
+p60: $887.8300 - HIT
+p50: $909.7600 - HIT
+p20: $1044.5500 - MISS
+pdcp20: $1044.5500 - MISS
+range_result: IN BAND
+error: $26.13 (2.8%)
+direction: DOWN - CORRECT","low: $796.2000 - HIT
+median: $931.6400 - HIT
+high: $1075.9200 - MISS
+p90: $796.2000 - HIT
+p60: $898.1900 - HIT
+p50: $931.6400 - HIT
+p20: $1064.2700 - MISS
+pdcp20: $1064.2700 - MISS
+range_result: IN BAND
+error: $4.25 (0.5%)
+direction: DOWN - CORRECT","low: $835.3300 - HIT
+median: $925.8200 - HIT
+high: $1068.1000 - MISS
+p90: $835.3300 - HIT
+p60: $896.7500 - HIT
+p50: $925.8200 - HIT
+p20: $1029.2500 - MISS
+pdcp20: $1029.2500 - MISS
+range_result: IN BAND
+error: $10.07 (1.1%)
+direction: DOWN - CORRECT","low: $866.3300 - HIT
+median: $966.6300 - MISS
+high: $1071.4300 - MISS
+p90: $866.3300 - HIT
+p60: $938.6100 - MISS
+p50: $966.6300 - MISS
+p20: $1016.5000 - MISS
+pdcp20: $1016.5000 - MISS
+range_result: IN BAND
+error: $30.74 (3.3%)
+direction: DOWN - CORRECT",,"low: $828.2100 - HIT
+median: $928.1600 - HIT
+high: $997.0900 - MISS
+p90: $828.2100 - HIT
+p60: $926.9800 - HIT
+p50: $928.1600 - HIT
+p20: $979.7000 - MISS
+pdcp20: $979.7000 - MISS
+range_result: IN BAND
+error: $7.73 (0.8%)
+direction: DOWN - CORRECT","low: $954.7200 - MISS
+median: $1048.1200 - MISS
+high: $1060.4400 - MISS
+p90: $954.7200 - MISS
+p60: $1002.7800 - MISS
+p50: $1048.1200 - MISS
+p20: $1060.4400 - MISS
+pdcp60: $1002.7800 - MISS
+pdcp20: $1060.4400 - MISS
+range_result: BELOW BAND
+error: $112.23 (12.0%)
+direction: UP - MISS","1. pearson ($4.25)
+2. manhattan ($6.30)
+3. kendall ($7.73)
+4. analog ($9.56)
+5. cosine ($10.07)
+6. spearman ($26.13)
+7. euclidean ($30.74)
+8. randomforest ($61.87)
+9. lightgbm ($65.96)
+10. knn2 ($69.59)
+11. xgboost ($112.23)","low: $909.7600 - HIT
+median: $1001.8500 - MISS
+high: $1056.4100 - MISS
+p90: $909.7600 - HIT
+p60: $988.5200 - MISS
+p50: $1001.8500 - MISS
+p20: $1056.4100 - MISS
+pdcp60: $988.5200 - MISS
+pdcp20: $1056.4100 - MISS
+range_result: IN BAND
+error: $65.96 (7.0%)
+direction: UP - MISS",,"low: $912.6000 - HIT
+median: $997.7600 - MISS
+high: $1055.4700 - MISS
+p90: $912.6000 - HIT
+p60: $981.9300 - MISS
+p50: $997.7600 - MISS
+p20: $1055.4700 - MISS
+pdcp60: $981.9300 - MISS
+pdcp20: $1055.4700 - MISS
+range_result: IN BAND
+error: $61.87 (6.6%)
+direction: UP - MISS","low: $809.9100 - HIT
+median: $942.1900 - MISS
+high: $1039.6700 - MISS
+p90: $809.9100 - HIT
+p60: $931.5300 - HIT
+p50: $942.1900 - MISS
+p20: $1009.0200 - MISS
+pdcp20: $1009.0200 - MISS
+range_result: IN BAND
+error: $6.30 (0.7%)
+direction: DOWN - CORRECT",,"low: $993.9200 - MISS
+median: $1005.4800 - MISS
+high: $1024.5700 - MISS
+p90: $1024.5700 - MISS
+p60: $1005.4800 - MISS
+p50: $1002.5900 - MISS
+p20: $993.9200 - MISS
+pdcp90: $1024.5700 - MISS
+pdcp60: $1005.4800 - MISS
+pdcp20: $993.9200 - MISS
+range_result: BELOW BAND
+error: $69.59 (7.4%)
+direction: DOWN - CORRECT"
+2026-06-10,Day 8 of 36,$935.89,"C: $891.88
+O: $905.13
+H: $957.48
+L: $883.25
+moved down 4.70%
+Direction: WRONG","price: $911.3800 - MISS
+pdcp: null
+error: $19.50 (2.2%)
+direction: DOWN - CORRECT",,"low: $736.7900 - HIT
+median: $883.0900 - HIT
+high: $1114.9600 - MISS
+p90: $736.7900 - HIT
+p60: $867.9100 - HIT
+p50: $883.0900 - HIT
+p20: $996.8900 - MISS
+pdcp20: $996.8900 - MISS
+range_result: IN BAND
+error: $8.79 (1.0%)
+direction: DOWN - CORRECT","low: $728.7000 - HIT
+median: $905.3900 - MISS
+high: $1100.8700 - MISS
+p90: $728.7000 - HIT
+p60: $881.0000 - HIT
+p50: $905.3900 - MISS
+p20: $1073.4300 - MISS
+pdcp20: $1073.4300 - MISS
+range_result: IN BAND
+error: $13.51 (1.5%)
+direction: DOWN - CORRECT","low: $840.8900 - HIT
+median: $911.6700 - MISS
+high: $1076.9300 - MISS
+p90: $840.8900 - HIT
+p60: $873.8600 - HIT
+p50: $911.6700 - MISS
+p20: $1023.9600 - MISS
+pdcp20: $1023.9600 - MISS
+range_result: IN BAND
+error: $19.79 (2.2%)
+direction: DOWN - CORRECT","low: $837.8000 - HIT
+median: $957.6800 - MISS
+high: $1051.9800 - MISS
+p90: $837.8000 - HIT
+p60: $927.3700 - MISS
+p50: $957.6800 - MISS
+p20: $1033.0200 - MISS
+pdcp20: $1033.0200 - MISS
+range_result: IN BAND
+error: $65.80 (7.4%)
+direction: DOWN - CORRECT",,"low: $814.1700 - HIT
+median: $942.4400 - MISS
+high: $1036.9800 - MISS
+p90: $814.1700 - HIT
+p60: $913.5600 - MISS
+p50: $942.4400 - MISS
+p20: $1001.5100 - MISS
+pdcp20: $1001.5100 - MISS
+range_result: IN BAND
+error: $50.56 (5.7%)
+direction: DOWN - CORRECT","low: $964.5600 - MISS
+median: $1061.4600 - MISS
+high: $1073.6100 - MISS
+p90: $964.5600 - MISS
+p60: $1017.1900 - MISS
+p50: $1061.4600 - MISS
+p20: $1073.6100 - MISS
+pdcp60: $1017.1900 - MISS
+pdcp20: $1073.6100 - MISS
+range_result: BELOW BAND
+error: $169.58 (19.0%)
+direction: UP - MISS","1. spearman ($8.79)
+2. pearson ($13.51)
+3. analog ($19.50)
+4. cosine ($19.79)
+5. manhattan ($49.36)
+6. kendall ($50.56)
+7. euclidean ($65.80)
+8. knn2 ($109.51)
+9. randomforest ($131.38)
+10. lightgbm ($138.98)
+11. xgboost ($169.58)","low: $930.3700 - MISS
+median: $1030.8600 - MISS
+high: $1081.9300 - MISS
+p90: $930.3700 - MISS
+p60: $1014.2000 - MISS
+p50: $1030.8600 - MISS
+p20: $1081.9300 - MISS
+pdcp60: $1014.2000 - MISS
+pdcp20: $1081.9300 - MISS
+range_result: BELOW BAND
+error: $138.98 (15.6%)
+direction: UP - MISS",,"low: $930.9400 - MISS
+median: $1023.2600 - MISS
+high: $1073.0500 - MISS
+p90: $930.9400 - MISS
+p60: $1007.0700 - MISS
+p50: $1023.2600 - MISS
+p20: $1073.0500 - MISS
+pdcp60: $1007.0700 - MISS
+pdcp20: $1073.0500 - MISS
+range_result: BELOW BAND
+error: $131.38 (14.7%)
+direction: UP - MISS","low: $773.1600 - HIT
+median: $941.2400 - MISS
+high: $1052.2600 - MISS
+p90: $773.1600 - HIT
+p60: $905.2100 - MISS
+p50: $941.2400 - MISS
+p20: $1027.3800 - MISS
+pdcp20: $1027.3800 - MISS
+range_result: IN BAND
+error: $49.36 (5.5%)
+direction: DOWN - CORRECT",,"low: $1000.8200 - MISS
+median: $1001.3900 - MISS
+high: $1023.8000 - MISS
+p90: $1023.8000 - MISS
+p60: $1001.3900 - MISS
+p50: $1001.2500 - MISS
+p20: $1000.8200 - MISS
+pdcp90: $1023.8000 - MISS
+pdcp60: $1001.3900 - MISS
+pdcp20: $1000.8200 - MISS
+range_result: BELOW BAND
+error: $109.51 (12.3%)
+direction: DOWN - CORRECT"
+2026-06-11,Day 9 of 36,$891.88,"C: $995.87
+O: $904.37
+H: $996.77
+L: $895.50
+moved up 11.66%
+Direction: WRONG","price: $911.3800 - HIT
+pdcp: null
+error: $84.49 (8.5%)
+direction: DOWN - MISS",,"low: $742.1100 - HIT
+median: $877.9300 - HIT
+high: $1115.1200 - MISS
+p90: $742.1100 - HIT
+p60: $848.3700 - HIT
+p50: $877.9300 - HIT
+p20: $967.9200 - HIT
+range_result: IN BAND
+error: $117.94 (11.8%)
+direction: DOWN - MISS","low: $741.6200 - HIT
+median: $892.2700 - HIT
+high: $1125.6900 - MISS
+p90: $741.6200 - HIT
+p60: $855.0200 - HIT
+p50: $892.2700 - HIT
+p20: $1094.7500 - MISS
+pdcp20: $1094.7500 - MISS
+range_result: IN BAND
+error: $103.60 (10.4%)
+direction: DOWN - MISS","low: $803.9900 - HIT
+median: $907.3100 - HIT
+high: $1097.5200 - MISS
+p90: $803.9900 - HIT
+p60: $866.9300 - HIT
+p50: $907.3100 - HIT
+p20: $1041.6200 - MISS
+pdcp20: $1041.6200 - MISS
+range_result: IN BAND
+error: $88.56 (8.9%)
+direction: DOWN - MISS","low: $824.3100 - HIT
+median: $958.7300 - HIT
+high: $1109.7800 - MISS
+p90: $824.3100 - HIT
+p60: $937.2800 - HIT
+p50: $958.7300 - HIT
+p20: $1036.2200 - MISS
+pdcp20: $1036.2200 - MISS
+range_result: IN BAND
+error: $37.14 (3.7%)
+direction: DOWN - MISS",,"low: $822.5200 - HIT
+median: $956.7200 - HIT
+high: $1009.3700 - MISS
+p90: $822.5200 - HIT
+p60: $933.1200 - HIT
+p50: $956.7200 - HIT
+p20: $975.2700 - HIT
+pdcp20: $975.2700 - HIT
+range_result: IN BAND
+error: $39.15 (3.9%)
+direction: DOWN - MISS","low: $974.4000 - HIT
+median: $1074.8100 - MISS
+high: $1086.7700 - MISS
+p90: $974.4000 - HIT
+p60: $1031.6000 - MISS
+p50: $1074.8100 - MISS
+p20: $1086.7700 - MISS
+pdcp90: $974.4000 - HIT
+pdcp60: $1031.6000 - MISS
+pdcp20: $1086.7700 - MISS
+range_result: IN BAND
+error: $78.94 (7.9%)
+direction: UP - CORRECT","1. knn2 ($1.90)
+2. euclidean ($37.14)
+3. kendall ($39.15)
+4. manhattan ($48.70)
+5. randomforest ($52.89)
+6. lightgbm ($64.01)
+7. xgboost ($78.94)
+8. analog ($84.49)
+9. cosine ($88.56)
+10. pearson ($103.60)
+11. spearman ($117.94)","low: $950.9900 - HIT
+median: $1059.8800 - MISS
+high: $1107.4600 - MISS
+p90: $950.9900 - HIT
+p60: $1039.8900 - MISS
+p50: $1059.8800 - MISS
+p20: $1107.4600 - MISS
+pdcp60: $1039.8900 - MISS
+pdcp20: $1107.4600 - MISS
+range_result: IN BAND
+error: $64.01 (6.4%)
+direction: UP - CORRECT",,"low: $949.2800 - HIT
+median: $1048.7600 - MISS
+high: $1090.6200 - MISS
+p90: $949.2800 - HIT
+p60: $1032.2200 - MISS
+p50: $1048.7600 - MISS
+p20: $1090.6200 - MISS
+pdcp60: $1032.2200 - MISS
+pdcp20: $1090.6200 - MISS
+range_result: IN BAND
+error: $52.89 (5.3%)
+direction: UP - CORRECT","low: $827.1200 - HIT
+median: $947.1700 - HIT
+high: $1088.8200 - MISS
+p90: $827.1200 - HIT
+p60: $901.3900 - HIT
+p50: $947.1700 - HIT
+p20: $1050.5300 - MISS
+pdcp20: $1050.5300 - MISS
+range_result: IN BAND
+error: $48.70 (4.9%)
+direction: DOWN - MISS",,"low: $984.1400 - HIT
+median: $997.7700 - MISS
+high: $1078.2500 - MISS
+p90: $1078.2500 - MISS
+p60: $997.7700 - MISS
+p50: $994.3600 - HIT
+p20: $984.1400 - HIT
+pdcp90: $1078.2500 - MISS
+pdcp60: $997.7700 - MISS
+pdcp20: $984.1400 - HIT
+range_result: IN BAND
+error: $1.90 (0.2%)
+direction: DOWN - MISS"
+2026-06-12,Day 10 of 36,$995.87,"C: $981.61
+O: $971.81
+H: $1012.62
+L: $960.19
+moved down 1.43%
+Direction: WRONG","price: $877.3100 - HIT
+pdcp: null
+error: $104.30 (10.6%)
+direction: DOWN - MISS",,"low: $682.8600 - HIT
+median: $874.3400 - HIT
+high: $1124.6100 - MISS
+p90: $682.8600 - HIT
+p60: $838.3500 - HIT
+p50: $874.3400 - HIT
+p20: $1031.7700 - MISS
+pdcp20: $1031.7700 - MISS
+range_result: IN BAND
+error: $107.27 (10.9%)
+direction: DOWN - MISS","low: $704.5800 - HIT
+median: $879.1500 - HIT
+high: $1103.1900 - MISS
+p90: $704.5800 - HIT
+p60: $863.9100 - HIT
+p50: $879.1500 - HIT
+p20: $1041.6200 - MISS
+pdcp20: $1041.6200 - MISS
+range_result: IN BAND
+error: $102.46 (10.4%)
+direction: DOWN - MISS","low: $777.1400 - HIT
+median: $877.7600 - HIT
+high: $1038.6800 - MISS
+p90: $777.1400 - HIT
+p60: $849.6200 - HIT
+p50: $877.7600 - HIT
+p20: $998.3800 - MISS
+pdcp20: $998.3800 - MISS
+range_result: IN BAND
+error: $103.85 (10.6%)
+direction: DOWN - MISS","low: $798.4700 - HIT
+median: $943.2600 - HIT
+high: $1068.3700 - MISS
+p90: $798.4700 - HIT
+p60: $907.4700 - HIT
+p50: $943.2600 - HIT
+p20: $1059.4300 - MISS
+pdcp20: $1059.4300 - MISS
+range_result: IN BAND
+error: $38.35 (3.9%)
+direction: DOWN - MISS",,"low: $874.8700 - HIT
+median: $999.5600 - MISS
+high: $1061.0100 - MISS
+p90: $874.8700 - HIT
+p60: $966.1500 - HIT
+p50: $999.5600 - MISS
+p20: $1035.0700 - MISS
+pdcp20: $1035.0700 - MISS
+range_result: IN BAND
+error: $17.95 (1.8%)
+direction: UP - CORRECT","low: $984.2400 - MISS
+median: $1088.1500 - MISS
+high: $1099.9400 - MISS
+p90: $984.2400 - MISS
+p60: $1046.0100 - MISS
+p50: $1088.1500 - MISS
+p20: $1099.9400 - MISS
+pdcp90: $984.2400 - MISS
+pdcp60: $1046.0100 - MISS
+pdcp20: $1099.9400 - MISS
+range_result: BELOW BAND
+error: $106.54 (10.9%)
+direction: UP - MISS","1. kendall ($17.95)
+2. euclidean ($38.35)
+3. manhattan ($53.06)
+4. knn2 ($61.61)
+5. randomforest ($92.64)
+6. pearson ($102.46)
+7. cosine ($103.85)
+8. analog ($104.30)
+9. xgboost ($106.54)
+10. spearman ($107.27)
+11. lightgbm ($107.29)","low: $971.6000 - HIT
+median: $1088.9000 - MISS
+high: $1132.9800 - MISS
+p90: $971.6000 - HIT
+p60: $1065.5700 - MISS
+p50: $1088.9000 - MISS
+p20: $1132.9800 - MISS
+pdcp90: $971.6000 - HIT
+pdcp60: $1065.5700 - MISS
+pdcp20: $1132.9800 - MISS
+range_result: IN BAND
+error: $107.29 (10.9%)
+direction: UP - CORRECT",,"low: $967.6200 - HIT
+median: $1074.2500 - MISS
+high: $1108.2000 - MISS
+p90: $967.6200 - HIT
+p60: $1057.3700 - MISS
+p50: $1074.2500 - MISS
+p20: $1108.2000 - MISS
+pdcp60: $1057.3700 - MISS
+pdcp20: $1108.2000 - MISS
+range_result: IN BAND
+error: $92.64 (9.4%)
+direction: UP - CORRECT","low: $790.7000 - HIT
+median: $928.5500 - HIT
+high: $1066.2200 - MISS
+p90: $790.7000 - HIT
+p60: $875.9600 - HIT
+p50: $928.5500 - HIT
+p20: $1043.5200 - MISS
+pdcp20: $1043.5200 - MISS
+range_result: IN BAND
+error: $53.06 (5.4%)
+direction: DOWN - MISS",,"low: $910.9900 - HIT
+median: $920.0000 - HIT
+high: $1053.2600 - MISS
+p90: $1053.2600 - MISS
+p60: $920.0000 - HIT
+p50: $917.7500 - HIT
+p20: $910.9900 - HIT
+pdcp90: $1053.2600 - MISS
+pdcp60: $703.5400 - HIT
+pdcp20: $685.9400 - HIT
+range_result: IN BAND
+error: $61.61 (6.3%)
+direction: DOWN - MISS"

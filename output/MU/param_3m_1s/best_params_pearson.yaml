@@ -1,0 +1,11 @@
+model: knn
+generated: '2026-04-26'
+method: pearson
+metrics:
+  mae: 2.63
+  mape_pct: 35.76
+  direction_pct: 80.0
+  cone_hit_pct: 38.7
+params:
+  K: 30
+  MIN_GAP: 40

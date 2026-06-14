@@ -1,0 +1,17 @@
+feature_weights:
+  return: 0.08864681422710419
+  hl_range: 0.10743256658315659
+  rel_volume: 0.10566091537475586
+  momentum_z: 0.12965549528598785
+  bb_pct_b: 0.16202987730503082
+  atr_norm: 0.16686134040355682
+  clv: 0.09882407635450363
+  vol_regime: 0.14088889956474304
+computed_on: '2026-04-30'
+lookback_bars: 1500
+target_days: 5
+half_life_days: 120
+distance_threshold_pct: 30.0
+sweep_dir_acc: 51.5
+sweep_mape: 12.57
+sweep_n_forecasts: 33

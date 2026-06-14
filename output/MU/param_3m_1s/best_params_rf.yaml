@@ -1,0 +1,12 @@
+model: randomforest
+generated: '2026-04-30'
+metrics:
+  mae: 164.3
+  mape_pct: 40.13
+  direction_pct: 66.7
+  cone_hit_pct: 29.3
+params:
+  n_estimators: 100
+  max_depth: 15
+  min_samples_leaf: 5
+  max_features: sqrt

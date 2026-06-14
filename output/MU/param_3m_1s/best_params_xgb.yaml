@@ -1,0 +1,13 @@
+model: xgboost
+generated: '2026-04-30'
+metrics:
+  mae: 107.9
+  mape_pct: 27.61
+  direction_pct: 66.7
+  cone_hit_pct: 85.6
+params:
+  n_estimators: 100
+  max_depth: 3
+  learning_rate: 0.03
+  subsample: 0.8
+  colsample_bytree: 0.8
