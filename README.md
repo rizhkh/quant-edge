@@ -1,7 +1,5 @@
 # quant-edge
 
-# sp500 — Personal Stock Insight Tool
-
 A personal stock-insight tool I built to generate short-horizon price forecasts
 by applying a mix of algorithms to historical market data. It combines a
 **historical-analog / k-NN similarity search** with gradient-boosted and
