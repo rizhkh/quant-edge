@@ -72,17 +72,4 @@ That's it — this generates the forecast for the configured ticker. The repo
 also includes scripts for backtesting, parameter tuning, and reporting; explore
 them if you want to go deeper.
 
-## How it works
-
-1. **Fetch** — OHLCV history is downloaded from Yahoo Finance and cached to
-   `data/<TICKER>_max.csv`.
-2. **Engineer features** — returns, intraday range, relative volume, momentum,
-   Bollinger %B, ATR-normalised volatility, close-location value, vol regime,
-   plus per-model extras (sector cohort, VIX regime, earnings proximity).
-3. **Search** — the most recent window is compared against all historical
-   windows; the top `K` analogs (with `MIN_GAP` spacing) are selected.
-4. **Project** — forward paths from those analogs (or ML model predictions) are
-   aggregated into a probabilistic cone with confidence bands.
-5. **Score** — walk-forward backtests and validation heuristics measure
-   directional accuracy and calibration before any forecast is trusted.
 
